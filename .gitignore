@@ -1,0 +1,11 @@
+node_modules/
+dist/
+# Never commit environment files (real or example)
+.env
+.env.*
+**/.env
+**/.env.*
+*.log
+infra/.env
+infra/generated/
+coverage/

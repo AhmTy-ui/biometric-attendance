@@ -1,0 +1,173 @@
+# BAMP production stack — single VPS / small cloud instance, containerised, TLS reverse proxy (PRD "Hosting").
+#
+#   cd infra
+#   cp .env.example .env            # fill in domain, email and generated secrets (./scripts/generate-secrets.sh)
+#   ./scripts/init-letsencrypt.sh   # obtains the TLS certificate for $BAMP_DOMAIN (HTTPS + MQTT/TLS)
+#   docker compose up -d
+#   docker compose exec backend node dist/db/bootstrap.js --org "Org" --slug org --email admin@org.com --name "Admin Name"
+#
+# Exposed ports: 80 (ACME + redirect), 443 (dashboard / API / device HTTPS), 8883 (MQTT over TLS).
+
+name: bamp
+
+x-restart: &restart
+  restart: unless-stopped
+  logging:
+    driver: json-file
+    options: { max-size: '20m', max-file: '5' }
+
+services:
+  postgres:
+    <<: *restart
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: bamp
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
+      POSTGRES_DB: bamp
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/10-init.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U bamp -d bamp']
+      interval: 10s
+      retries: 10
+
+  redis:
+    <<: *restart
+    image: redis:7-alpine
+    command: ['redis-server', '--requirepass', '${REDIS_PASSWORD:?}', '--appendonly', 'yes', '--maxmemory-policy', 'noeviction']
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', '-a', '${REDIS_PASSWORD}', 'ping']
+      interval: 10s
+
+  s3:
+    <<: *restart
+    image: chrislusf/seaweedfs:latest
+    command: 'server -dir=/data -s3 -s3.port=9000 -s3.config=/etc/seaweedfs/s3.json -master.volumeSizeLimitMB=1024 -volume.max=0'
+    volumes:
+      - s3data:/data
+      - ./generated/s3.json:/etc/seaweedfs/s3.json:ro
+
+  mosquitto:
+    <<: *restart
+    image: eclipse-mosquitto:2
+    ports:
+      - '8883:8883'
+    volumes:
+      - ./generated/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mosquittodata:/mosquitto/data
+      - letsencrypt:/etc/letsencrypt:ro
+
+  backend:
+    <<: *restart
+    image: bamp/platform:1.0.0
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+      s3: { condition: service_started }
+      mosquitto: { condition: service_started }
+    environment:
+      NODE_ENV: production
+      LOG_LEVEL: info
+      HTTP_HOST: 0.0.0.0
+      HTTP_PORT: 4000
+      PUBLIC_URL: https://${BAMP_DOMAIN:?}
+      TLS_ENABLED: 'false' # TLS terminates at nginx
+      TRUST_PROXY: 'true'
+      COOKIE_SECURE: 'true'
+      DATABASE_URL: postgres://bamp:${POSTGRES_PASSWORD}@postgres:5432/bamp
+      REDIS_URL: redis://:${REDIS_PASSWORD}@redis:6379
+      MQTT_URL: mqtts://${BAMP_DOMAIN}:8883
+      MQTT_CA_FILE: /etc/ssl/certs/ca-certificates.crt
+      MQTT_USERNAME: bamp-cloud
+      MQTT_PASSWORD: ${MQTT_CLOUD_PASSWORD:?}
+      MQTT_PUBLIC_HOST: ${BAMP_DOMAIN}
+      MQTT_PUBLIC_PORT: 8883
+      S3_ENDPOINT: http://s3:9000
+      S3_ACCESS_KEY: ${S3_ACCESS_KEY:?}
+      S3_SECRET_KEY: ${S3_SECRET_KEY:?}
+      S3_FORCE_PATH_STYLE: 'true'
+      # The template key-encryption key is mounted from the host, separate from the database volume (NFR-3.1).
+      KEK_FILE: /run/secrets/template_kek
+      KEK_ID: kek-1
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_FROM: ${SMTP_FROM:-BAMP <no-reply@example.com>}
+      BACKUP_RETENTION_DAYS: 30
+      ERROR_WEBHOOK_URL: ${ERROR_WEBHOOK_URL:-}
+    secrets:
+      - template_kek
+    extra_hosts:
+      # the backend reaches the broker through the public name so certificate validation matches
+      - '${BAMP_DOMAIN}:host-gateway'
+
+  nginx:
+    <<: *restart
+    image: nginx:1.27-alpine
+    depends_on: [backend]
+    ports:
+      - '80:80'
+      - '443:443'
+    environment:
+      BAMP_DOMAIN: ${BAMP_DOMAIN}
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates:ro
+      - letsencrypt:/etc/letsencrypt:ro
+      - certbot-www:/var/www/certbot:ro
+
+  certbot:
+    <<: *restart
+    image: certbot/certbot:latest
+    entrypoint: /bin/sh -c 'trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot --quiet --deploy-hook "touch /etc/letsencrypt/renewed"; sleep 12h & wait $${!}; done'
+    volumes:
+      - letsencrypt:/etc/letsencrypt
+      - certbot-www:/var/www/certbot
+
+  # Uptime monitoring (Observability). Point a monitor at https://$BAMP_DOMAIN/health.
+  uptime-kuma:
+    <<: *restart
+    image: louislam/uptime-kuma:1
+    profiles: ['monitoring']
+    ports:
+      - '127.0.0.1:3001:3001'
+    volumes:
+      - uptimekuma:/app/data
+
+  # Optional: the reference web software (only when the organisation's own HR system is not yet connected).
+  websoft:
+    <<: *restart
+    image: bamp/reference-web-software:1.0.0
+    profiles: ['reference-websoft']
+    build:
+      context: ../reference-web-software
+    environment:
+      PORT: 4100
+      PUBLIC_URL: https://${BAMP_DOMAIN}/websoft
+      TLS_CERT_FILE: ''
+      TLS_KEY_FILE: ''
+      DATABASE_URL: postgres://bamp:${POSTGRES_PASSWORD}@postgres:5432/websoft
+      API_KEY: ${WEBSOFT_API_KEY:-}
+      ADMIN_EMAIL: ${WEBSOFT_ADMIN_EMAIL:-hr-admin@example.com}
+      ADMIN_PASSWORD: ${WEBSOFT_ADMIN_PASSWORD:-}
+    depends_on:
+      postgres: { condition: service_healthy }
+
+secrets:
+  template_kek:
+    file: ./generated/template-kek.b64
+
+volumes:
+  pgdata:
+  redisdata:
+  s3data:
+  mosquittodata:
+  letsencrypt:
+  certbot-www:
+  uptimekuma:

@@ -1,0 +1,9 @@
+**/node_modules
+**/dist
+**/.env
+**/.env.local
+.git
+Template design
+*.pdf
+device-agent
+infra/data

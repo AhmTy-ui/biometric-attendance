@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#003ea8","surface-container-low":"#181c24","on-secondary-fixed-variant":"#004b73","inverse-on-surface":"#2c3039","background":"#0f131c","secondary-fixed-dim":"#93ccff","outline-variant":"#434655","on-primary-container":"#eeefff","on-error-container":"#ffdad6","outline":"#8d90a0","surface-container":"#1c2028","on-error":"#690005","secondary-fixed":"#cce5ff","error-container":"#93000a","on-tertiary-fixed":"#002113","tertiary-fixed-dim":"#4edea3","surface-variant":"#31353e","tertiary":"#4edea3","secondary-container":"#3198dc","primary-fixed-dim":"#b4c5ff","surface-dim":"#0f131c","tertiary-fixed":"#6ffbbe","on-surface":"#dfe2ee","on-secondary":"#003351","surface":"#0f131c","on-tertiary":"#003824","on-tertiary-fixed-variant":"#005236","tertiary-container":"#007d55","on-secondary-container":"#002c47","on-surface-variant":"#c3c6d7","secondary":"#93ccff","inverse-primary":"#0053db","inverse-surface":"#dfe2ee","on-background":"#dfe2ee","on-secondary-fixed":"#001d31","on-tertiary-container":"#bdffdb","error":"#ffb4ab","surface-bright":"#353942","surface-tint":"#b4c5ff","surface-container-high":"#262a33","surface-container-lowest":"#0a0e16","on-primary-fixed":"#00174b","on-primary":"#002a78","surface-container-highest":"#31353e","primary-container":"#2563eb","primary-fixed":"#dbe1ff","primary":"#b4c5ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"1rem","gutter-dense":"0.5rem","margin":"1.5rem","space-xl":"2rem","gutter":"1rem","space-lg":"1.25rem","space-md":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem"},"fontFamily":{"label-lg":["JetBrains Mono"],"headline-xl":["Inter"],"label-badge":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"body-sm":["Inter"],"label-md":["JetBrains Mono"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"label-sm":["JetBrains Mono"]},"fontSize":{"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"600"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"12px","letterSpacing":"0.04em","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X8zQTjBPN5xKLyptWugJbQfb-IBQ3EyxXMYi7L05FrBR2X6iHiIswytFgM0f3KpkMlthEKXwMiA2W5v6wZJyE1DK5Fxvpa1PYGESSihMdpaIIPFp7BJxshUTK4BK0SkTY5IZWnFPh6hP_7M8HvmjqLqmyTwNVlNmeALvjVal26HKvNt7r2pDjsEzJKuToFhaM0ccl23bxrjjV1qhKglSo4yeRc3j66gzZp9ENZfFTJkhR7KbuJSdosMlTq"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">BAMP CORE</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">v4.18.2-SEC</span></div></div><nav class="px-space-xs py-space-sm space-y-space-md overflow-y-auto max-h-[calc(100vh-8rem)]" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-space-xs">Overview</span><div class="space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="command-center" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span>Command Center</span></a></div></div><div><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-space-xs">Attendance</span><div class="space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-ingestion-stream" href="#"><span class="material-symbols-outlined text-[18px]">stream</span><span>Live Ingestion Stream</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="reconciliation-dlq" href="#"><span class="material-symbols-outlined text-[18px]">sync_problem</span><span>Reconciliation &amp; DLQ</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Reports &amp; Analytics</span></a></div></div><div><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-space-xs">Workforce &amp; Roster</span><div class="space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="sync-directory" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Sync Directory</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="locations-branches" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Locations &amp; Branches</span></a></div></div><div><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-space-xs">Devices &amp; Hardware</span><div class="space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="device-fleet-registry" href="#"><span class="material-symbols-outlined text-[18px]">developer_board</span><span>Device Fleet Registry</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="provisioning-wizard" href="#"><span class="material-symbols-outlined text-[18px]">add_to_queue</span><span>Provisioning Wizard</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="firmware-ota" href="#"><span class="material-symbols-outlined text-[18px]">system_update_alt</span><span>Firmware &amp; OTA</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="enrolment-terminal" href="#"><span class="material-symbols-outlined text-[18px]">face</span><span>Enrolment Terminal</span></a></div></div><div><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-space-xs">System &amp; Compliance</span><div class="space-y-0.5"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integration-adapter" href="#"><span class="material-symbols-outlined text-[18px]">cable</span><span>Integration Adapter</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="security-audit-trail" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Security Audit Trail</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings-rbac" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span>Settings &amp; RBAC</span></a></div></div></nav></div><div class="p-space-sm m-space-xs rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-sm text-label-sm text-on-surface font-mono">MQTT TLS CONNECTED</span></div><span class="font-label-sm text-label-sm text-tertiary font-mono">99.98%</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-primary">domain</span><select class="bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer pr-space-xs"><option class="bg-surface-container-high text-on-surface" value="global">Global Enterprise (All Sites)</option><option class="bg-surface-container-high text-on-surface" value="emea-hq">EMEA - Frankfurt Node</option><option class="bg-surface-container-high text-on-surface" value="us-east">US-East - Ashburn Data</option><option class="bg-surface-container-high text-on-surface" value="apac-sg">APAC - Jurong Edge</option></select></div><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full"><span class="relative flex h-1.5 w-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-tertiary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono">SYNC LATENCY:</span><span class="font-label-sm text-label-sm text-tertiary font-mono font-medium">18ms</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full"><span class="material-symbols-outlined text-[14px] text-secondary">layers</span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono">BUFFER:</span><span class="font-label-sm text-label-sm text-on-surface font-mono font-medium">0.02%</span></div></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Quick Search (Ctrl+K)</span><span class="font-label-sm text-label-sm bg-surface-container-high px-1 py-0.5 rounded text-on-surface-variant font-mono">/</span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XUBRD_fWz6jyWFQIskiIuckhxWw1yjpjUOLyVdjjbIYlO5kXeJhWysTr_g-XDyrS0uGnqLZcEXExB3v-47cg4s5nxuv9nfsD612jVMA83kpDXyDIX_eKcXnUQbd9mrv_cO_JdhPPUhML07DcKY9G8ZspuluEsCfzTr8jfWoGaUOpphXZQ5RIM1me4qyoIXkemlsttMKiQd2WYxYUl6_E8jyIf15FFYP_lv7KafGx8jBrvhAuLw0B0M58gD"/><div class="hidden md:flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-none">Dr. Elena Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono leading-none mt-1">System Admin / SecOps</span></div></div></div></header><main class="relative pt-16 bg-background w-full min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Barcode Modal Simulation (Hidden by default, triggered via JS) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-200" id="scan-modal">
+<div class="bg-surface-container w-full max-w-lg rounded-xl shadow-2xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">qr_code_scanner</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Optical Hardware Scanner</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-mono">OPT-PORT-RX: READY (VIRTUAL INTERFACE)</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-container-high transition-colors" id="close-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="relative w-full h-56 bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col items-center justify-center">
+<div class="absolute inset-x-8 top-1/2 h-0.5 bg-primary shadow-[0_0_8px_#2563eb] animate-pulse"></div>
+<span class="material-symbols-outlined text-[64px] text-surface-variant mb-2">barcode_reader</span>
+<span class="font-label-md text-label-md text-primary font-mono tracking-wider">AWAITING 2D DATA MATRIX FEED</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-center px-6">Align terminal chassis QR or optical bar laser over reader aperture</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary font-mono">USB/HID SCANNER DETECTED (VID_0483:PID_5740)</span>
+<button class="px-space-md py-1.5 bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary-container font-headline-sm text-body-sm rounded-lg transition-colors shadow-sm" id="simulate-scan-btn">
+          Simulate Scan Read
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Wizard Canvas -->
+<div class="p-margin space-y-space-md max-w-[1720px] mx-auto w-full">
+<!-- Top Header Breadcrumb & Mission Control Bar -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase font-mono">
+<span>DEVICES &amp; HARDWARE</span>
+<span class="text-surface-variant">/</span>
+<span class="text-secondary">PROVISIONING &amp; CRYPTOGRAPHIC COMMISSIONING</span>
+<span class="text-surface-variant">/</span>
+<span class="text-tertiary">STG-2 ATTN</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Hardware Provisioning &amp; Factory Activation Wizard
+        </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-4xl">
+          Guided cryptographic hardware identity binding, hardware root-of-trust (ATECC608A) attestation, mTLS client certificate minting, and initial biometric roster vector synchronization.
+        </p>
+</div>
+<div class="flex items-center flex-wrap gap-space-xs self-start lg:self-center">
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded-lg transition-colors font-body-sm text-body-sm shadow-sm" id="open-scan-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">qr_code_scanner</span>
+<span>Scan Terminal Barcode / QR</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-high hover:bg-surface-variant text-on-surface rounded-lg transition-colors font-body-sm text-body-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_upload</span>
+<span>Import Fleet CSV</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-error-container/20 hover:bg-error-container/40 text-error rounded-lg transition-colors font-body-sm text-body-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Abort</span>
+</button>
+</div>
+</div>
+<!-- Stepper Navigation Header -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative">
+<!-- Step 1: Completed -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container">
+<div class="w-8 h-8 rounded-full bg-tertiary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary font-mono block leading-none">STEP 01 // COMPLETED</span>
+<span class="font-headline-sm text-body-sm text-on-surface truncate block font-medium mt-1">Physical ID &amp; MAC Discovery</span>
+</div>
+</div>
+<!-- Step 2: Active -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-high shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="relative flex items-center justify-center shrink-0 w-8 h-8 rounded-full bg-primary-container/30">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-40"></span>
+<span class="material-symbols-outlined text-[18px] text-primary">security</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-mono block leading-none">STEP 02 // IN PROGRESS</span>
+</div>
+<span class="font-headline-sm text-body-sm text-on-surface truncate block font-semibold mt-1">ATECC608A Attestation</span>
+</div>
+</div>
+<!-- Step 3: Upcoming -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest opacity-70">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">03</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono block leading-none">STEP 03 // PENDING</span>
+<span class="font-headline-sm text-body-sm text-on-surface-variant truncate block mt-1">Branch &amp; Network Fence</span>
+</div>
+</div>
+<!-- Step 4: Upcoming -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest opacity-70">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">04</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono block leading-none">STEP 04 // PENDING</span>
+<span class="font-headline-sm text-body-sm text-on-surface-variant truncate block mt-1">mTLS &amp; KMS Injection</span>
+</div>
+</div>
+<!-- Step 5: Upcoming -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest opacity-70">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">05</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono block leading-none">STEP 05 // PENDING</span>
+<span class="font-headline-sm text-body-sm text-on-surface-variant truncate block mt-1">Baseline Roster Sync</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Split Grid: 2/3 Active Hardware Diagnostics vs 1/3 Security Checklist -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Column (8 of 12 cols): Diagnostics & Parameters -->
+<div class="lg:col-span-8 space-y-space-md">
+<!-- Detected Terminal Hardware Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-primary-container/20 text-primary">
+<span class="material-symbols-outlined text-[20px]">developer_board</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Terminal Identification Profile</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm font-mono">PROBED VIA ETH0</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-mono">DISCOVERY ID: 0x8849F-REFINERY-COMMISSION</p>
+</div>
+</div>
+<span class="px-space-sm py-1 bg-surface-container-highest rounded font-label-sm text-label-sm text-secondary font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> UNCOMMISSIONED FLEET NODE
+            </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-xs">
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">Hardware UUID / ID</span>
+<span class="font-label-lg text-label-lg text-on-surface font-mono font-semibold mt-1">TRM-PH-005</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono mt-0.5">Physical Tag #005</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">Factory Serial (SN)</span>
+<span class="font-label-lg text-label-lg text-on-surface font-mono font-semibold mt-1">SN-BAMP-2025-08912</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono mt-0.5">Batch LOT-24D</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">Interface MAC Address</span>
+<span class="font-label-lg text-label-lg text-primary font-mono font-semibold mt-1">00:1B:44:11:3A:9F</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono mt-0.5">PHY: Realtek RTL8211F</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">DHCP Network Lease</span>
+<span class="font-label-lg text-label-lg text-on-surface font-mono font-semibold mt-1">192.168.40.18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono mt-0.5">VLAN 40-IoT (Port Harcourt)</span>
+</div>
+</div>
+<!-- Extended Spec Chip Row -->
+<div class="flex items-center flex-wrap gap-space-xs pt-1">
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">memory</span> Quad-Core ARM Cortex-A53 @ 1.4GHz
+            </span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">storage</span> 2GB LPDDR4 / 16GB High-Endurance eMMC
+            </span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">fingerprint</span> Optical 500DPI FAP30 + Dual RGB-IR Live Cam
+            </span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">system_update</span> Baseline: v2.3.8-LTS (OTA Pending)
+            </span>
+</div>
+</div>
+<!-- Cryptographic Attestation & ATECC608A Engine -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-tertiary-container/30 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">encrypted</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Cryptographic Hardware Attestation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Microchip ATECC608A Secure Element Cryptographic Handshake &amp; Challenge</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> CHIP ATTESTATION PASSED
+              </span>
+</div>
+</div>
+<!-- Cryptographic Validation Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">PIK CHALLENGE SIGNATURE</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">MATCH 100%</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface font-mono break-all bg-surface-container-lowest p-2 rounded">
+                ECDSA: 4a9f:802c:31bb:9014:ee81:da2f:50b7:cf89:33b1:e4a2:77cd:90ef:11da:aa83:5200:19b4
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified against BAMP Global Factory Master Root CA (Rev 2024-Q3)</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ATECC608A CONFIG ZONE DIGEST</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">LOCKED (0x00)</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface font-mono break-all bg-surface-container-lowest p-2 rounded">
+                SHA-256: 9e32fcba791880e4b7713f021ad5c2a863009477e029ba35dd0c21a48c66e9bf
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Anti-cloning PUF silicon fingerprint validated. Hardware tamper lines intact.</p>
+</div>
+</div>
+<!-- Live Terminal Command Log Stream -->
+<div class="space-y-1">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-[14px] text-tertiary">terminal</span>
+<span>CRYPTOGRAPHIC HANDSHAKE TELEMETRY STREAM</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">BAUD: 115200 // TLS 1.3 SEC</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-sm font-label-sm text-label-sm font-mono text-on-surface space-y-1 overflow-x-auto shadow-inner leading-relaxed">
+<div class="text-on-surface-variant">[14:28:01.012] <span class="text-secondary">PROBE:</span> Microchip ATECC608A I2C address 0x60 detected on bus /dev/i2c-2</div>
+<div class="text-on-surface-variant">[14:28:02.145] <span class="text-secondary">NONCE:</span> Generated 32-byte cryptographic random server nonce #f89a20cd7138b1</div>
+<div class="text-on-surface-variant">[14:28:03.490] <span class="text-secondary">SIGN:</span> Terminal returned ECDSA signature over NIST P-256 curve (Slot 0 private key)</div>
+<div class="text-on-surface-variant">[14:28:04.108] <span class="text-tertiary">VERIFY:</span> Hardware root signature matches factory manifest ED25519 hash verified</div>
+<div class="text-tertiary font-semibold">[14:28:05.002] STATUS: Hardware authenticity confirmed. Zero tamper detected. Safe to mint mTLS certificates.</div>
+<div class="text-primary animate-pulse">[14:28:05.819] READY &gt;&gt; Awaiting deployment site parameters commit from Commissioning Engineer..._</div>
+</div>
+</div>
+</div>
+<!-- Commissioning Parameters Configuration -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Target Commissioning Parameters</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bind cryptographic hardware identity to geographical node, security boundary, and offline buffer quota</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">FORM SPEC: CFT-PH-REV4</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Assigned Facility -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant font-mono uppercase">Assigned Fleet Branch Node</label>
+<div class="relative bg-surface-container rounded-lg">
+<select class="w-full bg-transparent px-space-sm py-2 text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-0 cursor-pointer">
+<option class="bg-surface-container-high text-on-surface" selected="">Port Harcourt Offshore Refinery Dock (Hub 03)</option>
+<option class="bg-surface-container-high text-on-surface">Lagos Central Processing Terminal (Hub 01)</option>
+<option class="bg-surface-container-high text-on-surface">Warri Refining Logistics Depot (Hub 02)</option>
+<option class="bg-surface-container-high text-on-surface">Abuja Administrative Annex (Hub 04)</option>
+</select>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Designated geo-fence: 4.7774° N, 7.0134° E (Strict 50m radius)</span>
+</div>
+<!-- Specific Gate / Sub-location -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant font-mono uppercase">Sub-Location / Turnstile Bay</label>
+<div class="bg-surface-container rounded-lg px-space-sm py-2">
+<input class="w-full bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none" type="text" value="Terminal 05 - Heavy Machinery Loading Bay"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zone Classification: High Security Restricted Personnel</span>
+</div>
+<!-- Operational Mode -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant font-mono uppercase">Operational Access Profile</label>
+<div class="relative bg-surface-container rounded-lg">
+<select class="w-full bg-transparent px-space-sm py-2 text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high text-on-surface" selected="">Turnstile Bi-directional Access &amp; Time Tracking</option>
+<option class="bg-surface-container-high text-on-surface">Turnstile Ingress Only (Strict Anti-Passback)</option>
+<option class="bg-surface-container-high text-on-surface">Egress-Only Safety Muster Point Terminal</option>
+<option class="bg-surface-container-high text-on-surface">Kiosk Self-Service Shift Sign-In</option>
+</select>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Relay trigger pulse: 1500ms momentary closed circuit</span>
+</div>
+<!-- Offline Cache Allocation -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant font-mono uppercase">Offline Buffer NVRAM Quota</label>
+<div class="relative bg-surface-container rounded-lg">
+<select class="w-full bg-transparent px-space-sm py-2 text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high text-on-surface" selected="">NVRAM Max 5,000 Offline Records (Buffer Hold)</option>
+<option class="bg-surface-container-high text-on-surface">NVRAM Max 10,000 Offline Records (High Density)</option>
+<option class="bg-surface-container-high text-on-surface">NVRAM Max 1,000 Records (Volatile Fast Flushed)</option>
+</select>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-reconciliation triggers immediately upon link restoration</span>
+</div>
+</div>
+<!-- Fallback Authentication Toggles -->
+<div class="pt-space-xs">
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">pin</span>
+<div>
+<span class="font-headline-sm text-body-sm text-on-surface block font-medium">Allow PIN Fallback with Supervisor Dual-Sign</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">If optical fingerprint or facial biometric fails due to industrial PPE, allow emergency manual PIN entry</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (4 of 12 cols): Provisioning Checklist & Dual Custody Sign-Off -->
+<div class="lg:col-span-4 space-y-space-md">
+<!-- Security Checklist -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Commissioning Checklist</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">2 / 5 VERIFIED</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Checklist Item 1 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface font-medium">Factory Tamper Seal Verification</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">PASSED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Barcode tamper seal intact. Physically validated by Tech-048.</p>
+</div>
+</div>
+<!-- Checklist Item 2 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface font-medium">Secure Boot Chain Lock</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">FUSED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">SoC anti-rollback eFuses blown. JTAG debugging physically severed.</p>
+</div>
+</div>
+<!-- Checklist Item 3 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-high">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5 animate-pulse">radio_button_checked</span>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold">mTLS Client Certificate Signing</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">READY TO MINT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">CSR generated inside ATECC608A. Target: <span class="text-on-surface font-mono">crt-trm-ph-005.pem</span></p>
+</div>
+</div>
+<!-- Checklist Item 4 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container opacity-60">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 mt-0.5">radio_button_unchecked</span>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface">KMS Biometric Encryption Slot</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">AWAITING STG 4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Target: <span class="font-mono">kms-af-south-1:slot-05</span> for template vectors</p>
+</div>
+</div>
+<!-- Checklist Item 5 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container opacity-60">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 mt-0.5">radio_button_unchecked</span>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface">Initial Baseline Roster Push</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">QUEUE: 342 USERS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Distribute Port Harcourt personnel biometric feature vectors</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Field Engineer Identity Verification (Dual Custody) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">badge</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Dual Custody Authorization</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-mono">NFC VALIDATED</span>
+</div>
+<!-- Officers List -->
+<div class="space-y-space-sm">
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container rounded-lg">
+<img class="w-10 h-10 rounded-lg object-cover" data-alt="Close up professional portrait of an African field hardware engineer in industrial high-visibility uniform and protective glasses inside an enterprise datacenter with cool blue technical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClfdz12ugWTRclt5dQJBa9q4Yxax6K2rdB6295-WtReq7hUSEQWfhzgO3KFDh_Z_M4nVrszYLU75YbHojcf3hc-UvCceibnIWp69QIW4oIzgfJ4BXRzEt9ikJ3gOLn3O1lonjMEk_m1dt_BeBt_W7EG51Xe20gVzJVKWg30U2Brx9JuP7rfsnSF1mG91fWbvOpmk3EEEO150gj53r8FqxiTqJACbOpMWzo5b6RJvy3c62JtSQJW4h4ig"/>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold truncate">Chidi Eze</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">TECH-048</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Field Commissioning Lead (YubiKey 5C NFC Verified)</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container rounded-lg">
+<img class="w-10 h-10 rounded-lg object-cover" data-alt="Portrait of an African female operations manager wearing enterprise identification badge in modern mission control security center with dark industrial screens and slate tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEzn2ulFvKYfweNqPQuPPJ6JojhuNRvUhFfaR8wBzykza1dkFc7-PN-s8Te6AIGZYpP0DOWg069oLOREdJCzcpJDUCEJ9h6tGzGMw3xP5khHVuu7k3c8NH1Faw1MG2FNhnVzXPjoR-gfQpWMyDpfAxvgQudkOQz4H-YGyvXeniWRLfrdJTOUdqQj0RiMjInFvch_XRz_g_4NgIRPfH7VGrwUy2MN3oLbN9EaYvPbo61CKw0IpyKPRE-Q"/>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold truncate">Fatima Bello</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">MGR-014</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Regional Operations Sign-Off (Dual Key Co-Signer)</p>
+</div>
+</div>
+</div>
+<!-- Physical Terminal Hardware Preview -->
+<div class="relative w-full h-40 rounded-lg overflow-hidden mt-space-sm group">
+<img class="w-full h-full object-cover" data-alt="Macro photography of a sleek industrial biometric access terminal wall mounted with dual camera lenses fingerprint scanner glowing status indicator LEDs and heavy duty slate housing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKgbN-ZITj2bjIeioZu44rsbAM25EvhGna8vZtZTDO0SIsx6xzzCDZBvw7mehwjqlonf1Ot6z5Lj4XRluTsMkNxpcrT2ZFQRLWyo6AJBFz-tvvBrTfqHho9ZC04z9BQP7K1vH4rYoEpzAio7_zpDTW73ZTdm7_ziZ9797SPonvri3UYYoy3kYq6WnTF-epEwNHcwN9izgL5cDMG3x-M9sI1IGZVYCDne0DTDmIXjU1mwOuv5J1OBGFow"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent p-space-sm flex flex-col justify-end">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-mono">ATECC608A CRYPTO CORE ACTIVE</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">0x2A MATCH</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">BAMP Biometric Terminal Pro (SN: SN-BAMP-2025-08912)</span>
+</div>
+</div>
+</div>
+<!-- Terminal Execution Actions & Invariant Note -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="space-y-space-xs">
+<button class="w-full flex items-center justify-center gap-space-sm py-2.5 px-space-md bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary-container rounded-lg font-headline-sm text-body-sm font-semibold transition-all shadow-md active:scale-[0.99]" id="mint-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Mint Certificates &amp; Complete Commissioning</span>
+</button>
+<button class="w-full flex items-center justify-center gap-space-sm py-2 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-body-sm text-body-sm transition-colors" id="rerun-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">refresh</span>
+<span>Re-run Hardware Diagnostics</span>
+</button>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">
+<strong class="text-on-surface font-medium">Hardware Invariant:</strong> Once commissioned, terminal root-of-trust identity is permanently bound to Port Harcourt Dock. Re-assignment requires Tier 1 SecOps zeroization protocol.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Client-side micro-interactions for scanner modal & actions
+    const modal = document.getElementById('scan-modal');
+    const openBtn = document.getElementById('open-scan-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
+    const simScanBtn = document.getElementById('simulate-scan-btn');
+    const mintBtn = document.getElementById('mint-btn');
+    const rerunBtn = document.getElementById('rerun-btn');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+      }, 10);
+    }
+
+    function closeModal() {
+      modal.classList.add('opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+
+    if (simScanBtn) {
+      simScanBtn.addEventListener('click', () => {
+        simScanBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> Decrypting Tag...';
+        setTimeout(() => {
+          simScanBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check</span> Scanned TRM-PH-005';
+          setTimeout(() => {
+            closeModal();
+            simScanBtn.innerHTML = 'Simulate Scan Read';
+          }, 800);
+        }, 1000);
+      });
+    }
+
+    if (mintBtn) {
+      mintBtn.addEventListener('click', () => {
+        const originalText = mintBtn.innerHTML;
+        mintBtn.disabled = true;
+        mintBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Cryptographic Key Signing in Progress...';
+        mintBtn.classList.add('opacity-80');
+        
+        setTimeout(() => {
+          mintBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary">task_alt</span> Commissioning Successful // Node Online';
+          mintBtn.classList.remove('bg-primary-container', 'hover:bg-on-primary-fixed-variant');
+          mintBtn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+        }, 2200);
+      });
+    }
+
+    if (rerunBtn) {
+      rerunBtn.addEventListener('click', () => {
+        const icon = rerunBtn.querySelector('.material-symbols-outlined');
+        if (icon) icon.classList.add('animate-spin');
+        setTimeout(() => {
+          if (icon) icon.classList.remove('animate-spin');
+        }, 1200);
+      });
+    }
+  </script>
+</div></main></div></body></html>

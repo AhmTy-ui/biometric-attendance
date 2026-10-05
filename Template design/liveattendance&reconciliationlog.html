@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#2c3039", "on-background": "#dfe2ee", "on-tertiary": "#003824", "on-surface-variant": "#c3c6d7", "inverse-surface": "#dfe2ee", "on-tertiary-fixed-variant": "#005236", "primary-container": "#2563eb", "tertiary-fixed": "#6ffbbe", "tertiary-fixed-dim": "#4edea3", "on-secondary-container": "#002c47", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "surface-container-high": "#262a33", "surface-tint": "#b4c5ff", "on-primary": "#002a78", "on-secondary": "#003351", "surface-variant": "#31353e", "primary": "#b4c5ff", "secondary-container": "#3198dc", "primary-fixed": "#dbe1ff", "surface-container-low": "#181c24", "surface-dim": "#0f131c", "surface": "#0f131c", "error": "#ffb4ab", "secondary-fixed": "#cce5ff", "secondary": "#93ccff", "on-secondary-fixed": "#001d31", "on-error": "#690005", "on-surface": "#dfe2ee", "on-primary-container": "#eeefff", "on-secondary-fixed-variant": "#004b73", "outline": "#8d90a0", "on-error-container": "#ffdad6", "primary-fixed-dim": "#b4c5ff", "surface-container-highest": "#31353e", "tertiary": "#4edea3", "background": "#0f131c", "secondary-fixed-dim": "#93ccff", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#0a0e16", "surface-container": "#1c2028", "error-container": "#93000a", "outline-variant": "#434655", "inverse-primary": "#0053db", "surface-bright": "#353942", "tertiary-container": "#007d55" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1.5rem", "space-md": "0.75rem", "gutter-dense": "0.5rem", "margin-mobile": "1rem", "space-lg": "1.25rem" }, fontFamily: { "label-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-badge": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest"><img alt="BAMP Enterprise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XfD_O6uF0DR5j2vcAF2BkAiLYfzFJDNTkNA591_6oz5G_wJEKDnVtXSd-fm5l_l7upS1pvDJxfigy-FMhivSz_M0cNc1skgBfhH342rQHpClSMakBmRfgAR9SaTQCVRsI42MYGzLmzFoRSzkqU54ErKSKNdGhCJk0DULib0c8oEoQBFlG0hwUI81Xe28A81pBQj27maRu2vfvsYMj7w3E_v5Ud1s5BI_M-BSVYKpFkJ5iadgshN75SaLZX"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">BAMP CORE</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mission Operations</span></div></div><div class="overflow-y-auto flex-1 px-space-sm py-space-sm space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Overview</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">grid_view</span><span>Command Center</span></div><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Attendance</div><a aria-current="page" class="group flex items-center justify-between px-space-sm py-1.5 rounded transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="live-ingestion-stream" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">stream</span><span>Live Ingestion Stream</span></div><span class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-tertiary">LIVE</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="attendance-reconciliation-dlq" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">published_with_changes</span><span>Reconciliation & DLQ</span></div><span class="font-label-sm text-label-sm px-1.5 rounded bg-error-container text-on-error-container">2</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">analytics</span><span>Reports & Analytics</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workforce & Roster</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="employee-sync-directory" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">badge</span><span>Sync Directory</span></div><span class="font-label-sm text-label-sm text-outline">SSOT</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="locations-branches" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">storefront</span><span>Locations & Branches</span></div><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Devices & Hardware</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="device-fleet-registry" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">router</span><span>Device Fleet Registry</span></div><span class="font-label-sm text-label-sm text-tertiary font-label-lg">98.4%</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="firmware-ota-deployments" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">system_update</span><span>Firmware & OTA</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="biometric-enrolment-terminal" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">fingerprint</span><span>Enrolment Terminal</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System & Compliance</div><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integration-web-adapter" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">hub</span><span>Integration Adapter</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="security-audit-trail" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">verified_user</span><span>Security Audit Trail</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="system-settings-rbac" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">tune</span><span>Settings & RBAC</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-tertiary"></span><span>BAMP DAEMON v4.11</span></div><span class="font-label-sm text-label-sm text-outline-variant font-label-lg">SEC-A09</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur border-b border-outline-variant/40 z-40 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-outline-variant/40 rounded"><div class="relative flex items-center justify-center h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-tertiary"></span></div><span class="font-label-sm text-label-sm text-tertiary whitespace-nowrap">MQTT & Dual-Sync Healthy</span><span class="text-outline text-[10px]">|</span><span class="font-label-sm text-label-sm text-outline whitespace-nowrap">P95 4.2s</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-body-sm text-body-sm text-on-surface truncate max-w-[150px]">Apex Holdings - 14 Branches</span><span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span></div></div><div class="flex-1 max-w-xl mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline">search</span><input class="w-full bg-surface-container-low border border-outline-variant/40 rounded h-8 pl-8 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Search terminals, staff ID, sync events, locations..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 font-label-sm text-label-sm bg-surface-container-high text-outline rounded border border-outline-variant/40">/</kbd></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded font-label-sm text-label-sm text-secondary"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span>MQTT TLS: Active (Port 8883)</span></div><div class="flex items-center gap-1 px-2 py-1 bg-surface-container-low border border-outline-variant/40 rounded cursor-pointer hover:border-secondary transition-colors" title="Active Offline Buffers"><span class="material-symbols-outlined text-[16px] text-secondary">cloud_off</span><span class="font-label-sm text-label-sm text-on-surface">3 Buffering</span><span class="font-label-sm text-label-sm text-outline">(428)</span></div><button class="relative p-1.5 rounded bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error-container text-on-error-container font-label-sm text-[9px] font-bold border border-background">2</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/30"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlj8VFrNyEhwKFZarVvarBMnrK0R4ylSyfCRaL6liD53jTEuduW6Kgi5VpGOhKigITegAhjXuv55PIwLnv1ogAf9bVw_H-2MZWU1rwEWb_beYFFbYaZhTrMkEQf61qnuhxeRSSh1DBQOvWUYjEv60Ub-OlrsNZOZje2vgkodC1FWnFQkbigJgwibX60JFozqFRxaDvb8qEc360OuAefMDSjNlhmaKyqow60Bi1-NCgvxIH5_xUVWt7-g"/><span class="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-[10px] text-tertiary">lock</span></span></div><div class="hidden lg:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-body-sm text-body-sm text-on-surface font-semibold max-w-[140px] truncate">Dr. Elena Vance</span><span class="font-label-sm text-[9px] tracking-wider uppercase px-1 py-0.2 bg-primary-container text-on-primary-container rounded font-bold">SYSTEM ADMIN</span></div><span class="font-label-sm text-[10px] text-outline truncate max-w-[170px]">Head of Global SecOps</span></div></div></div></header><div class="fixed top-16 left-72 right-0 h-10 bg-surface-container-low border-b border-outline-variant/30 z-30 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline"><span class="material-symbols-outlined text-[15px]">dns</span><span>BAMP</span><span class="text-outline-variant">/</span></div><div class="flex items-center gap-1.5"><span class="text-outline">Fleet Domain:</span><select class="bg-surface-container border border-outline-variant/40 rounded px-2 py-0.5 font-label-sm text-label-sm text-on-surface focus:outline-none focus:border-primary-container"><option>All Branches (14 Active Locations)</option><option>Lagos Hub Terminal 04</option><option>Abuja HQ - Gate Alpha</option><option>London Ops Centre</option><option>Nairobi Assembly Plant</option></select></div></div><div class="flex items-center gap-space-md shrink-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline font-label-lg"><span class="material-symbols-outlined text-[14px]">schedule</span><span>UTC 14:26:08 | LOCAL +01:00</span></div><div class="flex items-center gap-1.5"><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">sync</span><span>Trigger Roster Sync</span></button><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">bolt</span><span>Flush Buffers</span></button></div></div></div><main class="relative pt-26 bg-background min-h-screen"><div class="flex flex-col w-full px-margin py-space-md space-y-space-md">
+<!-- TOP CONSOLE STATUS & TELEMETRY STREAM BAR -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Ingestion Feed Identification -->
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">stream</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight truncate">Live Attendance Stream & Reconciliation Engine</h1>
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-badge text-label-badge uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+              MQTT Live Stream
+            </span>
+</div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm mt-0.5">
+<span class="font-label-lg text-secondary">topic: bamp/prod/attendance/ingest/#</span>
+<span>•</span>
+<span class="text-on-surface-variant font-label-lg">TLS 1.3 Strict Mutual Auth</span>
+<span>•</span>
+<span class="text-outline">Socket ID: <code class="font-label-lg text-outline">sock_99f2ad0e</code></span>
+</div>
+</div>
+</div>
+<!-- Live Stream Controls -->
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-1 bg-surface-container rounded-lg p-1">
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-md text-label-md flex items-center gap-1.5 transition-colors" id="pauseToggleBtn" onclick="toggleStreamPause()">
+<span class="material-symbols-outlined text-[15px] text-tertiary" id="streamStateIcon">pause_circle</span>
+<span id="streamStateText">Pause Stream</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1.5 transition-colors" id="autoscrollBtn" onclick="toggleAutoscroll()">
+<span class="material-symbols-outlined text-[15px]">vertical_align_bottom</span>
+<span>Auto-Scroll: ON</span>
+</button>
+<button class="px-2 py-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1 transition-colors" id="audioToggleBtn" onclick="toggleAudioChime()" title="Toggle audio chime on ingest">
+<span class="material-symbols-outlined text-[16px]" id="audioIcon">volume_up</span>
+</button>
+</div>
+<div class="h-6 w-px bg-surface-variant/40 mx-1"></div>
+<button class="px-2.5 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="exportData('csv')">
+<span class="material-symbols-outlined text-[16px] text-secondary">download</span>
+<span>Export CSV</span>
+</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="exportData('json')">
+<span class="material-symbols-outlined text-[16px] text-primary">data_object</span>
+<span>JSON</span>
+</button>
+</div>
+</div>
+<!-- FILTER TOOLBAR -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-sm mt-space-md pt-space-md border-t border-surface-variant/30">
+<!-- Branch / Location -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Branch Fleet</label>
+<div class="relative">
+<select class="w-full h-8 bg-surface-container rounded px-2.5 pr-7 font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:bg-surface-container-high">
+<option value="all">All Branches (14 Active)</option>
+<option value="abuja">Abuja Hub HQ (Gate Alpha)</option>
+<option value="lagos">Lagos Terminal 04 (Island)</option>
+<option value="london">London Ops Centre (Floor 3)</option>
+<option value="nairobi">Nairobi Assembly Plant</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Direction -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Direction</label>
+<div class="relative">
+<select class="w-full h-8 bg-surface-container rounded px-2.5 pr-7 font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:bg-surface-container-high">
+<option value="all">Any Direction</option>
+<option value="in">Clock In (Shift Open)</option>
+<option value="out">Clock Out (Shift Close)</option>
+<option value="break">Break Departure / Return</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Web Delivery Status -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Upstream Sync State</label>
+<div class="relative">
+<select class="w-full h-8 bg-surface-container rounded px-2.5 pr-7 font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:bg-surface-container-high">
+<option value="all">All Sync States</option>
+<option value="delivered">Delivered (ACK 200)</option>
+<option value="dlq">DLQ Rejected / Backoff (4)</option>
+<option value="buffered">Buffered Offline Recovery</option>
+<option value="idempotent">Duplicate Suppressed (60s Safe)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Biometric Match Threshold Slider -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Match Threshold</label>
+<span class="font-label-lg text-label-sm text-secondary font-semibold" id="thresholdValue">>= 95.0%</span>
+</div>
+<div class="flex items-center gap-2 h-8">
+<input class="w-full accent-primary-container h-1 bg-surface-container rounded cursor-pointer" id="thresholdSlider" max="100" min="80" oninput="updateThreshold(this.value)" step="0.5" type="range" value="95"/>
+</div>
+</div>
+<!-- Channel Source -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Transport Source</label>
+<div class="relative">
+<select class="w-full h-8 bg-surface-container rounded px-2.5 pr-7 font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:bg-surface-container-high">
+<option value="all">All Transports</option>
+<option value="mqtt">MQTT TLS (Port 8883 Real-Time)</option>
+<option value="https">HTTPS Batch Back-Flush</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Quick Action Filters -->
+<div class="flex flex-col justify-end gap-1">
+<button class="w-full h-8 px-2.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" onclick="resetFilters()">
+<span class="material-symbols-outlined text-[15px]">filter_alt_off</span>
+<span>Reset View Filters</span>
+</button>
+</div>
+</div>
+</section>
+<!-- HIGH-IMPACT METRICS TELEMETRY STRIP -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Ingestion Velocity -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Ingestion Velocity</span>
+<span class="p-1 rounded bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 my-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">142</span>
+<span class="font-label-lg text-label-md text-outline">scans / min</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="text-tertiary flex items-center gap-0.5 font-label-lg">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span> +14.8% vs normal
+        </span>
+<!-- Inline SVG Sparkline -->
+<svg class="w-20 h-5 text-tertiary overflow-visible" fill="none" viewbox="0 0 80 20">
+<path d="M0,15 L12,12 L24,14 L36,8 L48,11 L60,4 L72,7 L80,2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 2: Average Delivery Latency -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Delivery Latency</span>
+<span class="p-1 rounded bg-tertiary-container/30 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 my-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">1.42</span>
+<span class="font-label-lg text-label-md text-outline">seconds</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="text-tertiary font-label-lg">P95: 3.8s (SLO <10s)</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary font-label-badge text-[10px]">Optimal</span>
+</div>
+</div>
+<!-- Metric 3: Real-Time Biometric Quality -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Biometric Quality</span>
+<span class="p-1 rounded bg-primary-container/20 text-primary">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 my-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">99.2%</span>
+<span class="font-label-lg text-label-md text-outline">mean score</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="text-secondary font-label-lg">FAR 0.0001% • FRR 0.12%</span>
+<span class="text-on-surface font-label-lg">3,912 Validated</span>
+</div>
+</div>
+<!-- Metric 4: Dead Letter Queue (DLQ) -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container transition-colors cursor-pointer" onclick="scrollToDLQ()">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-semibold">Dead Letter Queue</span>
+<span class="p-1 rounded bg-error-container text-on-error-container animate-pulse">
+<span class="material-symbols-outlined text-[18px]">error</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 my-2">
+<span class="font-headline-xl text-headline-xl text-error font-semibold tracking-tight">4</span>
+<span class="font-label-lg text-label-md text-error/80">events blocked</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="text-error font-label-lg">Action Required</span>
+<span class="underline text-on-surface hover:text-primary font-label-sm text-label-sm">Inspect Queue →</span>
+</div>
+</div>
+</section>
+<!-- MASTER-DETAIL VIEW: LIVE LOG FEED + INSPECTOR SLIDEOUT / SIDE PANEL -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- LEFT / MAIN: REAL-TIME STREAM TABLE (8 COLS) -->
+<div class="xl:col-span-8 flex flex-col bg-surface-container-low rounded-xl shadow-md overflow-hidden">
+<!-- Table Header Bar -->
+<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ingested Punch Events</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg text-label-sm">Real-time buffer (Last 50)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span>Sync Engine Auto-Reconciling</span>
+</div>
+</div>
+</div>
+<!-- High-Density Telemetry Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider select-none">
+<th class="py-2.5 px-space-md">Event ID & Time</th>
+<th class="py-2.5 px-space-md">Staff Identity</th>
+<th class="py-2.5 px-space-md">Terminal & Branch</th>
+<th class="py-2.5 px-space-md">Flow & Score</th>
+<th class="py-2.5 px-space-md">Ingest Path</th>
+<th class="py-2.5 px-space-md">Delivery ACK</th>
+<th class="py-2.5 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant/20" id="telemetryFeedBody">
+<!-- Row 1: Normal Ingested Clock In -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group bg-surface-container-low" onclick="selectEvent('evt_7e21fa-1102')">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-sm text-primary font-semibold">evt_7e21fa-1102</span>
+<button class="text-outline hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); copyText('evt_7e21fa-1102')" title="Copy UUID">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+<div class="font-label-lg text-label-sm text-outline">14:26:01.884 UTC <span class="text-on-surface-variant/60">(+01:00)</span></div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Corporate headshot portrait of an African male logistics manager wearing an ID badge and dark navy corporate polo shirt against a slate architectural studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA39aZJkx6VtdMvi_7UrgnuVrK51H8onNAYadTIcA8Qv7YJiF08VxLuvdS5vkLpq5qKqkrde3XC17xk288Y0YHSvJRpxcKv1QoPPQ2w96-bTgT7BWbumZd5t4zuwuB_au63JlMT-aQlBwt-X-i2bhj6SQPR_GhL7ySZ_Z0_gyn1MVpL3bKEH74jcZlUM10bk16CiT741lQzvoEu0mJ6VIMuLkuhThojL4JJjyc5h7EsGMBQpLwMmgJ_Iw"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold text-body-sm leading-tight">Oluwaseun Adeyemi</span>
+<span class="font-label-lg text-[10px] text-outline">ID: APX-4891 • Warehouse Ops</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="text-on-surface font-medium">Terminal 04</div>
+<div class="text-outline font-label-sm text-label-sm">Abuja Hub • Gate Alpha</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-badge text-label-badge uppercase">CLOCK IN</span>
+</div>
+<div class="font-label-lg text-label-sm text-on-surface-variant mt-0.5">
+<span class="text-tertiary font-semibold">99.7%</span> • Finger #1 R-Index
+                </div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+<span>MQTT TLS :8883</span>
+</div>
+<div class="text-outline font-label-lg text-[10px]">Edge QOS 1 • Latency 42ms</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-badge text-label-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Delivered (ACK 200)
+                </span>
+<div class="text-outline font-label-lg text-[10px] mt-0.5">Web Ref: #SYNC-98841</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-right">
+<button class="p-1 rounded hover:bg-surface-bright text-outline hover:text-on-surface transition-colors" onclick="event.stopPropagation(); selectEvent('evt_7e21fa-1102')" title="Inspect Telemetry">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: FLUSHED FROM OFFLINE BUFFER (Distinctive Amber Badge, FR-4.2 compliance) -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group bg-surface-container/30" onclick="selectEvent('evt_88cf91-0428')">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-sm text-primary font-semibold">evt_88cf91-0428</span>
+<button class="text-outline hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); copyText('evt_88cf91-0428')">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+<div class="font-label-lg text-label-sm text-outline">13:43:44.102 UTC</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Professional studio portrait of an Asian female biomedical engineer wearing a cleanroom uniform and identification lanyard with crisp overhead directional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPnMOX1NacL4C8eDvg0IvInxQpLvDnQjmfE4QsEfo6RZfKvf0yLFhyXI0U0oZMlLsGX0Ok8YGs97SoQGyf7C0LMrNs1v3p68_OwvXEnWCo8h5bTnBlGtT9qRngZsyFg6nPfOu8IMwhWxmBijuGdGbe8ckaW8kaPvTujQZVntR5lTCypuxl1oAMohFEw3qcswwLtdPglv9XNffFQlWYHlwU9mzqDojFllPXZUdlCXF1D7H8SmFtZ7eElQ"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold text-body-sm leading-tight">Sarah Chen</span>
+<span class="font-label-lg text-[10px] text-outline">ID: APX-1049 • Quality Assurance</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="text-on-surface font-medium">Terminal 02</div>
+<div class="text-outline font-label-sm text-label-sm">Lagos Terminal • Main Turnstile</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge uppercase">CLOCK OUT</span>
+</div>
+<div class="font-label-lg text-label-sm text-on-surface-variant mt-0.5">
+<span class="text-secondary font-semibold">98.9%</span> • Finger #2 R-Thumb
+                </div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1 text-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">cloud_sync</span>
+<span>HTTPS Batch Flush</span>
+</div>
+<div class="text-outline font-label-lg text-[10px]">Oldest-First FIFO Ingestion</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<!-- Visual Offline Buffer Tagging Badge -->
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+                    Buffered Offline: 42m 18s
+                  </span>
+<span class="text-[10px] font-label-lg text-outline">Flushed at 14:26:02 (FR-4.2)</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-right">
+<button class="p-1 rounded hover:bg-surface-bright text-outline hover:text-on-surface transition-colors" onclick="event.stopPropagation(); selectEvent('evt_88cf91-0428')">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: DLQ FAILURE EVENT -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group bg-error-container/10" onclick="selectEvent('evt_9a482b-8841')">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-sm text-error font-semibold">evt_9a482b-8841</span>
+<button class="text-outline hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); copyText('evt_9a482b-8841')">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+<div class="font-label-lg text-label-sm text-error/80">14:25:29.041 UTC</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait photo of an African American male facility manager in high-vis safety jacket and dark hard hat under direct industrial daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABTf2qAYi0EVi-dd9Wj59yts59pbOa57bikb8qrw5q_Kao9_W-whl9Ph0fHwuv5vNVTLZ1AsWMUmoefqt54H8c5EZ35T61jksNC-sCRaA4TW6AtpwIH9v1UWVb_s25schUGcPDbf4n4CrEAPCfgrA-cNcFsjAFLYlC3_zvRuVc6JqhJJGvr0QW2JLvloQm5Bch8W5LNHbiSUnValw2meoaUhYdV2bMrKmpjFEvwVycrxX18AHd3MDmpA"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold text-body-sm leading-tight">Marcus Danladi</span>
+<span class="font-label-lg text-[10px] text-outline">ID: APX-9002 • Maintenance Eng</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="text-on-surface font-medium">Terminal 01</div>
+<div class="text-outline font-label-sm text-label-sm">London Ops • Loading Dock C</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-badge text-label-badge uppercase">CLOCK IN</span>
+</div>
+<div class="font-label-lg text-label-sm text-on-surface-variant mt-0.5">
+<span class="text-tertiary font-semibold">99.1%</span> • Finger #1 R-Index
+                </div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+<span>MQTT TLS :8883</span>
+</div>
+<div class="text-outline font-label-lg text-[10px]">QoS 1 Acked by Broker</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                    DLQ: Retry (3/5)
+                  </span>
+<span class="text-[10px] font-label-lg text-error">HTTP 504 Gateway Timeout</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-error-container text-on-error-container hover:bg-error font-label-sm text-label-sm font-semibold transition-colors" onclick="event.stopPropagation(); triggerReplay('evt_9a482b-8841')">
+                    Re-Push
+                  </button>
+<button class="p-1 rounded hover:bg-surface-bright text-outline hover:text-on-surface transition-colors" onclick="event.stopPropagation(); selectEvent('evt_9a482b-8841')">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: IDEMPOTENCY SUPPRESSION ROW -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group bg-surface-container-low" onclick="selectEvent('evt_4b8801-6672')">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-sm text-outline font-semibold">evt_4b8801-6672</span>
+<button class="text-outline hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); copyText('evt_4b8801-6672')">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+<div class="font-label-lg text-label-sm text-outline">14:25:12.771 UTC</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Headshot of a middle-aged Hispanic male senior enterprise architect dressed in a charcoal blazer in an illuminated corporate data center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdWLuczy1ymydjn7Nt8XRx5HXnC714hr_-H5L8Dv9B6Cwa4CQUoX8glg9M-W1t6vfL9o02JsYq83OUup4-9Du0Zm5G-CwewnuqNqibBBVSl-Tp3Xpwlmdb0a7nwOL4GdICy-nwPLbP_Ih28yMENMs1AkP2oz-LYNrsJSFqnonIwlN7WUlGXUQ3l86xvUVuNOCX7bHXHG8NEczGVHhuTXQe74lW87xRQl84Lcu8SkEThpFAOMtdAYV51w"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold text-body-sm leading-tight">Mateo Silva</span>
+<span class="font-label-lg text-[10px] text-outline">ID: APX-7119 • Cloud Infrastructure</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="text-on-surface font-medium">Terminal 04</div>
+<div class="text-outline font-label-sm text-label-sm">Abuja Hub • Gate Alpha</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-badge text-label-badge uppercase">CLOCK IN</span>
+</div>
+<div class="font-label-lg text-label-sm text-on-surface-variant mt-0.5">
+<span class="text-tertiary font-semibold">99.5%</span> • Finger #1 R-Index
+                </div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+<span>MQTT TLS :8883</span>
+</div>
+<div class="text-outline font-label-lg text-[10px]">Rapid Double Tap (<60s)</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified</span>
+                  Duplicate Dropped (Idempotent OK)
+                </span>
+<div class="text-outline font-label-lg text-[10px] mt-0.5">Hash match with evt_7e21fa</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-right">
+<button class="p-1 rounded hover:bg-surface-bright text-outline hover:text-on-surface transition-colors" onclick="event.stopPropagation(); selectEvent('evt_4b8801-6672')">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Normal Clock Out Event -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group bg-surface-container-low" onclick="selectEvent('evt_3d5512-9018')">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-sm text-primary font-semibold">evt_3d5512-9018</span>
+<button class="text-outline hover:text-on-surface opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); copyText('evt_3d5512-9018')">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+</button>
+</div>
+<div class="font-label-lg text-label-sm text-outline">14:24:59.319 UTC</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of a young European woman with glasses and styled hair wearing dark tech firm business casual clothing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnP_EzoFW0v8QCklbWLNjRfyXwDVPlPfVttBCsGcFpNy9CJrypZPdjw9A3VncHLCPTXHO7jmCIUwDo2j8mkL4plgamURX6Ti5QuqjkzuxAwun4MpyeEazyVjv6ILpGtXggJlN6_BUaHzPfCDLVGBSCAUx8HCxFIFoU3I0gTIZgcvoQw07aAofgAm0NjAQ74ZYIcMnowOFCSySK_HfaROQZopoE2_XU1_EjanE8GNa_Cey3xQxG4Jtknw"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold text-body-sm leading-tight">Clara Brandt</span>
+<span class="font-label-lg text-[10px] text-outline">ID: APX-5321 • Finance Control</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="text-on-surface font-medium">Terminal 07</div>
+<div class="text-outline font-label-sm text-label-sm">Nairobi Plant • Gate South</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge uppercase">CLOCK OUT</span>
+</div>
+<div class="font-label-lg text-label-sm text-on-surface-variant mt-0.5">
+<span class="text-tertiary font-semibold">99.4%</span> • Finger #1 R-Index
+                </div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+<span>MQTT TLS :8883</span>
+</div>
+<div class="text-outline font-label-lg text-[10px]">Edge Latency: 38ms</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-badge text-label-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Delivered (ACK 200)
+                </span>
+<div class="text-outline font-label-lg text-[10px] mt-0.5">Web Ref: #SYNC-98839</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-right">
+<button class="p-1 rounded hover:bg-surface-bright text-outline hover:text-on-surface transition-colors" onclick="event.stopPropagation(); selectEvent('evt_3d5512-9018')">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Live Stream Telemetry Ticker Bottom -->
+<div class="px-space-md py-2 bg-surface-container-lowest flex items-center justify-between text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Showing 5 of 4,118 today's records</span>
+</div>
+<div class="flex items-center gap-3">
+<span>MQTT Ingestion Buffer: <strong class="text-on-surface font-label-lg">4% utilized</strong></span>
+<span>•</span>
+<span>Zero packet drops in past 24h</span>
+</div>
+</div>
+</div>
+<!-- RIGHT: SPLIT-VIEW EVENT INSPECTOR & RECONCILIATION DETAIL (4 COLS) -->
+<div class="xl:col-span-4 flex flex-col space-y-space-md">
+<!-- INSPECTOR CARD -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">manage_search</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Event Telemetry Inspector</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge" id="inspectorBadge">
+            REALTIME PARSED
+          </span>
+</div>
+<!-- Biometric Match Comparison Tile (Dual-Photo & Quality Bar) -->
+<div class="bg-surface-container rounded-lg p-space-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Dual Biometric Match Verification</span>
+<span class="font-label-lg text-label-sm text-tertiary font-bold" id="inspectorScore">99.7% SIMILARITY</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<!-- Edge Hardware Snapshot -->
+<div class="relative rounded overflow-hidden bg-surface-container-lowest aspect-square flex flex-col justify-end p-2 group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-300" data-alt="High-resolution security infrared terminal capture showing an African male worker face angled toward an edge sensor with biometric vector overlay lines." id="inspectorEdgeImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpKqVXgnxVirl8Tmp_VXjFaJNZjDuhZ21PAh8pRi9oKZYsMX66SjkGZ0-qd3J7zpV3Kwc7mgzUCKsO8TST-O_j8rzRKvawgKvpST_VacR44Xw0ZV-0GdPvzx7OCLJLKOX09ISZ0huvG6vmYZon1Qc1Wfp7tceQ6zIQ8fW1orTZBLVZ-INIysiFL9KHFADmBYGOaVTLvung-cYMCa6jYl9P7P7MGjFN0ymn6etBtyA1TfMInJm9vDBaOw"/>
+<div class="relative z-10 bg-surface-container-lowest/80 backdrop-blur px-1.5 py-0.5 rounded text-[10px] font-label-sm text-on-surface flex items-center justify-between">
+<span>Edge Frame</span>
+<span class="text-tertiary font-label-lg">0.04s</span>
+</div>
+</div>
+<!-- Master Enrolled Template -->
+<div class="relative rounded overflow-hidden bg-surface-container-lowest aspect-square flex flex-col justify-end p-2 group">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Official HR biometric enrolment template photo of an African male corporate staff member with neutral lighting and clean identification profile." id="inspectorMasterImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCCOVoVLVluugsrV6w1uCcJfexxPDUolv___jY1Aj75vW23asVuKclP91ErYoxMybuc_63LDmvSIALkCrm7A1PeDJL59iBii6ljwIQRucs8oZPO3FREcI2reaLV-pWUOtsY5IXd8sB2qCxCIBRG49oqOfmicLf9UmWqjQRI06ntipLOGIu3aFVfzHcO78CV8bqyQM3_wTtq-_jqFnNYFdXgCy6kmqDupfLk8BKDsqMZQwJijE4-pRpoQ"/>
+<div class="relative z-10 bg-surface-container-lowest/80 backdrop-blur px-1.5 py-0.5 rounded text-[10px] font-label-sm text-on-surface flex items-center justify-between">
+<span>Enrolled Template</span>
+<span class="text-secondary font-label-lg">SSOT #01</span>
+</div>
+</div>
+</div>
+<!-- Segmented Biometric Quality Score Bar -->
+<div class="space-y-1 pt-1">
+<div class="flex justify-between text-outline font-label-sm text-label-sm">
+<span>Biometric Vector Match</span>
+<span class="text-on-surface font-label-lg">Min threshold: 95.0%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-lowest rounded-full overflow-hidden flex gap-0.5 p-0.5">
+<div class="h-full bg-tertiary rounded-full" style="width: 99.7%"></div>
+</div>
+</div>
+</div>
+<!-- Telemetry Metadata List -->
+<div class="space-y-2 font-label-sm text-label-sm">
+<div class="flex items-center justify-between py-1 border-b border-surface-variant/30">
+<span class="text-outline">Event UUID:</span>
+<span class="font-label-lg text-primary select-all" id="inspectorUuid">evt_7e21fa-1102</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-surface-variant/30">
+<span class="text-outline">Staff Name & No:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium" id="inspectorStaff">Oluwaseun Adeyemi (APX-4891)</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-surface-variant/30">
+<span class="text-outline">Terminal ID:</span>
+<span class="font-label-lg text-on-surface" id="inspectorTerminal">BAMP-TERM-04 [MAC: 7C:2F:80:1B:32:0A]</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-surface-variant/30">
+<span class="text-outline">Biometric Modality:</span>
+<span class="font-label-lg text-secondary" id="inspectorModality">Fingerprint Optical (FVC2006 Compliant)</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-surface-variant/30">
+<span class="text-outline">Anti-Spoof Liveness:</span>
+<span class="font-label-lg text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>
+              Passed (99.88% Genuine Liveness)
+            </span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-outline">SHA-256 Ledger Hash:</span>
+<span class="font-label-lg text-outline truncate max-w-[180px]" title="e43f11bc02998a67dfc891">e43f11bc02998a67dfc8...</span>
+</div>
+</div>
+<!-- Raw Ingestion JSON Payload Drawer Preview -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Edge Webhook Raw Payload</span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1" onclick="copyRawJson()">
+<span class="material-symbols-outlined text-[12px]">content_copy</span> Copy JSON
+            </button>
+</div>
+<pre class="w-full bg-surface-container-lowest p-space-sm rounded font-label-lg text-[11px] leading-tight text-on-surface-variant overflow-x-auto max-h-36 selection:bg-primary-container selection:text-white" id="inspectorJsonPayload">{
+  "event_id": "evt_7e21fa-1102",
+  "direction": "CLOCK_IN",
+  "employee_ssot_id": "EMP_APX_4891",
+  "terminal_hw_id": "HW_TERM_04",
+  "confidence_score": 0.9972,
+  "liveness_verified": true,
+  "offline_buffered": false,
+  "timestamp_edge_iso": "2025-05-18T14:26:01.884Z",
+  "sync_ack_id": "ACK_200_WEBHOOK_98841"
+}</pre>
+</div>
+<!-- Fast Actions for Active Selection -->
+<div class="grid grid-cols-2 gap-2 pt-space-xs">
+<button class="px-3 py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" onclick="triggerImmediateRepush()">
+<span class="material-symbols-outlined text-[15px] text-secondary">sync</span>
+<span>Force Web Re-push</span>
+</button>
+<button class="px-3 py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" onclick="overrideFlag()">
+<span class="material-symbols-outlined text-[15px] text-primary">flag</span>
+<span>Flag for Audit</span>
+</button>
+</div>
+</div>
+<!-- IDEMPOTENCY GUARANTEE VISUALIZER CARD (PRD Sec 5 Idempotency Requirement) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md space-y-space-sm border-l-4 border-l-secondary">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">60s Idempotency Shield</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-badge text-label-badge uppercase">ACTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Guarantees that double-taps or rapid successive scans within a 60-second window acknowledge the user at the terminal hardware while silently deduplicating downstream webhook pushes to avoid payroll inflation.
+        </p>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-outline">
+<span>Suppressed Today: <strong class="text-on-surface font-label-lg">38 duplicates</strong></span>
+<span>Zero downstream pollution</span>
+</div>
+</div>
+</div>
+</section>
+<!-- EMBEDDED DLQ & FAILED DELIVERY RESOLUTION DRAWER / PANEL (PRD FR-1.4 & Section 6) -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-lg space-y-space-md" id="dlqSection">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-surface-variant/30">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Dead Letter Queue (DLQ) & Upstream Webhook Errors</h2>
+<span class="px-2 py-0.2 rounded-full bg-error-container text-on-error-container font-label-badge text-label-badge font-bold">4 Blocked Pushes</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Events safely recorded on edge broker but rejected or timed-out during upstream web software synchronization (FR-1.4).</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-primary-container hover:bg-inverse-primary text-on-primary-container font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-sm" onclick="retryAllDLQ()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Batch Replay All DLQ (4)</span>
+</button>
+</div>
+</div>
+<!-- Active DLQ Failure Item Details -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md bg-surface-container rounded-lg p-space-md">
+<!-- Left Error Summary -->
+<div class="lg:col-span-8 space-y-space-sm">
+<div class="flex items-center gap-3">
+<span class="font-label-lg text-label-lg text-error font-semibold">evt_9a482b-8841</span>
+<span class="px-2 py-0.5 rounded bg-error-container/30 text-error font-label-badge text-label-badge">HTTP 504 Gateway Timeout</span>
+<span class="text-outline font-label-sm text-label-sm">Endpoint: <code class="font-label-lg text-on-surface">/api/v2/attendance/webhook</code></span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2 py-1 font-label-sm text-label-sm">
+<div class="bg-surface-container-lowest p-2 rounded">
+<span class="text-outline block">Target Web Software:</span>
+<span class="font-medium text-on-surface">SAP SuccessFactors Connector</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded">
+<span class="text-outline block">Retry Strategy:</span>
+<span class="font-medium text-secondary">Exponential Backoff (Attempt 3/5)</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded">
+<span class="text-outline block">Next Scheduled Attempt:</span>
+<span class="font-label-lg text-tertiary">In 32 seconds (14:27:14 UTC)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded font-label-lg text-label-sm text-error/90 border-l-2 border-l-error">
+<span class="text-outline font-bold">UPSTREAM REASON:</span> upstream connection timeout after 5000ms. Remote service failed to return HTTP 200 within acceptable threshold window. Idempotent key: <code class="text-on-surface">idemp_9a482b8841c30</code>.
+        </div>
+</div>
+<!-- Right Action Controls -->
+<div class="lg:col-span-4 flex flex-col justify-between gap-space-sm bg-surface-container-low p-space-sm rounded">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold block mb-1">Administrative Actions</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manual bypass or re-dispatch will update upstream payroll without recreating terminal edge transactions.</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full py-2 px-3 rounded bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-inverse-primary transition-colors" onclick="triggerImmediateRepush('evt_9a482b-8841')">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Force Immediate Retry Now</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-1.5 px-2 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors" onclick="editPayloadModal('evt_9a482b-8841')">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span>Edit Payload</span>
+</button>
+<button class="py-1.5 px-2 rounded bg-error/15 text-error hover:bg-error hover:text-on-error font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors" onclick="discardDlqEvent('evt_9a482b-8841')">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+<span>Discard to DLQ Archive</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MODAL: PAYLOAD INSPECTION / EDIT DIALOG (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-background/80 backdrop-blur flex items-center justify-center p-gutter hidden" id="payloadModal">
+<div class="w-full max-w-2xl bg-surface-container-low rounded-xl shadow-2xl overflow-hidden flex flex-col">
+<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">code</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Edit Upstream Webhook Reference Payload</span>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded" onclick="closePayloadModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md space-y-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Adjust the outgoing Webhook URL or modify reference header mappings for Event <code class="font-label-lg text-primary" id="modalEventId">evt_9a482b-8841</code>.
+        </p>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Target Webhook URL</label>
+<input class="w-full h-9 bg-surface-container rounded px-3 font-label-lg text-label-sm text-on-surface focus:outline-none focus:bg-surface-container-high" id="modalWebhookUrl" type="text" value="https://api.workforce.apexholdings.internal/api/v2/attendance/webhook"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">JSON Body</label>
+<textarea class="w-full bg-surface-container rounded p-space-sm font-label-lg text-[11px] text-on-surface focus:outline-none focus:bg-surface-container-high leading-relaxed select-all" id="modalJsonBody" rows="7">{
+  "event_id": "evt_9a482b-8841",
+  "direction": "CLOCK_IN",
+  "employee_ssot_id": "EMP_APX_9002",
+  "terminal_hw_id": "HW_TERM_01",
+  "confidence_score": 0.9912,
+  "liveness_verified": true,
+  "retry_count": 3,
+  "timestamp_edge_iso": "2025-05-18T14:25:29.041Z"
+}</textarea>
+</div>
+</div>
+<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors" onclick="closePayloadModal()">
+          Cancel
+        </button>
+<button class="px-3 py-1.5 rounded bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-inverse-primary transition-colors flex items-center gap-1.5" onclick="saveAndReplay()">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Save & Re-dispatch</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TOAST FEEDBACK NOTIFICATION CONTAINER -->
+<div class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<div class="bg-surface-container-high border-l-4 border-l-tertiary px-4 py-2.5 rounded-lg shadow-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px]" id="toastIcon">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface" id="toastMessage">Action completed successfully</span>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE SCRIPTS & LOG STREAM HANDLER -->
+<script>
+  let isStreamPaused = false;
+  let isAutoScrollOn = true;
+  let isAudioChimeOn = true;
+
+  // Stream Pause / Resume Toggle
+  function toggleStreamPause() {
+    isStreamPaused = !isStreamPaused;
+    const btnText = document.getElementById('streamStateText');
+    const icon = document.getElementById('streamStateIcon');
+    if (isStreamPaused) {
+      btnText.innerText = 'Resume Stream';
+      icon.innerText = 'play_arrow';
+      icon.classList.remove('text-tertiary');
+      icon.classList.add('text-secondary');
+      showToast('Live MQTT ingestion stream paused by operator.', 'pause');
+    } else {
+      btnText.innerText = 'Pause Stream';
+      icon.innerText = 'pause_circle';
+      icon.classList.add('text-tertiary');
+      icon.classList.remove('text-secondary');
+      showToast('Live MQTT stream re-engaged.', 'play_circle');
+    }
+  }
+
+  // Auto-scroll toggle
+  function toggleAutoscroll() {
+    isAutoScrollOn = !isAutoScrollOn;
+    const btn = document.getElementById('autoscrollBtn');
+    if (isAutoScrollOn) {
+      btn.className = 'px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1.5 transition-colors';
+      btn.innerHTML = '<span class="material-symbols-outlined text-[15px]">vertical_align_bottom</span><span>Auto-Scroll: ON</span>';
+      showToast('Auto-scroll pinned to live head.', 'vertical_align_bottom');
+    } else {
+      btn.className = 'px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 transition-colors';
+      btn.innerHTML = '<span class="material-symbols-outlined text-[15px]">pan_tool</span><span>Auto-Scroll: OFF</span>';
+      showToast('Auto-scroll unpinned.', 'pan_tool');
+    }
+  }
+
+  // Audio indicator toggle
+  function toggleAudioChime() {
+    isAudioChimeOn = !isAudioChimeOn;
+    const icon = document.getElementById('audioIcon');
+    if (isAudioChimeOn) {
+      icon.innerText = 'volume_up';
+      icon.classList.remove('text-outline');
+      showToast('Biometric ingest audio chimes enabled.', 'volume_up');
+    } else {
+      icon.innerText = 'volume_off';
+      icon.classList.add('text-outline');
+      showToast('Audio chimes silenced.', 'volume_off');
+    }
+  }
+
+  // Update threshold slider readout
+  function updateThreshold(val) {
+    document.getElementById('thresholdValue').innerText = '>= ' + parseFloat(val).toFixed(1) + '%';
+  }
+
+  // Reset Filters
+  function resetFilters() {
+    document.getElementById('thresholdSlider').value = 95;
+    updateThreshold(95);
+    showToast('Telemetry stream filters restored to default.', 'filter_alt_off');
+  }
+
+  // Copy UUID
+  function copyText(val) {
+    navigator.clipboard?.writeText(val);
+    showToast('Copied: ' + val, 'content_copy');
+  }
+
+  // Copy Raw JSON from Inspector
+  function copyRawJson() {
+    const raw = document.getElementById('inspectorJsonPayload').innerText;
+    navigator.clipboard?.writeText(raw);
+    showToast('Edge JSON payload copied to clipboard.', 'content_copy');
+  }
+
+  // Select Event into Inspector
+  function selectEvent(eventId) {
+    document.getElementById('inspectorUuid').innerText = eventId;
+    
+    if (eventId === 'evt_88cf91-0428') {
+      document.getElementById('inspectorStaff').innerText = 'Sarah Chen (APX-1049)';
+      document.getElementById('inspectorTerminal').innerText = 'BAMP-TERM-02 [MAC: 34:B7:DA:90:11:42]';
+      document.getElementById('inspectorScore').innerText = '98.9% SIMILARITY';
+      document.getElementById('inspectorBadge').innerText = 'BUFFERED FLUSH';
+      document.getElementById('inspectorModality').innerText = 'Optical Fingerprint #2 (Right Thumb)';
+      document.getElementById('inspectorJsonPayload').innerText = JSON.stringify({
+        event_id: "evt_88cf91-0428",
+        direction: "CLOCK_OUT",
+        employee_ssot_id: "EMP_APX_1049",
+        terminal_hw_id: "HW_TERM_02",
+        confidence_score: 0.9891,
+        offline_buffer_seconds: 2538,
+        flush_protocol: "HTTPS_BATCH_FIFO",
+        timestamp_edge_iso: "2025-05-18T13:43:44.102Z"
+      }, null, 2);
+    } else if (eventId === 'evt_9a482b-8841') {
+      document.getElementById('inspectorStaff').innerText = 'Marcus Danladi (APX-9002)';
+      document.getElementById('inspectorTerminal').innerText = 'BAMP-TERM-01 [MAC: A4:83:E7:22:98:50]';
+      document.getElementById('inspectorScore').innerText = '99.1% SIMILARITY';
+      document.getElementById('inspectorBadge').innerText = 'DLQ BLOCKED';
+      document.getElementById('inspectorModality').innerText = 'Biometric Fingerprint #1 (Right Index)';
+      document.getElementById('inspectorJsonPayload').innerText = JSON.stringify({
+        event_id: "evt_9a482b-8841",
+        direction: "CLOCK_IN",
+        employee_ssot_id: "EMP_APX_9002",
+        terminal_hw_id: "HW_TERM_01",
+        confidence_score: 0.9912,
+        sync_state: "DLQ_BACKOFF_RETRYING",
+        upstream_http_status: 504,
+        timestamp_edge_iso: "2025-05-18T14:25:29.041Z"
+      }, null, 2);
+    } else {
+      document.getElementById('inspectorStaff').innerText = 'Oluwaseun Adeyemi (APX-4891)';
+      document.getElementById('inspectorTerminal').innerText = 'BAMP-TERM-04 [MAC: 7C:2F:80:1B:32:0A]';
+      document.getElementById('inspectorScore').innerText = '99.7% SIMILARITY';
+      document.getElementById('inspectorBadge').innerText = 'REALTIME PARSED';
+      document.getElementById('inspectorModality').innerText = 'Fingerprint Optical (FVC2006 Compliant)';
+      document.getElementById('inspectorJsonPayload').innerText = JSON.stringify({
+        event_id: eventId,
+        direction: "CLOCK_IN",
+        employee_ssot_id: "EMP_APX_4891",
+        terminal_hw_id: "HW_TERM_04",
+        confidence_score: 0.9972,
+        liveness_verified: true,
+        offline_buffered: false,
+        timestamp_edge_iso: "2025-05-18T14:26:01.884Z"
+      }, null, 2);
+    }
+
+    showToast('Loaded telemetry for ' + eventId, 'manage_search');
+  }
+
+  // Trigger Re-push to Upstream Web Software
+  function triggerImmediateRepush(eventId = 'evt_7e21fa-1102') {
+    showToast('Re-dispatching event ' + eventId + ' to upstream webhook...', 'sync');
+    setTimeout(() => {
+      showToast('Upstream ACK 200 Received for ' + eventId, 'check_circle');
+    }, 900);
+  }
+
+  function triggerReplay(eventId) {
+    showToast('Triggering exponential backoff bypass for ' + eventId, 'bolt');
+  }
+
+  function retryAllDLQ() {
+    showToast('Batch replay dispatched: 4 DLQ events re-enqueued for delivery.', 'restart_alt');
+  }
+
+  function scrollToDLQ() {
+    const el = document.getElementById('dlqSection');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function overrideFlag() {
+    showToast('Event flagged for SecOps biometric audit verification.', 'flag');
+  }
+
+  // Modal Handlers
+  function editPayloadModal(eventId) {
+    document.getElementById('modalEventId').innerText = eventId;
+    document.getElementById('payloadModal').classList.remove('hidden');
+  }
+
+  function closePayloadModal() {
+    document.getElementById('payloadModal').classList.add('hidden');
+  }
+
+  function saveAndReplay() {
+    closePayloadModal();
+    showToast('Updated payload saved & re-dispatched to webhook.', 'published_with_changes');
+  }
+
+  function discardDlqEvent(eventId) {
+    showToast('Event ' + eventId + ' discarded to archive with audit note.', 'delete');
+  }
+
+  // Export Trigger
+  function exportData(type) {
+    showToast('Generating ' + type.toUpperCase() + ' telemetry export bundle...', 'download');
+  }
+
+  // Toast System
+  function showToast(msg, iconName = 'check_circle') {
+    const toast = document.getElementById('toastNotification');
+    const msgEl = document.getElementById('toastMessage');
+    const iconEl = document.getElementById('toastIcon');
+    if (!toast || !msgEl) return;
+    
+    msgEl.innerText = msg;
+    iconEl.innerText = iconName;
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3200);
+  }
+</script></main></div></body></html>

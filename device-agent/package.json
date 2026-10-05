@@ -1,0 +1,43 @@
+{
+  "name": "@bamp/device-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BAMP embedded terminal services: offline-first fingerprint attendance capture, enrolment, roster/template sync, buffered upload, MQTT real-time link and OTA updates",
+  "type": "module",
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "bin": {
+    "bamp-device": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "service",
+    "README.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/cli.js run",
+    "dev": "tsx src/cli.ts run",
+    "activate": "tsx src/cli.ts activate",
+    "status": "tsx src/cli.ts status"
+  },
+  "dependencies": {
+    "@node-rs/argon2": "^2.0.2",
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "mqtt": "^5.10.3",
+    "pino": "^9.6.0",
+    "serialport": "^12.0.0",
+    "undici": "^7.2.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

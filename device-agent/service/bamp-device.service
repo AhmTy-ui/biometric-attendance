@@ -1,0 +1,61 @@
+# systemd unit for the BAMP device agent (Linux ARM/x86 terminals).
+#
+# Install:
+#   sudo useradd --system --home /var/lib/bamp-device --shell /usr/sbin/nologin bamp
+#   sudo usermod -aG dialout bamp                 # access to the fingerprint UART (/dev/ttyS*, /dev/ttyUSB*)
+#   sudo cp -r device-agent /opt/bamp-device && cd /opt/bamp-device && sudo npm ci --omit=dev && sudo npm run build
+#   sudo cp /opt/bamp-device/.env.example /opt/bamp-device/.env   # then edit it
+#   sudo install -d -o bamp -g bamp -m 0700 /var/lib/bamp-device
+#   sudo -u bamp env BAMP_DATA_DIR=/var/lib/bamp-device node /opt/bamp-device/dist/cli.js activate --uid <UID> --code <CODE>
+#   sudo cp service/bamp-device.service /etc/systemd/system/ && sudo systemctl daemon-reload
+#   sudo systemctl enable --now bamp-device
+#
+# Exit code 75 = restart requested (remote `restart` command, firmware update/rollback). Restart=always covers
+# it (and crashes); RestartForceExitStatus makes the intent explicit.
+
+[Unit]
+Description=BAMP biometric attendance terminal agent
+Wants=network-online.target
+After=network-online.target time-sync.target
+StartLimitIntervalSec=300
+StartLimitBurst=20
+
+[Service]
+Type=simple
+User=bamp
+Group=bamp
+SupplementaryGroups=dialout
+WorkingDirectory=/opt/bamp-device
+EnvironmentFile=-/opt/bamp-device/.env
+Environment=NODE_ENV=production
+Environment=BAMP_DATA_DIR=/var/lib/bamp-device
+ExecStart=/usr/bin/env node /opt/bamp-device/dist/cli.js run
+Restart=always
+RestartSec=3
+RestartForceExitStatus=75
+SuccessExitStatus=75
+KillSignal=SIGTERM
+TimeoutStopSec=20
+
+# Kiosk console: to show the terminal UI on the attached display/keyboard instead of running headless,
+# uncomment the following lines (and disable getty on that tty: systemctl mask getty@tty1).
+#StandardInput=tty
+#StandardOutput=tty
+#TTYPath=/dev/tty1
+#TTYReset=yes
+#TTYVHangup=yes
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/bamp-device
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

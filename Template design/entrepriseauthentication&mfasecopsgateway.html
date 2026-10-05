@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#003ea8","surface-container-low":"#181c24","on-secondary-fixed-variant":"#004b73","inverse-on-surface":"#2c3039","background":"#0f131c","secondary-fixed-dim":"#93ccff","outline-variant":"#434655","on-primary-container":"#eeefff","on-error-container":"#ffdad6","outline":"#8d90a0","surface-container":"#1c2028","on-error":"#690005","secondary-fixed":"#cce5ff","error-container":"#93000a","on-tertiary-fixed":"#002113","tertiary-fixed-dim":"#4edea3","surface-variant":"#31353e","tertiary":"#4edea3","secondary-container":"#3198dc","primary-fixed-dim":"#b4c5ff","surface-dim":"#0f131c","tertiary-fixed":"#6ffbbe","on-surface":"#dfe2ee","on-secondary":"#003351","surface":"#0f131c","on-tertiary":"#003824","on-tertiary-fixed-variant":"#005236","tertiary-container":"#007d55","on-secondary-container":"#002c47","on-surface-variant":"#c3c6d7","secondary":"#93ccff","inverse-primary":"#0053db","inverse-surface":"#dfe2ee","on-background":"#dfe2ee","on-secondary-fixed":"#001d31","on-tertiary-container":"#bdffdb","error":"#ffb4ab","surface-bright":"#353942","surface-tint":"#b4c5ff","surface-container-high":"#262a33","surface-container-lowest":"#0a0e16","on-primary-fixed":"#00174b","on-primary":"#002a78","surface-container-highest":"#31353e","primary-container":"#2563eb","primary-fixed":"#dbe1ff","primary":"#b4c5ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"1rem","gutter-dense":"0.5rem","margin":"1.5rem","space-xl":"2rem","gutter":"1rem","space-lg":"1.25rem","space-md":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem"},"fontFamily":{"label-lg":["JetBrains Mono"],"headline-xl":["Inter"],"label-badge":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"body-sm":["Inter"],"label-md":["JetBrains Mono"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"label-sm":["JetBrains Mono"]},"fontSize":{"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"600"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"12px","letterSpacing":"0.04em","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><main class="w-full min-h-screen bg-background flex items-center justify-center p-gutter"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto my-auto p-margin-mobile lg:p-margin">
+<!-- Top System Telemetry Bar (Single line institutional header) -->
+<div class="w-full flex flex-wrap items-center justify-between gap-gutter-dense mb-space-md bg-surface-container-lowest px-space-md py-space-xs rounded-lg shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">BAMP DEFENSE CORE GATEWAY</span>
+<span class="font-label-sm text-label-sm text-outline">/</span>
+<span class="font-label-sm text-label-sm text-tertiary">SESSION-GATEWAY-NODE-04 // WEST-DC</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="hidden sm:inline">ZERO-TRUST INGRESS: <strong class="text-tertiary font-medium">ENFORCED</strong></span>
+<span class="text-outline">|</span>
+<span>LATENCY: <strong class="text-secondary font-medium">1.8ms</strong></span>
+<span class="text-outline">|</span>
+<span>AUDIT WORM: <strong class="text-on-surface font-medium">ACTIVE</strong></span>
+</div>
+</div>
+<!-- Main Architectural Split Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter shadow-xl bg-surface-container-low rounded-xl overflow-hidden">
+<!-- LEFT PANEL: Security Architecture, Threat Matrix & Fleet Telemetry (45% / 5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg lg:p-space-xl flex flex-col justify-between relative overflow-hidden">
+<!-- Subtle Vector Grid Underlay (Ambient Telemetry Graphic) -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-tertiary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-lg">
+<!-- Institutional Logo / Brand -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-sm shadow-md">
+<span class="material-symbols-outlined text-body-lg" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md tracking-tight text-on-surface block leading-tight">BAMP<span class="text-secondary">.CORE</span></span>
+<span class="font-label-sm text-label-sm text-outline tracking-widest uppercase">Institutional SecOps Edge</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-space-xs mt-space-xs bg-surface-container px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-tertiary text-body-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm text-tertiary tracking-wide uppercase">MISSION-CRITICAL BIOMETRIC &amp; ATTENDANCE INFRASTRUCTURE</span>
+</div>
+</div>
+<!-- Hero Graphic Concept: Defense-in-Depth Authentication Mesh -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-inner flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">DEFENSE-IN-DEPTH AUTH MESH</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-space-xs py-0.5 rounded">mTLS ACTIVE</span>
+</div>
+<!-- Interactive Mesh Topology SVG Visualizer -->
+<div class="w-full h-32 bg-surface-container-lowest rounded flex items-center justify-center relative p-2 overflow-hidden">
+<svg class="w-full h-full text-on-surface-variant" fill="none" stroke="currentColor" viewbox="0 0 340 110">
+<!-- Grid background lines -->
+<pattern height="16" id="grid" patternunits="userSpaceOnUse" width="16">
+<path d="M 16 0 L 0 0 0 16" fill="none" stroke="currentColor" stroke-opacity="0.08" stroke-width="0.5"></path>
+</pattern>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+<!-- Circuit Connections -->
+<path class="text-primary-container" d="M50 55 L130 55" stroke="currentColor" stroke-dasharray="2 3" stroke-width="1.5"></path>
+<path class="text-tertiary" d="M170 55 L250 55" stroke="currentColor" stroke-dasharray="2 3" stroke-width="1.5"></path>
+<path d="M150 35 L150 15" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.2"></path>
+<path d="M150 75 L150 95" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.2"></path>
+<!-- Node 1: Workstation/VPN Ingress -->
+<circle class="fill-surface-container-high stroke-primary" cx="50" cy="55" r="14" stroke-width="1.5"></circle>
+<text class="fill-on-surface font-label-sm" font-size="8" text-anchor="middle" x="50" y="58">VPN</text>
+<text class="fill-on-surface-variant font-label-sm" font-size="7" text-anchor="middle" x="50" y="80">Corporate VNet</text>
+<!-- Node 2: Core Hardware Gateway HSM -->
+<circle class="fill-surface-container-highest stroke-secondary" cx="150" cy="55" r="18" stroke-width="2"></circle>
+<circle class="fill-primary-container/40" cx="150" cy="55" r="8"></circle>
+<text class="fill-on-primary-container font-label-sm font-bold" font-size="7" text-anchor="middle" x="150" y="58">HSM</text>
+<text class="fill-tertiary font-label-sm" font-size="7" text-anchor="middle" x="150" y="24">FIDO2 L3 Root</text>
+<text class="fill-on-surface-variant font-label-sm" font-size="7" text-anchor="middle" x="150" y="90">Dual-Custody</text>
+<!-- Node 3: WORM Audit Ledger -->
+<circle class="fill-surface-container-high stroke-tertiary" cx="250" cy="55" r="14" stroke-width="1.5"></circle>
+<text class="fill-tertiary font-label-sm" font-size="8" text-anchor="middle" x="250" y="58">WORM</text>
+<text class="fill-on-surface-variant font-label-sm" font-size="7" text-anchor="middle" x="250" y="80">Audit Stream</text>
+</svg>
+</div>
+<div class="grid grid-cols-3 gap-space-xs text-center pt-space-xs">
+<div class="bg-surface-container-low p-space-xs rounded">
+<span class="block font-label-sm text-label-sm text-outline">SESSION JWT</span>
+<span class="font-label-md text-label-md text-on-surface">15m Strict</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded">
+<span class="block font-label-sm text-label-sm text-outline">CIPHER SUITE</span>
+<span class="font-label-md text-label-md text-secondary">TLS_AES_256</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded">
+<span class="block font-label-sm text-label-sm text-outline">PBKDF2 ITER</span>
+<span class="font-label-md text-label-md text-on-surface">600,000</span>
+</div>
+</div>
+</div>
+<!-- Gateway Security Matrix Accordion / Specs -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">GATEWAY SECURITY MATRIX</span>
+<div class="bg-surface-container rounded p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-body-lg">network_check</span>
+<div>
+<div class="font-headline-sm text-body-sm text-on-surface">Zero-Trust Ingress Security</div>
+<div class="font-body-sm text-body-sm text-outline">WAF Layer 7 &amp; DDoS Mitigation L4 Active</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/20 px-space-xs py-0.5 rounded">ONLINE</span>
+</div>
+<div class="bg-surface-container rounded p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-body-lg">lock_person</span>
+<div>
+<div class="font-headline-sm text-body-sm text-on-surface">Hardware Attestation Enforced</div>
+<div class="font-body-sm text-body-sm text-outline">FIDO2 / WebAuthn Level 3 Authenticator (CTAP2)</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-primary-container/20 px-space-xs py-0.5 rounded">TIER 1 ROOT</span>
+</div>
+<div class="bg-surface-container rounded p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-body-lg">gpp_bad</span>
+<div>
+<div class="font-headline-sm text-body-sm text-on-surface">Brute-Force &amp; Tamper Lockdown</div>
+<div class="font-body-sm text-body-sm text-outline">3 Failed Attestation Attempts = Physical KMS Reset</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-error bg-error-container/20 px-space-xs py-0.5 rounded">ARMED</span>
+</div>
+</div>
+</div>
+<!-- Terminal Fleet Telemetry Readout (Mission Control Bottom) -->
+<div class="mt-space-lg pt-space-md bg-surface-container-low rounded-lg p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Biometric Fleet Status</span>
+<span class="font-label-sm text-label-sm text-tertiary">ALL NODES SYNCHRONIZED</span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div>
+<div class="font-label-sm text-label-sm text-outline">ACTIVE NODES</div>
+<div class="font-label-lg text-label-lg text-on-surface">142 / 142</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">P95 LATENCY</div>
+<div class="font-label-lg text-label-lg text-secondary">1.8 sec</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">TAMPER ALERTS</div>
+<div class="font-label-lg text-label-lg text-tertiary">0 DETECTED</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Multi-Factor SecOps Authentication Terminal (55% / 7 cols) -->
+<div class="lg:col-span-7 bg-surface-container p-space-lg lg:p-space-xl flex flex-col justify-between">
+<div>
+<!-- Header and Intro -->
+<div class="flex flex-col gap-space-xs pb-space-md">
+<div class="flex items-center justify-between">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Enterprise SecOps Gateway</h1>
+<span class="font-label-sm text-label-sm bg-primary-container text-on-primary-container px-space-sm py-1 rounded-full uppercase">FR-5.1 COMPLIANT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Enter verified corporate credentials to negotiate cryptographic challenge exchange.</p>
+</div>
+<!-- Enterprise Tab Switcher -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded-lg mb-space-lg">
+<button class="flex-1 py-space-xs px-space-sm rounded bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-body-sm text-secondary">domain</span>
+<span>Corporate SSO / AD</span>
+</button>
+<button class="flex-1 py-space-xs px-space-sm rounded text-outline hover:text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-body-sm">pin</span>
+<span class="hidden sm:inline">Supervisor PIN</span>
+<span class="sm:hidden">PIN</span>
+</button>
+<button class="flex-1 py-space-xs px-space-sm rounded text-outline hover:text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-body-sm">token</span>
+<span class="hidden sm:inline">Escrow Token</span>
+<span class="sm:hidden">Token</span>
+</button>
+</div>
+<!-- Form Fields Container -->
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault();">
+<!-- Principal Input -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wide">Corporate Staff Principal (UPN)</label>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                  TLS Directory Verified
+                </span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-space-md material-symbols-outlined text-secondary text-body-lg pointer-events-none">badge</span>
+<input class="w-full h-9 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded pl-10 pr-space-md focus:outline-none focus:bg-surface-container-high transition-colors" readonly="" type="email" value="elena.vance@bamp-core.internal"/>
+</div>
+</div>
+<!-- Password Input with Entropy Gauge -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wide">Enterprise Master Password</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-label-sm">Entropy: <strong class="text-tertiary">94 Bits</strong> (Master Grade)</span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-space-md material-symbols-outlined text-outline text-body-lg pointer-events-none">key</span>
+<input class="w-full h-9 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded pl-10 pr-10 focus:outline-none" readonly="" type="password" value="MasterSecret2025!CryptZeroTrust"/>
+<button class="absolute right-space-md text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-body-md">visibility_off</span>
+</button>
+</div>
+<!-- Entropy Bar segments -->
+<div class="grid grid-cols-4 gap-1 h-1 mt-1">
+<div class="bg-tertiary rounded-full"></div>
+<div class="bg-tertiary rounded-full"></div>
+<div class="bg-tertiary rounded-full"></div>
+<div class="bg-tertiary rounded-full"></div>
+</div>
+</div>
+<!-- STEP 2: Active FIDO2 / WebAuthn Hardware Challenge Module -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary-container"></span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Step 2: Hardware Root Key Challenge (FIDO2 / WebAuthn)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-primary-container/20 px-space-xs py-0.5 rounded">CTAP2</span>
+</div>
+<!-- Graphic: Live Hardware Touch Prompt -->
+<div class="bg-surface-container p-space-md rounded-md flex flex-col sm:flex-row items-center gap-space-md">
+<!-- Pulsing Security Key Visual Graphic -->
+<div class="relative w-16 h-16 bg-surface-container-lowest rounded-lg flex items-center justify-center shrink-0 shadow-inner">
+<div class="absolute inset-0 rounded-lg animate-pulse bg-primary-container/20"></div>
+<span class="material-symbols-outlined text-secondary text-headline-xl" style="font-variation-settings: 'FILL' 1;">usb</span>
+<span class="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-tertiary animate-ping"></span>
+</div>
+<div class="flex flex-col gap-space-xs text-center sm:text-left">
+<div class="font-headline-sm text-body-md text-on-surface">Touch your hardware YubiKey or fingerprint sensor now</div>
+<p class="font-body-sm text-body-sm text-outline">Awaiting cryptographic signature verification on workstation biometric token.</p>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 justify-center sm:justify-start">
+<span class="text-outline">CHALLENGE NONCE:</span>
+<span class="bg-surface-container-high px-1 py-0.5 rounded text-secondary font-mono">0x7fa289c1e4d0b1...982410</span>
+</div>
+</div>
+</div>
+<!-- Alternative Verification Fallbacks -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs font-label-sm text-label-sm">
+<span class="text-outline">Alternative Second Factors:</span>
+<div class="flex items-center gap-space-sm text-secondary">
+<button class="hover:underline" type="button">Push Authenticator</button>
+<span class="text-outline">•</span>
+<button class="hover:underline" type="button">Emergency TOTP</button>
+<span class="text-outline">•</span>
+<button class="hover:underline" type="button">Dual-Key Escrow</button>
+</div>
+</div>
+</div>
+<!-- Session & Compliance Matrix Badge Strip -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<div>
+<span class="text-outline">AUTHORIZED PRINCIPAL:</span>
+<span class="text-on-surface font-medium ml-1">Dr. Elena Vance (Root SecOps)</span>
+</div>
+<div>
+<span class="text-outline">SESSION TIMEOUT:</span>
+<span class="text-tertiary font-medium ml-1">15m Enforced</span>
+</div>
+<div>
+<span class="text-outline">PERIMETER:</span>
+<span class="text-secondary font-medium ml-1">14 Branches</span>
+</div>
+</div>
+<!-- Mandatory WORM Audit Warning Accordion -->
+<div class="bg-surface-container-lowest/80 p-space-sm rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-body-lg shrink-0 mt-0.5">policy</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">COMPLIANCE NOTICE (PRD FR-5.4):</strong> All login interactions are permanently signed into the append-only WORM audit log. Exceeding 3 incorrect token attempts triggers an instantaneous fleet-wide credential freeze requiring Tier 1 KMS reset.
+              </p>
+</div>
+<!-- Primary Action Button (Electric Cobalt Glow) -->
+<button class="w-full h-11 bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary font-headline-sm text-headline-sm rounded flex items-center justify-center gap-space-sm shadow-lg shadow-primary-container/30 transition-all transform active:scale-[0.99]" type="submit">
+<span class="material-symbols-outlined text-body-lg">vpn_key</span>
+<span>Verify Security Key &amp; Authenticate</span>
+</button>
+</form>
+</div>
+<!-- Footer SecOps Metadata Links -->
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center justify-between gap-space-xs font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-md">
+<a class="hover:text-on-surface flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-body-sm text-tertiary">check_circle</span>
+              System Status: Nominal
+            </a>
+<span>•</span>
+<a class="hover:text-on-surface" href="#">Field Operations Desk</a>
+<span>•</span>
+<a class="hover:text-on-surface" href="#">Hardware Key Setup</a>
+</div>
+<span class="text-on-surface-variant">FIPS 140-3 LEVEL 3 ROOT</span>
+</div>
+</div>
+</div>
+<!-- Institutional Bottom Copyright & Spec Tracking Tag -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mt-space-md px-space-xs font-label-sm text-label-sm text-outline">
+<span>BAMP ATTENDANCE MANAGEMENT PLATFORM // REVISION 4.19-PROD // CLASSIFIED GATEWAY</span>
+<span>CRYPTO-SUITE: ED25519-SHA512-AES256-GCM // AUDIT REF: FR-5.1/5.3</span>
+</div>
+</div>
+</div></main></body></html>

@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#2c3039", "on-background": "#dfe2ee", "on-tertiary": "#003824", "on-surface-variant": "#c3c6d7", "inverse-surface": "#dfe2ee", "on-tertiary-fixed-variant": "#005236", "primary-container": "#2563eb", "tertiary-fixed": "#6ffbbe", "tertiary-fixed-dim": "#4edea3", "on-secondary-container": "#002c47", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "surface-container-high": "#262a33", "surface-tint": "#b4c5ff", "on-primary": "#002a78", "on-secondary": "#003351", "surface-variant": "#31353e", "primary": "#b4c5ff", "secondary-container": "#3198dc", "primary-fixed": "#dbe1ff", "surface-container-low": "#181c24", "surface-dim": "#0f131c", "surface": "#0f131c", "error": "#ffb4ab", "secondary-fixed": "#cce5ff", "secondary": "#93ccff", "on-secondary-fixed": "#001d31", "on-error": "#690005", "on-surface": "#dfe2ee", "on-primary-container": "#eeefff", "on-secondary-fixed-variant": "#004b73", "outline": "#8d90a0", "on-error-container": "#ffdad6", "primary-fixed-dim": "#b4c5ff", "surface-container-highest": "#31353e", "tertiary": "#4edea3", "background": "#0f131c", "secondary-fixed-dim": "#93ccff", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#0a0e16", "surface-container": "#1c2028", "error-container": "#93000a", "outline-variant": "#434655", "inverse-primary": "#0053db", "surface-bright": "#353942", "tertiary-container": "#007d55" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1.5rem", "space-md": "0.75rem", "gutter-dense": "0.5rem", "margin-mobile": "1rem", "space-lg": "1.25rem" }, fontFamily: { "label-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-badge": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest"><img alt="BAMP Enterprise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XfD_O6uF0DR5j2vcAF2BkAiLYfzFJDNTkNA591_6oz5G_wJEKDnVtXSd-fm5l_l7upS1pvDJxfigy-FMhivSz_M0cNc1skgBfhH342rQHpClSMakBmRfgAR9SaTQCVRsI42MYGzLmzFoRSzkqU54ErKSKNdGhCJk0DULib0c8oEoQBFlG0hwUI81Xe28A81pBQj27maRu2vfvsYMj7w3E_v5Ud1s5BI_M-BSVYKpFkJ5iadgshN75SaLZX"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">BAMP CORE</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mission Operations</span></div></div><div class="overflow-y-auto flex-1 px-space-sm py-space-sm space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Overview</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">grid_view</span><span>Command Center</span></div><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Attendance</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-ingestion-stream" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">stream</span><span>Live Ingestion Stream</span></div><span class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-tertiary">LIVE</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="attendance-reconciliation-dlq" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">published_with_changes</span><span>Reconciliation &amp; DLQ</span></div><span class="font-label-sm text-label-sm px-1.5 rounded bg-error-container text-on-error-container">2</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">analytics</span><span>Reports &amp; Analytics</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workforce &amp; Roster</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="employee-sync-directory" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">badge</span><span>Sync Directory</span></div><span class="font-label-sm text-label-sm text-outline">SSOT</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="locations-branches" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">storefront</span><span>Locations &amp; Branches</span></div><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Devices &amp; Hardware</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="device-fleet-registry" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">router</span><span>Device Fleet Registry</span></div><span class="font-label-sm text-label-sm text-tertiary font-label-lg">98.4%</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="firmware-ota-deployments" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">system_update</span><span>Firmware &amp; OTA</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="biometric-enrolment-terminal" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">fingerprint</span><span>Enrolment Terminal</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System &amp; Compliance</div><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integration-web-adapter" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">hub</span><span>Integration Adapter</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="security-audit-trail" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">verified_user</span><span>Security Audit Trail</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="system-settings-rbac" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">tune</span><span>Settings &amp; RBAC</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-tertiary"></span><span>BAMP DAEMON v4.11</span></div><span class="font-label-sm text-label-sm text-outline-variant font-label-lg">SEC-A09</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur border-b border-outline-variant/40 z-40 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-outline-variant/40 rounded"><div class="relative flex items-center justify-center h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-tertiary"></span></div><span class="font-label-sm text-label-sm text-tertiary whitespace-nowrap">MQTT &amp; Dual-Sync Healthy</span><span class="text-outline text-[10px]">|</span><span class="font-label-sm text-label-sm text-outline whitespace-nowrap">P95 4.2s</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-body-sm text-body-sm text-on-surface truncate max-w-[150px]">Apex Holdings - 14 Branches</span><span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span></div></div><div class="flex-1 max-w-xl mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline">search</span><input class="w-full bg-surface-container-low border border-outline-variant/40 rounded h-8 pl-8 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Search terminals, staff ID, sync events, locations..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 font-label-sm text-label-sm bg-surface-container-high text-outline rounded border border-outline-variant/40">/</kbd></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded font-label-sm text-label-sm text-secondary"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span>MQTT TLS: Active (Port 8883)</span></div><div class="flex items-center gap-1 px-2 py-1 bg-surface-container-low border border-outline-variant/40 rounded cursor-pointer hover:border-secondary transition-colors" title="Active Offline Buffers"><span class="material-symbols-outlined text-[16px] text-secondary">cloud_off</span><span class="font-label-sm text-label-sm text-on-surface">3 Buffering</span><span class="font-label-sm text-label-sm text-outline">(428)</span></div><button class="relative p-1.5 rounded bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error-container text-on-error-container font-label-sm text-[9px] font-bold border border-background">2</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/30"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlj8VFrNyEhwKFZarVvarBMnrK0R4ylSyfCRaL6liD53jTEuduW6Kgi5VpGOhKigITegAhjXuv55PIwLnv1ogAf9bVw_H-2MZWU1rwEWb_beYFFbYaZhTrMkEQf61qnuhxeRSSh1DBQOvWUYjEv60Ub-OlrsNZOZje2vgkodC1FWnFQkbigJgwibX60JFozqFRxaDvb8qEc360OuAefMDSjNlhmaKyqow60Bi1-NCgvxIH5_xUVWt7-g"/><span class="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-[10px] text-tertiary">lock</span></span></div><div class="hidden lg:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-body-sm text-body-sm text-on-surface font-semibold max-w-[140px] truncate">Dr. Elena Vance</span><span class="font-label-sm text-[9px] tracking-wider uppercase px-1 py-0.2 bg-primary-container text-on-primary-container rounded font-bold">SYSTEM ADMIN</span></div><span class="font-label-sm text-[10px] text-outline truncate max-w-[170px]">Head of Global SecOps</span></div></div></div></header><div class="fixed top-16 left-72 right-0 h-10 bg-surface-container-low border-b border-outline-variant/30 z-30 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline"><span class="material-symbols-outlined text-[15px]">dns</span><span>BAMP</span><span class="text-outline-variant">/</span></div><div class="flex items-center gap-1.5"><span class="text-outline">Fleet Domain:</span><select class="bg-surface-container border border-outline-variant/40 rounded px-2 py-0.5 font-label-sm text-label-sm text-on-surface focus:outline-none focus:border-primary-container"><option>All Branches (14 Active Locations)</option><option>Lagos Hub Terminal 04</option><option>Abuja HQ - Gate Alpha</option><option>London Ops Centre</option><option>Nairobi Assembly Plant</option></select></div></div><div class="flex items-center gap-space-md shrink-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline font-label-lg"><span class="material-symbols-outlined text-[14px]">schedule</span><span>UTC 14:26:08 | LOCAL +01:00</span></div><div class="flex items-center gap-1.5"><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">sync</span><span>Trigger Roster Sync</span></button><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">bolt</span><span>Flush Buffers</span></button></div></div></div><main class="relative pt-26 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Styles & Keyframes for Industrial Telemetry UI -->
+<style>
+    @keyframes pulse-subtle {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.35; }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0a0e16;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #262a33;
+      border-radius: 2px;
+    }
+    .hash-highlight {
+      background: linear-gradient(90deg, rgba(78, 222, 163, 0.08) 0%, rgba(37, 99, 235, 0.04) 100%);
+    }
+  </style>
+<div class="p-space-lg xl:p-margin space-y-space-md">
+<!-- Top Banner: WORM Cryptographic Ledger Assurance & Compliance Seal -->
+<div class="relative overflow-hidden rounded bg-surface-container-low p-space-md shadow-md">
+<div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute right-72 bottom-0 h-28 w-28 rounded-full bg-tertiary/10 blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md z-10">
+<div class="flex items-start gap-space-md">
+<div class="h-10 w-10 shrink-0 rounded bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">FR-5.4 &amp; FR-5.5 Cryptographic Append-Only Ledger Verified</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-ping"></span>
+                WORM STORAGE ACTIVE
+              </span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm">
+                NFR-1.4 / NFR-3.1 / NFR-3.2 COMPLIANT
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-outline max-w-4xl leading-relaxed">
+              Every mutating action across Cloud APIs, bidirectional MQTT commands, and physical edge terminals is sealed in a continuous SHA-256 Merkle chain. Record modifications and in-place deletions are strictly mathematically prohibited.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end xl:self-center">
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" id="btn-merkle-verify" onclick="triggerMerkleVerification()">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock_reset</span>
+<span>Verify Merkle Tree</span>
+</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-secondary">file_download</span>
+<span>Export Forensic Log</span>
+</button>
+<button class="px-3 py-1.5 rounded bg-primary-container hover:bg-inverse-primary text-on-primary-container font-headline-sm text-body-sm flex items-center gap-1.5 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+<span>Cryptographic Attestation</span>
+</button>
+</div>
+</div>
+<!-- Verification Micro-Bar -->
+<div class="mt-space-sm pt-space-xs flex flex-wrap items-center justify-between text-outline font-label-sm text-label-sm bg-surface-container-lowest/60 px-3 py-1 rounded" id="merkle-banner-status">
+<div class="flex items-center gap-3">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+            Hardware Root of Trust:
+          </span>
+<span class="font-label-md text-on-surface font-semibold">ATECC608A-TFLXTLS Secure Element</span>
+<span class="text-outline-variant">|</span>
+<span class="text-outline">Sync Drift: <span class="text-tertiary">0.000ms</span></span>
+<span class="text-outline-variant">|</span>
+<span class="text-outline">Consensus Signature: <span class="font-label-sm text-secondary">Ed25519-Batch-OK</span></span>
+</div>
+<div class="text-outline-variant font-label-sm">
+          Next Epoch Digest Snapshot: <span class="text-on-surface">00:03:52</span>
+</div>
+</div>
+</div>
+<!-- Ledger Integrity KPI Cards (4 metrics) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-sm">
+<!-- Card 1 -->
+<div class="rounded bg-surface-container-low p-space-md shadow-sm relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Mutation Events</span>
+<span class="material-symbols-outlined text-[18px] text-primary">data_object</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">2,841,920</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-1 rounded">100% NON-REPUDIABLE</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Ingress: ~14.8 events/sec</span>
+<span class="text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>+3.4%
+          </span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="rounded bg-surface-container-low p-space-md shadow-sm relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Merkle Root State</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">account_tree</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-lg text-label-lg text-tertiary font-bold tracking-tight">0x9d4e...a71c</span>
+<span class="font-label-sm text-label-sm text-outline">#41,209</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-pulse-subtle"></span>
+            Verified 12s ago
+          </span>
+<span class="text-on-surface-variant font-label-sm">Depth: 22 Levels</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="rounded bg-surface-container-low p-space-md shadow-sm relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Biometric Zeroizations</span>
+<span class="material-symbols-outlined text-[18px] text-error">delete_forever</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">18 Events</span>
+<span class="font-label-sm text-label-sm text-error bg-error-container/40 text-on-error-container px-1 rounded">ALL PURGED</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Target NVRAM latency</span>
+<span class="text-tertiary font-label-sm font-semibold">&lt;4.2s (P95)</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="rounded bg-surface-container-low p-space-md shadow-sm relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Scope Tamper Attempts</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">security</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-bold">0 Blocked</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-1 rounded">HW SE INTACT</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>ATECC608A Bus Status</span>
+<span class="text-tertiary font-label-sm font-semibold">ARMED / NORMAL</span>
+</div>
+</div>
+</div>
+<!-- Filter & Forensic Search Toolbar -->
+<div class="rounded bg-surface-container-low p-space-sm shadow-sm space-y-space-xs">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<!-- Filters Cluster -->
+<div class="flex flex-wrap items-center gap-space-xs flex-1">
+<!-- Actor Filter -->
+<div class="flex items-center bg-surface-container rounded px-2 py-1 gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-outline">person</span>
+<span class="text-outline">Actor:</span>
+<select class="bg-transparent text-on-surface font-label-sm focus:outline-none cursor-pointer" id="filter-actor" onchange="applyFilters()">
+<option value="ALL">All Actors</option>
+<option value="ELENA">Dr. Elena Vance (SEC-001)</option>
+<option value="MARCUS">Marcus Adeboye (SUP-092)</option>
+<option value="DAEMON">BAMP Daemon (Worker-03)</option>
+<option value="WEBHOOK">Web ERP Ingestion Webhook</option>
+</select>
+</div>
+<!-- Mutation Type Filter -->
+<div class="flex items-center bg-surface-container rounded px-2 py-1 gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-outline">tune</span>
+<span class="text-outline">Action:</span>
+<select class="bg-transparent text-on-surface font-label-sm focus:outline-none cursor-pointer" id="filter-action" onchange="applyFilters()">
+<option value="ALL">All Mutation Types</option>
+<option value="ZEROIZE">Biometric Zeroization (FR-1.3)</option>
+<option value="DLQ">DLQ Force-Replay (FR-1.4)</option>
+<option value="ROSTER">Roster Ingestion (FR-1.1)</option>
+<option value="ENROL">Terminal Enrolment Auth (FR-2.1)</option>
+<option value="OVERRIDE">Security Rule Override</option>
+</select>
+</div>
+<!-- Branch Filter -->
+<div class="flex items-center bg-surface-container rounded px-2 py-1 gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-outline">storefront</span>
+<span class="text-outline">Scope:</span>
+<select class="bg-transparent text-on-surface font-label-sm focus:outline-none cursor-pointer" id="filter-scope" onchange="applyFilters()">
+<option value="ALL">All Fleet Nodes</option>
+<option value="LAGOS">Lagos Hub Terminal 04</option>
+<option value="ABUJA">Abuja HQ - Gate Alpha</option>
+<option value="LONDON">London Ops Centre</option>
+<option value="REGION_NW">Region: North-West Zone</option>
+</select>
+</div>
+<!-- Time Range -->
+<div class="flex items-center bg-surface-container rounded px-2 py-1 gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">date_range</span>
+<select class="bg-transparent text-on-surface font-label-sm focus:outline-none cursor-pointer">
+<option>Last 24 Hours</option>
+<option>Last 7 Days</option>
+<option>Last 30 Days</option>
+<option>Forensic Window (Custom)</option>
+</select>
+</div>
+</div>
+<!-- Search Inputs -->
+<div class="flex items-center gap-space-xs shrink-0">
+<div class="relative w-full sm:w-80">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[15px] text-outline">key</span>
+<input class="w-full bg-surface-container text-on-surface font-label-sm text-label-sm pl-8 pr-16 py-1.5 rounded placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-colors" id="search-input" onkeyup="handleSearch(event)" placeholder="Search TxID, SHA-256 hash, or Target ID..." type="text"/>
+<span class="absolute right-2 top-2 font-label-sm text-label-sm text-outline">ENTER</span>
+</div>
+<button class="p-1.5 rounded bg-surface-container hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" onclick="resetFilters()" title="Reset Filters">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Workspace Split Grid: 70% Table & Diffs + 30% Cryptographic Verification Inspector -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Primary Audit Log & Diff Stream (8 cols) -->
+<div class="lg:col-span-8 flex flex-col space-y-space-sm">
+<!-- Table Control Strip -->
+<div class="flex items-center justify-between px-1 text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Append-Only Event Ledger</span>
+<span class="bg-surface-container-high text-on-surface-variant px-1.5 py-0.2 rounded font-label-sm" id="log-count-badge">5 Displayed / 2,841,920 Total</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-tertiary flex items-center gap-1 font-label-sm">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+              Real-time Ingestion Stream Active
+            </span>
+</div>
+</div>
+<!-- High-Density Telemetry Table & Inline Granular Diffs -->
+<div class="rounded bg-surface-container-low shadow-md overflow-hidden">
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse" id="audit-table">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm tracking-wider uppercase select-none">
+<th class="py-2.5 px-3">Log TxID</th>
+<th class="py-2.5 px-3">Timestamp (UTC)</th>
+<th class="py-2.5 px-3">Actor &amp; Origin</th>
+<th class="py-2.5 px-3">Action Mutation</th>
+<th class="py-2.5 px-3">Target Entity</th>
+<th class="py-2.5 px-3 text-right">SHA-256 Digest</th>
+<th class="py-2.5 px-3 text-center">Inspect</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface" id="audit-table-body">
+<!-- ROW 1: Biometric Zeroization -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group bg-surface-container-low" data-row-id="SEC-LOG-982410" onclick="selectEvent('SEC-LOG-982410')">
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-error">shield_locked</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">SEC-LOG-982410</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap font-label-sm text-label-sm text-outline">
+                    14:26:01.882
+                  </td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">BAMP Daemon</span>
+<span class="font-label-sm text-[9px] text-tertiary">SYSTEM_ACTOR [Worker-03]</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-error-container/40 text-on-error-container font-label-sm text-label-sm font-semibold inline-block">
+                      BIOMETRIC_NVRAM_ZEROIZE
+                    </span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="font-label-sm text-label-sm text-on-surface">EMP-3810 (Tariq Mansoor)</div>
+<div class="font-label-sm text-[10px] text-outline">4 Edge Terminals Dispatched</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-right font-label-sm text-label-sm text-tertiary">
+<span class="px-1 rounded bg-surface-container">0x7f2a...8c19</span>
+</td>
+<td class="py-2 px-3 text-center whitespace-nowrap">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" onclick="toggleDiff('diff-982410', event)">
+<span class="material-symbols-outlined text-[15px]" id="diff-icon-diff-982410">unfold_more</span>
+</button>
+</td>
+</tr>
+<!-- INLINE DIFF ROW 1 -->
+<tr class="hidden bg-surface-container-lowest/80 transition-all" id="diff-982410">
+<td class="p-3" colspan="7">
+<div class="rounded bg-surface-container p-3 space-y-2">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[15px]">difference</span>
+                          Granular State Delta (PRD FR-5.4 Cryptographic Diff Verification)
+                        </span>
+<span>Hardware Command: NVRAM_PURGE_ACK_RECVD</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-label-sm font-label-sm">
+<!-- Before -->
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-error font-semibold mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">remove_circle_outline</span> PRE-STATE (BLOCK #41208)
+                          </div>
+<pre class="text-on-surface-variant overflow-x-auto whitespace-pre font-label-sm leading-tight">{
+  "employee_id": "EMP-3810",
+  "pii_status": "ACTIVE_ROSTER",
+  "template_state": "ENROLLED_NVRAM_SLOT_081",
+  "edge_nvram_digest": "0xcc89a102941b...fe",
+  "biometric_hash_salt": "hw_salt_atecc_sec4"
+}</pre>
+</div>
+<!-- After -->
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-tertiary font-semibold mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">add_circle_outline</span> POST-STATE (BLOCK #41209)
+                          </div>
+<pre class="text-on-surface overflow-x-auto whitespace-pre font-label-sm leading-tight text-tertiary">{
+  "employee_id": "EMP-3810",
+  "pii_status": "TERMINATED_PURGED",
+  "template_state": "CRYPTOGRAPHICALLY_ZEROIZED",
+  "edge_nvram_digest": "0x000000000000...00",
+  "zeroize_epoch_proof": "0x8a994cba87...11",
+  "reason": "WEB_ERP_SYNC_TERMINATION"
+}</pre>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<!-- ROW 2: DLQ Force-Replay -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group bg-surface-container-low" data-row-id="SEC-LOG-982409" onclick="selectEvent('SEC-LOG-982409')">
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">sync_problem</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">SEC-LOG-982409</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap font-label-sm text-label-sm text-outline">
+                    14:23:45.109
+                  </td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Dr. Elena Vance</span>
+<span class="font-label-sm text-[9px] text-primary">SYSTEM_ADMIN [SEC-001]</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-primary-container/30 text-on-primary-container font-label-sm text-label-sm font-semibold inline-block">
+                      DLQ_FORCE_REPLAY_MUTATION
+                    </span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="font-label-sm text-label-sm text-on-surface">Queue idemp_9a482b8841c30</div>
+<div class="font-label-sm text-[10px] text-outline">Replay Stream to Ingestion Bus</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-right font-label-sm text-label-sm text-tertiary">
+<span class="px-1 rounded bg-surface-container">0x3e11...f482</span>
+</td>
+<td class="py-2 px-3 text-center whitespace-nowrap">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" onclick="toggleDiff('diff-982409', event)">
+<span class="material-symbols-outlined text-[15px]" id="diff-icon-diff-982409">unfold_more</span>
+</button>
+</td>
+</tr>
+<!-- INLINE DIFF ROW 2 -->
+<tr class="hidden bg-surface-container-lowest/80 transition-all" id="diff-982409">
+<td class="p-3" colspan="7">
+<div class="rounded bg-surface-container p-3 space-y-2">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[15px]">published_with_changes</span>
+                          Dead-Letter Queue Replay Mutation (FR-1.4 DLQ Idempotency Re-arm)
+                        </span>
+<span>MFA FIDO2 Authenticated (YubiKey 5C)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-label-sm font-label-sm">
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-error font-semibold mb-1">PRE-MUTATION STATE</div>
+<pre class="text-on-surface-variant whitespace-pre overflow-x-auto font-label-sm leading-tight">{
+  "dlq_message_id": "idemp_9a482b8841c30",
+  "status": "DEAD_LETTER_HTTP_504",
+  "retry_count": 5,
+  "dead_letter_timestamp": "2025-05-18T13:40:11.002Z",
+  "quarantine_held": true
+}</pre>
+</div>
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-tertiary font-semibold mb-1">POST-MUTATION STATE</div>
+<pre class="text-secondary whitespace-pre overflow-x-auto font-label-sm leading-tight">{
+  "dlq_message_id": "idemp_9a482b8841c30",
+  "status": "FORCE_REPLAY_QUEUED",
+  "retry_count": 6,
+  "bypass_auth": "MFA_FIDO2_SIGNED",
+  "signed_by": "dr.vance@apex.internal",
+  "quarantine_held": false
+}</pre>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<!-- ROW 3: Terminal Enrolment Authorized -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group bg-surface-container-low" data-row-id="SEC-LOG-982408" onclick="selectEvent('SEC-LOG-982408')">
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">fingerprint</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">SEC-LOG-982408</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap font-label-sm text-label-sm text-outline">
+                    14:18:12.441
+                  </td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Marcus Adeboye</span>
+<span class="font-label-sm text-[9px] text-secondary">BRANCH_SUPERVISOR [SUP-092]</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm font-semibold inline-block">
+                      TERMINAL_ENROLMENT_AUTHORIZED
+                    </span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="font-label-sm text-label-sm text-on-surface">TER-LG-04 → EMP-5519</div>
+<div class="font-label-sm text-[10px] text-outline">Zainab Okonjo (Lagos Hub)</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-right font-label-sm text-label-sm text-tertiary">
+<span class="px-1 rounded bg-surface-container">0xaa42...99bb</span>
+</td>
+<td class="py-2 px-3 text-center whitespace-nowrap">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" onclick="toggleDiff('diff-982408', event)">
+<span class="material-symbols-outlined text-[15px]" id="diff-icon-diff-982408">unfold_more</span>
+</button>
+</td>
+</tr>
+<!-- INLINE DIFF ROW 3 -->
+<tr class="hidden bg-surface-container-lowest/80 transition-all" id="diff-982408">
+<td class="p-3" colspan="7">
+<div class="rounded bg-surface-container p-3 space-y-2">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[15px]">badge</span>
+                          Enrolment Terminal Session Escalation (FR-2.1 Two-Factor In-Person Enrolment)
+                        </span>
+<span>PIN + Supervisor Card Swiped</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-label-sm font-label-sm">
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-error font-semibold mb-1">PRE-SESSION STATE</div>
+<pre class="text-on-surface-variant whitespace-pre overflow-x-auto font-label-sm leading-tight">{
+  "terminal_hardware_id": "TER-LG-04",
+  "enrolment_session": "LOCKED_IDLE",
+  "optical_sensor_state": "STANDBY",
+  "session_token": null
+}</pre>
+</div>
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-tertiary font-semibold mb-1">SESSION ACTIVATED</div>
+<pre class="text-tertiary whitespace-pre overflow-x-auto font-label-sm leading-tight">{
+  "terminal_hardware_id": "TER-LG-04",
+  "enrolment_session": "ACTIVE_SESSION_SUPERVISOR_CONFIRMED",
+  "candidate_employee_id": "EMP-5519",
+  "supervisor_token": "HMAC-SHA256:0xf40a...99",
+  "session_ttl_seconds": 300
+}</pre>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Roster Ingestion -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group bg-surface-container-low" data-row-id="SEC-LOG-982407" onclick="selectEvent('SEC-LOG-982407')">
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-outline">hub</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">SEC-LOG-982407</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap font-label-sm text-label-sm text-outline">
+                    13:58:22.012
+                  </td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Web ERP Ingestion</span>
+<span class="font-label-sm text-[9px] text-outline">EXTERNAL_INTEGRATION</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold inline-block">
+                      ROSTER_INGESTION_INCREMENTAL
+                    </span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="font-label-sm text-label-sm text-on-surface">EXT-LOC-882 (North-West)</div>
+<div class="font-label-sm text-[10px] text-error">Unmapped Alert Dispatched</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-right font-label-sm text-label-sm text-tertiary">
+<span class="px-1 rounded bg-surface-container">0x991f...102a</span>
+</td>
+<td class="py-2 px-3 text-center whitespace-nowrap">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" onclick="toggleDiff('diff-982407', event)">
+<span class="material-symbols-outlined text-[15px]" id="diff-icon-diff-982407">unfold_more</span>
+</button>
+</td>
+</tr>
+<!-- INLINE DIFF ROW 4 -->
+<tr class="hidden bg-surface-container-lowest/80 transition-all" id="diff-982407">
+<td class="p-3" colspan="7">
+<div class="rounded bg-surface-container p-3 space-y-2">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[15px]">warning</span>
+                          ERP Roster Staging Delta (FR-1.1 Unmapped Branch Safeguard)
+                        </span>
+<span>Signature: RSA-PSS Webhook Digest</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-label-sm font-label-sm">
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-outline font-semibold mb-1">PRE-INGESTION MAPPING</div>
+<pre class="text-on-surface-variant whitespace-pre overflow-x-auto font-label-sm leading-tight">{
+  "unmapped_count": 0,
+  "staging_buffer_quarantined": false
+}</pre>
+</div>
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-error font-semibold mb-1">ALERT GENERATED</div>
+<pre class="text-error whitespace-pre overflow-x-auto font-label-sm leading-tight">{
+  "unmapped_count": 3,
+  "unmapped_records": ["EMP-8812", "EMP-8819", "EMP-8840"],
+  "staging_buffer_quarantined": true,
+  "alert_dispatched": "ALERT_UNMAPPED_LOC_STAGING"
+}</pre>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<!-- ROW 5: Security Rule Override -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group bg-surface-container-low" data-row-id="SEC-LOG-982406" onclick="selectEvent('SEC-LOG-982406')">
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">policy</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">SEC-LOG-982406</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap font-label-sm text-label-sm text-outline">
+                    13:42:00.000
+                  </td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Dr. Elena Vance</span>
+<span class="font-label-sm text-[9px] text-primary">SYSTEM_ADMIN [SEC-001]</span>
+</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold inline-block">
+                      SECURITY_RULE_OVERRIDE
+                    </span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<div class="font-label-sm text-label-sm text-on-surface">RBAC: REGION_NORTH_WEST</div>
+<div class="font-label-sm text-[10px] text-secondary">FIDO2 WebAuthn Signed</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-right font-label-sm text-label-sm text-tertiary">
+<span class="px-1 rounded bg-surface-container">0xbb28...3341</span>
+</td>
+<td class="py-2 px-3 text-center whitespace-nowrap">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-variant text-outline hover:text-on-surface transition-colors" onclick="toggleDiff('diff-982406', event)">
+<span class="material-symbols-outlined text-[15px]" id="diff-icon-diff-982406">unfold_more</span>
+</button>
+</td>
+</tr>
+<!-- INLINE DIFF ROW 5 -->
+<tr class="hidden bg-surface-container-lowest/80 transition-all" id="diff-982406">
+<td class="p-3" colspan="7">
+<div class="rounded bg-surface-container p-3 space-y-2">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[15px]">security</span>
+                          RBAC Scope Elevation Boundary Mutated
+                        </span>
+<span>Dual-Custodian Key Sealed</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-label-sm font-label-sm">
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-outline font-semibold mb-1">INITIAL POLICY</div>
+<pre class="text-on-surface-variant whitespace-pre overflow-x-auto font-label-sm leading-tight">{
+  "policy_scope": "REGION_NORTH_WEST",
+  "require_dual_custodian_mfa": true,
+  "enrolment_override_window_min": 0
+}</pre>
+</div>
+<div class="rounded bg-surface-container-low p-2">
+<div class="text-primary font-semibold mb-1">ELEVATED POLICY</div>
+<pre class="text-primary whitespace-pre overflow-x-auto font-label-sm leading-tight">{
+  "policy_scope": "REGION_NORTH_WEST",
+  "require_dual_custodian_mfa": true,
+  "enrolment_override_window_min": 60,
+  "temporary_emergency_ticket": "SEC-TICK-4401"
+}</pre>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Pagination & WORM Chain Indicator -->
+<div class="px-space-md py-2 bg-surface-container-lowest flex flex-wrap items-center justify-between gap-2 text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="inline-flex h-2 w-2 rounded-full bg-tertiary"></span>
+<span>Merkle Continuous Accumulator Chain #41,209 is Valid</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container text-outline hover:text-on-surface disabled:opacity-30" disabled="">Previous</button>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">Page 1 of 56,838</span>
+<button class="px-2 py-0.5 rounded bg-surface-container text-outline hover:text-on-surface">Next</button>
+</div>
+</div>
+</div>
+<!-- Merkle Integrity Visual Pipeline (Inline Micro-Diagram) -->
+<div class="rounded bg-surface-container-low p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">polyline</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Active Merkle Chain Accumulation Flow</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">RFC-6962 Certificate Transparency Model</span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm">
+<!-- Node A -->
+<div class="flex-1 w-full bg-surface-container p-2 rounded text-center">
+<div class="text-outline text-[10px] uppercase">Current Leaf Hash (N)</div>
+<div class="text-tertiary font-bold truncate">0x7f2a89c1...982410</div>
+<div class="text-[9px] text-on-surface-variant">SEC-LOG-982410</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline hidden md:block">arrow_forward</span>
+<!-- Node B -->
+<div class="flex-1 w-full bg-surface-container p-2 rounded text-center">
+<div class="text-outline text-[10px] uppercase">Sibling Audit Hash</div>
+<div class="text-secondary font-bold truncate">0x3e114f82...982409</div>
+<div class="text-[9px] text-on-surface-variant">DLQ_FORCE_REPLAY</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline hidden md:block">arrow_forward</span>
+<!-- Node C -->
+<div class="flex-1 w-full bg-surface-container p-2 rounded text-center">
+<div class="text-outline text-[10px] uppercase">Intermediate Node (L2)</div>
+<div class="text-on-surface font-bold truncate">0xd8319f00...c78a</div>
+<div class="text-[9px] text-tertiary">Cryptographically Bound</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline hidden md:block">arrow_forward</span>
+<!-- Node Root -->
+<div class="flex-1 w-full bg-primary-container/20 p-2 rounded text-center">
+<div class="text-secondary text-[10px] uppercase font-bold">Consensus Merkle Root</div>
+<div class="text-primary-fixed font-bold truncate">0x9d4e11...a71c</div>
+<div class="text-[9px] text-tertiary">Block #41,209 Immutable</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right-Hand Forensic Verification Drawer / Merkle Proof Inspector (4 cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-sm">
+<div class="rounded bg-surface-container-low p-space-md shadow-md space-y-space-md sticky top-32">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<div class="h-7 w-7 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cryptographic Proof</h3>
+<span class="font-label-sm text-[10px] text-outline block">Forensic Nonce &amp; Signature Attestation</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm font-semibold" id="inspector-badge">
+              VERIFIED
+            </span>
+</div>
+<!-- Inspector Selected Event Header -->
+<div class="p-2.5 rounded bg-surface-container-lowest space-y-1">
+<div class="flex items-center justify-between">
+<span class="text-outline font-label-sm text-[10px] uppercase">Target Transaction</span>
+<span class="font-label-md text-label-md text-primary font-bold" id="inspector-txid">SEC-LOG-982410</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline font-label-sm text-[10px]">Actor Signature:</span>
+<span class="font-label-sm text-label-sm text-on-surface" id="inspector-actor">BAMP Daemon (Worker-03)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline font-label-sm text-[10px]">Action Type:</span>
+<span class="font-label-sm text-label-sm text-error font-semibold" id="inspector-action">BIOMETRIC_NVRAM_ZEROIZE</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline font-label-sm text-[10px]">Ingress ISO Timestamp:</span>
+<span class="font-label-sm text-label-sm text-outline" id="inspector-timestamp">2025-05-18T14:26:01.882Z</span>
+</div>
+</div>
+<!-- Cryptographic Hash Tree Inspection -->
+<div class="space-y-space-xs font-label-sm text-label-sm">
+<span class="text-outline text-[10px] uppercase font-semibold">Merkle Inclusion Path (Audit Proof)</span>
+<div class="space-y-1.5">
+<div class="p-2 rounded bg-surface-container space-y-0.5">
+<div class="flex justify-between text-[10px] text-outline">
+<span>Leaf Hash (H_leaf)</span>
+<span class="text-tertiary">Matched</span>
+</div>
+<div class="font-label-sm text-on-surface break-all" id="inspector-leaf-hash">
+                  0x7f2a89c100e47b99c15892110c4a89d4128f8c19
+                </div>
+</div>
+<div class="p-2 rounded bg-surface-container space-y-0.5">
+<div class="flex justify-between text-[10px] text-outline">
+<span>Parent Node Hash (H_parent)</span>
+<span class="text-secondary">Level 1</span>
+</div>
+<div class="font-label-sm text-on-surface-variant break-all">
+                  0xd8319f001aa309ef327498cbe401928419c78ab0
+                </div>
+</div>
+<div class="p-2 rounded bg-surface-container space-y-0.5">
+<div class="flex justify-between text-[10px] text-outline">
+<span>Root Consensus Anchor (H_root)</span>
+<span class="text-primary-fixed">Block #41,209</span>
+</div>
+<div class="font-label-sm text-tertiary font-bold break-all">
+                  0x9d4e8301140023aae102847ffbc019283419a71c
+                </div>
+</div>
+</div>
+</div>
+<!-- Anti-Replay Nonce & Security Hardware Token -->
+<div class="p-2.5 rounded bg-surface-container-lowest space-y-2 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-secondary font-semibold">
+<span class="material-symbols-outlined text-[15px]">token</span>
+<span>Replay-Attack Shield (NFR-1.4)</span>
+</div>
+<div class="space-y-1 text-[11px]">
+<div class="flex justify-between text-outline">
+<span>Cryptographic Nonce:</span>
+<span class="font-label-sm text-on-surface">#99104-e08-f4</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Ingress Origin IP:</span>
+<span class="font-label-sm text-on-surface">10.244.18.91 (VPC Internal Mesh)</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Hardware Token:</span>
+<span class="font-label-sm text-tertiary">ATECC608A Slot 0 Key [Hardware OK]</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>WORM Lock Status:</span>
+<span class="font-label-sm text-on-surface">SEALED (CANNOT_MUTATE)</span>
+</div>
+</div>
+</div>
+<!-- Forensic Verification Actions -->
+<div class="space-y-2 pt-1">
+<button class="w-full py-2 rounded bg-surface-container-high hover:bg-surface-variant text-tertiary hover:text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" id="btn-run-verify" onclick="runLocalVerification()">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span id="lbl-verify-btn">Validate Cryptographic Chain</span>
+</button>
+<button class="w-full py-2 rounded bg-surface-container hover:bg-surface-container-high text-outline hover:text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" onclick="inspectRawJSON()">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Inspect Raw JSON-LD Attestation</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Forensic Raw JSON-LD Modal Container -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-sm p-4" id="modal-json">
+<div class="w-full max-w-3xl rounded bg-surface-container-low shadow-xl p-space-md space-y-space-sm relative">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">data_array</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Forensic Log Record JSON-LD Payload</span>
+</div>
+<button class="text-outline hover:text-on-surface p-1" onclick="closeJSONModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded overflow-x-auto max-h-96 custom-scrollbar">
+<pre class="font-label-sm text-label-sm text-tertiary leading-relaxed whitespace-pre font-mono" id="json-modal-content"></pre>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="text-outline font-label-sm text-[11px]">W3C Cryptographic Traceability Compliant (JSON-LD v1.1)</span>
+<button class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md flex items-center gap-1.5" onclick="copyRawJSON()">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copy-btn-text">Copy Payload</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Logic for Filtering, Dynamic Merkle Verification, and Diff Toggling -->
+<script>
+    const mockEvents = {
+      'SEC-LOG-982410': {
+        txid: 'SEC-LOG-982410',
+        actor: 'BAMP Daemon (Worker-03)',
+        role: 'SYSTEM_ACTOR',
+        action: 'BIOMETRIC_NVRAM_ZEROIZE',
+        timestamp: '2025-05-18T14:26:01.882Z',
+        target: 'EMP-3810 (Tariq Mansoor)',
+        hash: '0x7f2a89c100e47b99c15892110c4a89d4128f8c19',
+        badgeColor: 'text-error',
+        leafHash: '0x7f2a89c100e47b99c15892110c4a89d4128f8c19',
+        jsonld: {
+          "@context": "https://w3id.org/security/v2",
+          "id": "urn:bamp:log:SEC-LOG-982410",
+          "type": ["AuditMutationRecord", "BiometricZeroizationEvent"],
+          "timestamp": "2025-05-18T14:26:01.882Z",
+          "actor": {
+            "id": "urn:bamp:actor:system:worker-03",
+            "type": "SystemDaemon",
+            "clusterHost": "worker-mesh-eu-west-03"
+          },
+          "action": "BIOMETRIC_NVRAM_ZEROIZE",
+          "target": {
+            "employeeId": "EMP-3810",
+            "name": "Tariq Mansoor",
+            "terminalsPurged": ["TER-LG-01", "TER-LG-02", "TER-LG-03", "TER-LG-04"]
+          },
+          "hardwareZeroizeProof": {
+            "nvramSlotPurged": 81,
+            "status": "CRYPTOGRAPHICALLY_ZEROIZED",
+            "latencyMs": 4120
+          },
+          "merkleRoot": "0x9d4e8301140023aae102847ffbc019283419a71c",
+          "signature": {
+            "type": "Ed25519Signature2020",
+            "created": "2025-05-18T14:26:01.889Z",
+            "proofValue": "z3mKnf88a2Hk9JqLp0W4m..."
+          }
+        }
+      },
+      'SEC-LOG-982409': {
+        txid: 'SEC-LOG-982409',
+        actor: 'Dr. Elena Vance (SEC-001)',
+        role: 'SYSTEM_ADMIN',
+        action: 'DLQ_FORCE_REPLAY_MUTATION',
+        timestamp: '2025-05-18T14:23:45.109Z',
+        target: 'Queue idemp_9a482b8841c30',
+        hash: '0x3e114f828bb70129ac1498110948ac019283f482',
+        badgeColor: 'text-secondary',
+        leafHash: '0x3e114f828bb70129ac1498110948ac019283f482',
+        jsonld: {
+          "@context": "https://w3id.org/security/v2",
+          "id": "urn:bamp:log:SEC-LOG-982409",
+          "type": ["AuditMutationRecord", "DLQReplayEvent"],
+          "timestamp": "2025-05-18T14:23:45.109Z",
+          "actor": {
+            "id": "urn:bamp:actor:user:elena-vance",
+            "role": "SYSTEM_ADMIN",
+            "fido2Authenticated": true
+          },
+          "action": "DLQ_FORCE_REPLAY_MUTATION",
+          "target": {
+            "dlqMessageId": "idemp_9a482b8841c30",
+            "previousError": "DEAD_LETTER_HTTP_504"
+          },
+          "merkleRoot": "0x9d4e8301140023aae102847ffbc019283419a71c"
+        }
+      },
+      'SEC-LOG-982408': {
+        txid: 'SEC-LOG-982408',
+        actor: 'Marcus Adeboye (SUP-092)',
+        role: 'BRANCH_SUPERVISOR',
+        action: 'TERMINAL_ENROLMENT_AUTHORIZED',
+        timestamp: '2025-05-18T14:18:12.441Z',
+        target: 'Terminal TER-LG-04 -> EMP-5519',
+        hash: '0xaa4299bb840192bb31980a9118cba4102919aa42',
+        badgeColor: 'text-tertiary',
+        leafHash: '0xaa4299bb840192bb31980a9118cba4102919aa42',
+        jsonld: {
+          "@context": "https://w3id.org/security/v2",
+          "id": "urn:bamp:log:SEC-LOG-982408",
+          "type": ["AuditMutationRecord", "EnrolmentAuthEvent"],
+          "timestamp": "2025-05-18T14:18:12.441Z",
+          "actor": {
+            "id": "urn:bamp:actor:supervisor:marcus-adeboye",
+            "terminal": "TER-LG-04"
+          },
+          "action": "TERMINAL_ENROLMENT_AUTHORIZED",
+          "targetEmployee": "EMP-5519"
+        }
+      },
+      'SEC-LOG-982407': {
+        txid: 'SEC-LOG-982407',
+        actor: 'Web ERP Ingestion Webhook',
+        role: 'EXTERNAL_INTEGRATION',
+        action: 'ROSTER_INGESTION_INCREMENTAL',
+        timestamp: '2025-05-18T13:58:22.012Z',
+        target: 'Location EXT-LOC-882 (North-West)',
+        hash: '0x991f102a99182371900112847118231001928102',
+        badgeColor: 'text-outline',
+        leafHash: '0x991f102a99182371900112847118231001928102',
+        jsonld: {
+          "@context": "https://w3id.org/security/v2",
+          "id": "urn:bamp:log:SEC-LOG-982407",
+          "type": ["AuditMutationRecord", "RosterIngestionEvent"],
+          "timestamp": "2025-05-18T13:58:22.012Z",
+          "action": "ROSTER_INGESTION_INCREMENTAL",
+          "unmappedAlertTriggered": true
+        }
+      },
+      'SEC-LOG-982406': {
+        txid: 'SEC-LOG-982406',
+        actor: 'Dr. Elena Vance (SEC-001)',
+        role: 'SYSTEM_ADMIN',
+        action: 'SECURITY_RULE_OVERRIDE',
+        timestamp: '2025-05-18T13:42:00.000Z',
+        target: 'RBAC Policy: REGION_NORTH_WEST',
+        hash: '0xbb28334182900112347101824190820194821900',
+        badgeColor: 'text-primary',
+        leafHash: '0xbb28334182900112347101824190820194821900',
+        jsonld: {
+          "@context": "https://w3id.org/security/v2",
+          "id": "urn:bamp:log:SEC-LOG-982406",
+          "type": ["AuditMutationRecord", "SecurityPolicyOverride"],
+          "timestamp": "2025-05-18T13:42:00.000Z",
+          "action": "SECURITY_RULE_OVERRIDE",
+          "authMethod": "MFA_FIDO2_YUBIKEY"
+        }
+      }
+    };
+
+    let currentSelectedTx = 'SEC-LOG-982410';
+
+    function selectEvent(txid) {
+      const data = mockEvents[txid];
+      if (!data) return;
+      currentSelectedTx = txid;
+
+      // Update right-hand drawer
+      document.getElementById('inspector-txid').innerText = data.txid;
+      document.getElementById('inspector-actor').innerText = data.actor;
+      document.getElementById('inspector-action').innerText = data.action;
+      document.getElementById('inspector-timestamp').innerText = data.timestamp;
+      document.getElementById('inspector-leaf-hash').innerText = data.leafHash;
+
+      // Visual row highlight
+      const rows = document.querySelectorAll('#audit-table-body tr[data-row-id]');
+      rows.forEach(r => {
+        if (r.getAttribute('data-row-id') === txid) {
+          r.classList.add('bg-surface-container');
+        } else {
+          r.classList.remove('bg-surface-container');
+        }
+      });
+    }
+
+    function toggleDiff(diffRowId, event) {
+      if (event) event.stopPropagation();
+      const row = document.getElementById(diffRowId);
+      const icon = document.getElementById('diff-icon-' + diffRowId);
+      if (row.classList.contains('hidden')) {
+        row.classList.remove('hidden');
+        if (icon) icon.innerText = 'unfold_less';
+      } else {
+        row.classList.add('hidden');
+        if (icon) icon.innerText = 'unfold_more';
+      }
+    }
+
+    function runLocalVerification() {
+      const btn = document.getElementById('btn-run-verify');
+      const lbl = document.getElementById('lbl-verify-btn');
+      lbl.innerText = 'Hashing Merkle Path...';
+      btn.classList.add('opacity-75');
+
+      setTimeout(() => {
+        lbl.innerText = 'Cryptographic Proof Valid (0 Collisions)';
+        btn.classList.remove('opacity-75');
+        const badge = document.getElementById('inspector-badge');
+        badge.innerText = 'MATHEMATICALLY PROVEN';
+        badge.className = 'px-1.5 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold';
+
+        setTimeout(() => {
+          lbl.innerText = 'Validate Cryptographic Chain';
+          badge.innerText = 'VERIFIED';
+          badge.className = 'px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm font-semibold';
+        }, 3200);
+      }, 700);
+    }
+
+    function triggerMerkleVerification() {
+      const banner = document.getElementById('merkle-banner-status');
+      banner.classList.add('hash-highlight');
+      setTimeout(() => {
+        banner.classList.remove('hash-highlight');
+      }, 2500);
+    }
+
+    function inspectRawJSON() {
+      const data = mockEvents[currentSelectedTx];
+      const modal = document.getElementById('modal-json');
+      const content = document.getElementById('json-modal-content');
+      content.innerText = JSON.stringify(data.jsonld, null, 2);
+      modal.classList.remove('hidden');
+    }
+
+    function closeJSONModal() {
+      document.getElementById('modal-json').classList.add('hidden');
+    }
+
+    function copyRawJSON() {
+      const content = document.getElementById('json-modal-content').innerText;
+      navigator.clipboard.writeText(content);
+      const copyBtn = document.getElementById('copy-btn-text');
+      copyBtn.innerText = 'Copied to Clipboard!';
+      setTimeout(() => {
+        copyBtn.innerText = 'Copy Payload';
+      }, 2000);
+    }
+
+    function applyFilters() {
+      const actorVal = document.getElementById('filter-actor').value;
+      const actionVal = document.getElementById('filter-action').value;
+      const rows = document.querySelectorAll('#audit-table-body tr[data-row-id]');
+      let visible = 0;
+
+      rows.forEach(r => {
+        const tx = r.getAttribute('data-row-id');
+        const item = mockEvents[tx];
+        let show = true;
+
+        if (actorVal === 'ELENA' && !item.actor.includes('Elena')) show = false;
+        if (actorVal === 'MARCUS' && !item.actor.includes('Marcus')) show = false;
+        if (actorVal === 'DAEMON' && !item.actor.includes('Daemon')) show = false;
+        if (actorVal === 'WEBHOOK' && !item.actor.includes('Webhook')) show = false;
+
+        if (actionVal === 'ZEROIZE' && item.action !== 'BIOMETRIC_NVRAM_ZEROIZE') show = false;
+        if (actionVal === 'DLQ' && item.action !== 'DLQ_FORCE_REPLAY_MUTATION') show = false;
+        if (actionVal === 'ROSTER' && item.action !== 'ROSTER_INGESTION_INCREMENTAL') show = false;
+        if (actionVal === 'ENROL' && item.action !== 'TERMINAL_ENROLMENT_AUTHORIZED') show = false;
+        if (actionVal === 'OVERRIDE' && item.action !== 'SECURITY_RULE_OVERRIDE') show = false;
+
+        if (show) {
+          r.classList.remove('hidden');
+          visible++;
+        } else {
+          r.classList.add('hidden');
+          // Also hide diff if open
+          const diffId = 'diff-' + tx.replace('SEC-LOG-', '');
+          const diffRow = document.getElementById(diffId);
+          if (diffRow) diffRow.classList.add('hidden');
+        }
+      });
+
+      document.getElementById('log-count-badge').innerText = visible + ' Displayed / 2,841,920 Total';
+    }
+
+    function handleSearch(e) {
+      const q = e.target.value.toLowerCase().trim();
+      const rows = document.querySelectorAll('#audit-table-body tr[data-row-id]');
+      let visible = 0;
+
+      rows.forEach(r => {
+        const tx = r.getAttribute('data-row-id');
+        const item = mockEvents[tx];
+        const match = tx.toLowerCase().includes(q) ||
+                      item.actor.toLowerCase().includes(q) ||
+                      item.action.toLowerCase().includes(q) ||
+                      item.hash.toLowerCase().includes(q) ||
+                      item.target.toLowerCase().includes(q);
+
+        if (match) {
+          r.classList.remove('hidden');
+          visible++;
+        } else {
+          r.classList.add('hidden');
+          const diffId = 'diff-' + tx.replace('SEC-LOG-', '');
+          const diffRow = document.getElementById(diffId);
+          if (diffRow) diffRow.classList.add('hidden');
+        }
+      });
+      document.getElementById('log-count-badge').innerText = visible + ' Displayed / 2,841,920 Total';
+    }
+
+    function resetFilters() {
+      document.getElementById('filter-actor').value = 'ALL';
+      document.getElementById('filter-action').value = 'ALL';
+      document.getElementById('filter-scope').value = 'ALL';
+      document.getElementById('search-input').value = '';
+      applyFilters();
+    }
+
+    // Default selection on mount
+    selectEvent('SEC-LOG-982410');
+  </script>
+</div></main></div></body></html>

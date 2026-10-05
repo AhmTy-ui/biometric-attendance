@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#2c3039", "on-background": "#dfe2ee", "on-tertiary": "#003824", "on-surface-variant": "#c3c6d7", "inverse-surface": "#dfe2ee", "on-tertiary-fixed-variant": "#005236", "primary-container": "#2563eb", "tertiary-fixed": "#6ffbbe", "tertiary-fixed-dim": "#4edea3", "on-secondary-container": "#002c47", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "surface-container-high": "#262a33", "surface-tint": "#b4c5ff", "on-primary": "#002a78", "on-secondary": "#003351", "surface-variant": "#31353e", "primary": "#b4c5ff", "secondary-container": "#3198dc", "primary-fixed": "#dbe1ff", "surface-container-low": "#181c24", "surface-dim": "#0f131c", "surface": "#0f131c", "error": "#ffb4ab", "secondary-fixed": "#cce5ff", "secondary": "#93ccff", "on-secondary-fixed": "#001d31", "on-error": "#690005", "on-surface": "#dfe2ee", "on-primary-container": "#eeefff", "on-secondary-fixed-variant": "#004b73", "outline": "#8d90a0", "on-error-container": "#ffdad6", "primary-fixed-dim": "#b4c5ff", "surface-container-highest": "#31353e", "tertiary": "#4edea3", "background": "#0f131c", "secondary-fixed-dim": "#93ccff", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#0a0e16", "surface-container": "#1c2028", "error-container": "#93000a", "outline-variant": "#434655", "inverse-primary": "#0053db", "surface-bright": "#353942", "tertiary-container": "#007d55" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1.5rem", "space-md": "0.75rem", "gutter-dense": "0.5rem", "margin-mobile": "1rem", "space-lg": "1.25rem" }, fontFamily: { "label-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-badge": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest"><img alt="BAMP Enterprise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XfD_O6uF0DR5j2vcAF2BkAiLYfzFJDNTkNA591_6oz5G_wJEKDnVtXSd-fm5l_l7upS1pvDJxfigy-FMhivSz_M0cNc1skgBfhH342rQHpClSMakBmRfgAR9SaTQCVRsI42MYGzLmzFoRSzkqU54ErKSKNdGhCJk0DULib0c8oEoQBFlG0hwUI81Xe28A81pBQj27maRu2vfvsYMj7w3E_v5Ud1s5BI_M-BSVYKpFkJ5iadgshN75SaLZX"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">BAMP CORE</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mission Operations</span></div></div><div class="overflow-y-auto flex-1 px-space-sm py-space-sm space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Overview</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">grid_view</span><span>Command Center</span></div><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Attendance</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-ingestion-stream" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">stream</span><span>Live Ingestion Stream</span></div><span class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-tertiary">LIVE</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="attendance-reconciliation-dlq" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">published_with_changes</span><span>Reconciliation & DLQ</span></div><span class="font-label-sm text-label-sm px-1.5 rounded bg-error-container text-on-error-container">2</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">analytics</span><span>Reports & Analytics</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workforce & Roster</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="employee-sync-directory" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">badge</span><span>Sync Directory</span></div><span class="font-label-sm text-label-sm text-outline">SSOT</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="locations-branches" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">storefront</span><span>Locations & Branches</span></div><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Devices & Hardware</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="device-fleet-registry" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">router</span><span>Device Fleet Registry</span></div><span class="font-label-sm text-label-sm text-tertiary font-label-lg">98.4%</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="firmware-ota-deployments" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">system_update</span><span>Firmware & OTA</span></a><a aria-current="page" class="group flex items-center gap-2 px-space-sm py-1.5 rounded transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="biometric-enrolment-terminal" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">fingerprint</span><span>Enrolment Terminal</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System & Compliance</div><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integration-web-adapter" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">hub</span><span>Integration Adapter</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="security-audit-trail" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">verified_user</span><span>Security Audit Trail</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="system-settings-rbac" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">tune</span><span>Settings & RBAC</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-tertiary"></span><span>BAMP DAEMON v4.11</span></div><span class="font-label-sm text-label-sm text-outline-variant font-label-lg">SEC-A09</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur border-b border-outline-variant/40 z-40 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-outline-variant/40 rounded"><div class="relative flex items-center justify-center h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-tertiary"></span></div><span class="font-label-sm text-label-sm text-tertiary whitespace-nowrap">MQTT & Dual-Sync Healthy</span><span class="text-outline text-[10px]">|</span><span class="font-label-sm text-label-sm text-outline whitespace-nowrap">P95 4.2s</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-body-sm text-body-sm text-on-surface truncate max-w-[150px]">Apex Holdings - 14 Branches</span><span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span></div></div><div class="flex-1 max-w-xl mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline">search</span><input class="w-full bg-surface-container-low border border-outline-variant/40 rounded h-8 pl-8 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Search terminals, staff ID, sync events, locations..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 font-label-sm text-label-sm bg-surface-container-high text-outline rounded border border-outline-variant/40">/</kbd></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded font-label-sm text-label-sm text-secondary"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span>MQTT TLS: Active (Port 8883)</span></div><div class="flex items-center gap-1 px-2 py-1 bg-surface-container-low border border-outline-variant/40 rounded cursor-pointer hover:border-secondary transition-colors" title="Active Offline Buffers"><span class="material-symbols-outlined text-[16px] text-secondary">cloud_off</span><span class="font-label-sm text-label-sm text-on-surface">3 Buffering</span><span class="font-label-sm text-label-sm text-outline">(428)</span></div><button class="relative p-1.5 rounded bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error-container text-on-error-container font-label-sm text-[9px] font-bold border border-background">2</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/30"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlj8VFrNyEhwKFZarVvarBMnrK0R4ylSyfCRaL6liD53jTEuduW6Kgi5VpGOhKigITegAhjXuv55PIwLnv1ogAf9bVw_H-2MZWU1rwEWb_beYFFbYaZhTrMkEQf61qnuhxeRSSh1DBQOvWUYjEv60Ub-OlrsNZOZje2vgkodC1FWnFQkbigJgwibX60JFozqFRxaDvb8qEc360OuAefMDSjNlhmaKyqow60Bi1-NCgvxIH5_xUVWt7-g"/><span class="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-[10px] text-tertiary">lock</span></span></div><div class="hidden lg:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-body-sm text-body-sm text-on-surface font-semibold max-w-[140px] truncate">Dr. Elena Vance</span><span class="font-label-sm text-[9px] tracking-wider uppercase px-1 py-0.2 bg-primary-container text-on-primary-container rounded font-bold">SYSTEM ADMIN</span></div><span class="font-label-sm text-[10px] text-outline truncate max-w-[170px]">Head of Global SecOps</span></div></div></div></header><div class="fixed top-16 left-72 right-0 h-10 bg-surface-container-low border-b border-outline-variant/30 z-30 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline"><span class="material-symbols-outlined text-[15px]">dns</span><span>BAMP</span><span class="text-outline-variant">/</span></div><div class="flex items-center gap-1.5"><span class="text-outline">Fleet Domain:</span><select class="bg-surface-container border border-outline-variant/40 rounded px-2 py-0.5 font-label-sm text-label-sm text-on-surface focus:outline-none focus:border-primary-container"><option>All Branches (14 Active Locations)</option><option>Lagos Hub Terminal 04</option><option>Abuja HQ - Gate Alpha</option><option>London Ops Centre</option><option>Nairobi Assembly Plant</option></select></div></div><div class="flex items-center gap-space-md shrink-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline font-label-lg"><span class="material-symbols-outlined text-[14px]">schedule</span><span>UTC 14:26:08 | LOCAL +01:00</span></div><div class="flex items-center gap-1.5"><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">sync</span><span>Trigger Roster Sync</span></button><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">bolt</span><span>Flush Buffers</span></button></div></div></div><main class="relative pt-26 bg-background min-h-screen"><div class="flex flex-col w-full p-gutter space-y-gutter">
+<!-- Operational Flow Header Banner -->
+<div class="bg-surface-container-low rounded-xl p-gutter shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="h-12 w-12 rounded-xl bg-primary-container/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-headline-lg">fingerprint</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface">Biometric Enrolment Terminal & Remote Console</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-badge text-label-badge uppercase tracking-wider">JOURNEY B ACTIVE</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-badge text-label-badge">ISO/IEC 19794-2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+          Hardware terminal emulation paired with real-time cloud cryptographic escrow & mesh sync distribution.
+        </p>
+</div>
+</div>
+<!-- Telemetry Badges -->
+<div class="flex items-center gap-space-sm shrink-0 flex-wrap">
+<div class="bg-surface-container px-3 py-1.5 rounded flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-outline">TERMINAL ID:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">T-LAGOS-04 (REV-3)</span>
+</div>
+<div class="bg-surface-container px-3 py-1.5 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock</span>
+<span class="font-label-sm text-label-sm text-outline">SECURE ENCLAVE:</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">CC EAL6+ HARDENED</span>
+</div>
+<button class="px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" onclick="resetFlow()">
+<span class="material-symbols-outlined text-[14px]">restart_alt</span>
+<span>Reset Simulator</span>
+</button>
+</div>
+</div>
+<!-- Interactive Split-Screen 12-Column Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
+<!-- LEFT: Physical Terminal Hardware Kiosk Simulator (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col space-y-space-md">
+<!-- Outer Hardware Chassis Mockup -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-xl flex flex-col space-y-space-md">
+<!-- Hardware Bezel Header Bar -->
+<div class="flex items-center justify-between px-space-sm py-1 bg-surface-container-low rounded">
+<div class="flex items-center gap-2">
+<span class="h-2.5 w-2.5 rounded-full bg-tertiary shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-semibold tracking-wider">BAMP EDGE TERMINAL K450</span>
+<span class="text-outline text-[11px]">• LAGOS INDUSTRIAL HUB</span>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-tertiary">wifi</span> 98%</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">memory</span> 41°C</span>
+<span class="text-on-surface font-semibold font-label-sm text-label-sm" id="terminalClock">14:26:42</span>
+</div>
+</div>
+<!-- Terminal Touchscreen Active Glass -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-inner min-h-[580px] flex flex-col justify-between relative overflow-hidden">
+<!-- Background Digital Grid Watermark -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-tertiary/5 pointer-events-none"></div>
+<!-- Step Progression Indicator -->
+<div class="relative z-10 flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-1.5 flex-1">
+<div class="h-2 flex-1 rounded bg-primary transition-all duration-300" id="stepDot1"></div>
+<div class="h-2 flex-1 rounded bg-surface-container-high transition-all duration-300" id="stepDot2"></div>
+<div class="h-2 flex-1 rounded bg-surface-container-high transition-all duration-300" id="stepDot3"></div>
+<div class="h-2 flex-1 rounded bg-surface-container-high transition-all duration-300" id="stepDot4"></div>
+<div class="h-2 flex-1 rounded bg-surface-container-high transition-all duration-300" id="stepDot5"></div>
+</div>
+<span class="ml-4 font-label-sm text-label-sm text-secondary font-semibold uppercase" id="stepLabel">Step 1 of 5: Supervisor Auth</span>
+</div>
+<!-- DYNAMIC SCREEN CONTAINER -->
+<div class="relative z-10 flex-1 flex flex-col justify-center">
+<!-- ================= STEP 1: SUPERVISOR AUTH ================= -->
+<div class="flex flex-col items-center text-center space-y-space-md py-space-md" id="flowStep1">
+<div class="relative group cursor-pointer" onclick="advanceStep(2)">
+<div class="h-24 w-24 rounded-full bg-surface-container-highest flex items-center justify-center relative shadow-lg">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-25"></span>
+<span class="material-symbols-outlined text-[48px] text-secondary">fingerprint</span>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary text-on-tertiary rounded-full p-1 shadow">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+</div>
+<div>
+<span class="px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm uppercase font-semibold tracking-wider">
+                  FR-2.1: SUPERVISOR CREDENTIAL REQUIRED
+                </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-2">Authorize Enrolment Session</h3>
+<p class="font-body-sm text-body-sm text-outline max-w-md mx-auto mt-1">
+                  Place registered supervisor thumb on optical scanner or enter 4-digit master PIN.
+                </p>
+</div>
+<!-- Keypad Mock / Quick Auth -->
+<div class="w-full max-w-xs bg-surface-container-low rounded-xl p-space-md space-y-space-sm">
+<div class="flex justify-center gap-2">
+<span class="h-3 w-3 rounded-full bg-secondary"></span>
+<span class="h-3 w-3 rounded-full bg-secondary"></span>
+<span class="h-3 w-3 rounded-full bg-secondary"></span>
+<span class="h-3 w-3 rounded-full bg-outline-variant"></span>
+</div>
+<div class="grid grid-cols-3 gap-1.5 font-label-md text-label-md">
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">1</button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">2</button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">3</button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">4</button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">5</button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">6</button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">7</button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">8</button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-semibold">9</button>
+</div>
+<button class="w-full py-2 rounded bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-2" onclick="advanceStep(2)">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>Simulate Biometric Scan</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+<span>Branch Supervisor on Duty: Marcus Adeboye (SUP-092)</span>
+</div>
+</div>
+<!-- ================= STEP 2: ROSTER SELECTION (SSOT) ================= -->
+<div class="hidden flex-col space-y-space-md py-space-sm" id="flowStep2">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-semibold">
+                    FR-2.2: SINGLE SOURCE OF TRUTH (SSOT)
+                  </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">Select Synced Employee</h3>
+<p class="font-body-sm text-body-sm text-outline">
+                    Terminals cannot forge new employee records. Select from verified branch roster.
+                  </p>
+</div>
+<div class="px-2.5 py-1 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+<span>Roster Synced 3m ago</span>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="bg-surface-container-low p-2 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none" readonly="" type="text" value="Zainab Okonjo"/>
+<span class="px-2 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm">1 MATCH</span>
+</div>
+<!-- Candidate Card (Selected) -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-16 h-16 rounded-xl object-cover" data-alt="High resolution professional corporate photo of Zainab Okonjo, a young Nigerian woman in a crisp navy blue blouse with gentle office lighting and calm confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGGDM3FpVENgXTyElVQmuEckCfopfjWm9QNDnFYGR1ANOPlmPubO6WUX2vDryLabnVF5oT5_Sw1ktLOOrlVhvxCDZ-lrPHBp-uvlz87cmChpyctMCGKRBXSAki8IipPfgp6sY35QYrc4XFyiPJBQGR_sIwVMgdFVQzX9g5NxGa-7WMIXZ2lx8lqhat8GqKbe-kIvbXkyKVX0GeOQst6MbQSkMB5-pz6Xa2EhwndYp1BdTDjif_V9lhEA"/>
+<span class="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-[10px]">✓</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Zainab Okonjo</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-primary font-semibold">EMP-5519</span>
+<span class="text-outline text-label-sm">•</span>
+<span class="font-body-sm text-body-sm text-outline">Senior Operations Analyst</span>
+</div>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                      Dept: Logistics & Supply Chain
+                    </span>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-1 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold block mb-1">
+                    READY FOR ENROLMENT
+                  </span>
+<span class="font-label-sm text-label-sm text-outline">Web Ref: #WREF-98421</span>
+</div>
+</div>
+<!-- Warning Notice -->
+<div class="bg-surface-container-low/60 rounded p-space-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline mt-0.5">info</span>
+<span class="font-body-sm text-body-sm text-outline">
+                  Strict Governance: Ad-hoc staff creation is disabled on terminal firmware per SEC-A09 protocol.
+                </span>
+</div>
+<div class="flex justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors" onclick="advanceStep(1)">
+                  Back
+                </button>
+<button class="px-5 py-2 rounded bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-headline-sm text-headline-sm flex items-center gap-2" onclick="advanceStep(3)">
+<span>Confirm Employee & Begin Scans</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- ================= STEP 3: DUAL FINGERPRINT CAPTURE (FR-2.4) ================= -->
+<div class="hidden flex-col space-y-space-md py-space-xs" id="flowStep3">
+<div class="flex items-center justify-between">
+<div>
+<span class="px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm uppercase font-semibold">
+                    FR-2.4: DUAL SENSOR CAPTURE (FALLBACK REDUNDANCY)
+                  </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">Acquire Primary & Secondary Biometrics</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">NFIQ 2.0 Standard</span>
+</div>
+<!-- Fingerprint Scans Comparison Card -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Finger 1: Right Index -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col items-center text-center space-y-space-sm">
+<div class="flex items-center justify-between w-full font-label-sm text-label-sm text-outline">
+<span>FINGER 1 (PRIMARY)</span>
+<span class="text-tertiary font-semibold">RIGHT INDEX</span>
+</div>
+<!-- Minutiae SVG Map Container -->
+<div class="relative h-32 w-32 rounded-xl bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<svg class="h-28 w-28 text-tertiary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 100 100">
+<circle class="opacity-60" cx="50" cy="50" r="12" stroke-dasharray="3 2"></circle>
+<circle class="opacity-80" cx="50" cy="50" r="22"></circle>
+<circle cx="50" cy="50" r="32" stroke-dasharray="8 4"></circle>
+<path d="M 30 70 Q 50 20 70 70"></path>
+<path d="M 25 60 Q 50 35 75 60"></path>
+<circle cx="42" cy="40" fill="currentColor" r="2.5"></circle>
+<circle cx="60" cy="48" fill="currentColor" r="2.5"></circle>
+<circle cx="48" cy="62" fill="currentColor" r="2.5"></circle>
+<circle cx="34" cy="52" fill="currentColor" r="2.5"></circle>
+</svg>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-tertiary/10 to-transparent animate-pulse"></div>
+<span class="absolute top-1 left-1 px-1 rounded bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold">MATCH 98%</span>
+</div>
+<div class="w-full">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline">Minutiae Density</span>
+<span class="text-tertiary font-semibold font-label-lg">48 points mapped</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[98%]"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Verified Quality
+                  </span>
+</div>
+<!-- Finger 2: Right Thumb -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col items-center text-center space-y-space-sm">
+<div class="flex items-center justify-between w-full font-label-sm text-label-sm text-outline">
+<span>FINGER 2 (BACKUP)</span>
+<span class="text-secondary font-semibold">RIGHT THUMB</span>
+</div>
+<!-- Minutiae SVG Map Container -->
+<div class="relative h-32 w-32 rounded-xl bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<svg class="h-28 w-28 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 100 100">
+<circle class="opacity-70" cx="50" cy="50" r="14"></circle>
+<circle cx="50" cy="50" r="26" stroke-dasharray="5 3"></circle>
+<circle cx="50" cy="50" r="36"></circle>
+<path d="M 35 75 Q 50 15 65 75"></path>
+<circle cx="50" cy="35" fill="currentColor" r="2.5"></circle>
+<circle cx="38" cy="55" fill="currentColor" r="2.5"></circle>
+<circle cx="62" cy="58" fill="currentColor" r="2.5"></circle>
+</svg>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/10 to-transparent animate-pulse"></div>
+<span class="absolute top-1 left-1 px-1 rounded bg-secondary text-on-secondary-fixed font-label-sm text-[9px] font-bold">MATCH 96%</span>
+</div>
+<div class="w-full">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline">Minutiae Density</span>
+<span class="text-secondary font-semibold font-label-lg">42 points mapped</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[96%]"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Verified Quality
+                  </span>
+</div>
+</div>
+<!-- Liveness & Quality Guarantee -->
+<div class="p-space-sm bg-surface-container-low rounded flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-tertiary">fingerprint</span> Multispectral Optical Liveness: PASSED (Anti-Spoof V2)</span>
+<span class="text-on-surface font-semibold">Latency: 142ms</span>
+</div>
+<div class="flex justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors" onclick="advanceStep(2)">
+                  Rescan
+                </button>
+<button class="px-5 py-2 rounded bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-headline-sm text-headline-sm flex items-center gap-2" onclick="advanceStep(4)">
+<span>Generate Hardware Template</span>
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+</button>
+</div>
+</div>
+<!-- ================= STEP 4: HARDWARE VECTOR & TEMPLATE GENERATION (FR-2.3) ================= -->
+<div class="hidden flex-col space-y-space-md py-space-sm" id="flowStep4">
+<div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-semibold">
+                  FR-2.3: LOCAL ZERO-RAW-IMAGE COMPLIANCE
+                </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">Hardware Template Extraction (ISO/IEC 19794-2)</h3>
+<p class="font-body-sm text-body-sm text-outline">
+                  Raw biometric photos are purged instantly from RAM. Only mathematical feature vectors leave the secure enclave.
+                </p>
+</div>
+<!-- Enclave Diagram Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-md shadow-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">SECURE ENCLAVE WORKFLOW</span>
+<span class="text-tertiary font-semibold font-label-lg">STATE: ENCRYPTED & PURGED</span>
+</div>
+<!-- Process Sequence -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm text-center">
+<div class="bg-surface-container rounded p-space-sm flex flex-col items-center">
+<span class="material-symbols-outlined text-outline text-[22px]">delete_sweep</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 font-semibold">Raw Image Purge</span>
+<span class="text-[10px] text-outline mt-0.5">RAM zeroed in 12ms</span>
+</div>
+<div class="bg-surface-container rounded p-space-sm flex flex-col items-center">
+<span class="material-symbols-outlined text-tertiary text-[22px]">grain</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 font-semibold">Minutiae Vector</span>
+<span class="text-[10px] text-tertiary mt-0.5">1024-byte compact record</span>
+</div>
+<div class="bg-surface-container rounded p-space-sm flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-[22px]">key</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 font-semibold">AES-256 Envelope</span>
+<span class="text-[10px] text-secondary mt-0.5">Local HSM master key</span>
+</div>
+</div>
+<!-- Cryptographic Vector Stream Terminal Window -->
+<div class="bg-surface-container-lowest rounded p-space-sm font-label-sm text-[11px] space-y-1 font-label-lg text-outline">
+<div class="text-tertiary"># BIOMETRIC EXTRACTOR HARDWARE DAEMON v4.11</div>
+<div class="text-on-surface-variant truncate">> [HW_EXTRACT] Raw sensory buffer: [0xFF..0xA3] -> <span class="text-error font-bold">DESTRUCTION CONFIRMED</span></div>
+<div class="text-on-surface-variant truncate">> [VECTOR_GEN] ISO_19794_2 standard payload initialized. Payload size: 1,024 bytes.</div>
+<div class="text-secondary truncate">> [CIPHER_SIGN] SHA256: e82f1b7c093aa6d403ef881c009d6f8319f6a109</div>
+</div>
+</div>
+<div class="flex justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors" onclick="advanceStep(3)">
+                  Back
+                </button>
+<button class="px-5 py-2 rounded bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-headline-sm text-headline-sm flex items-center gap-2" onclick="advanceStep(5)">
+<span>Commit to Cloud Escrow</span>
+<span class="material-symbols-outlined text-[16px]">cloud_upload</span>
+</button>
+</div>
+</div>
+<!-- ================= STEP 5: ENCRYPTED CLOUD ESCROW UPLOAD (NFR-3.1) ================= -->
+<div class="hidden flex-col space-y-space-md py-space-sm" id="flowStep5">
+<div>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm uppercase font-semibold">
+                  NFR-3.1: CENTRAL ESCROW COMPLETED
+                </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">Enrolment Packet Successfully Sealed</h3>
+<p class="font-body-sm text-body-sm text-outline">
+                  Biometric envelope uploaded to central escrow vault and broadcast to Lagos branch mesh.
+                </p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-md shadow-sm">
+<!-- Success State Display -->
+<div class="flex items-center gap-space-md">
+<div class="h-14 w-14 rounded-xl bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Zainab Okonjo (EMP-5519)</h4>
+<p class="font-body-sm text-body-sm text-outline">
+                      Dual-template authorized by Supervisor <span class="text-on-surface font-semibold">Marcus Adeboye</span>
+</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold font-label-lg">STATUS: ESCROW_STORED</span>
+<span class="text-outline text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-outline font-label-lg">AUDIT_TX: #BAMP-TX-9941</span>
+</div>
+</div>
+</div>
+<!-- Hash Checkbox Matrix -->
+<div class="bg-surface-container rounded p-space-sm space-y-1.5 font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-tertiary">check</span> Envelope Cryptography</span>
+<span class="text-tertiary font-semibold font-label-lg">AES-256-GCM</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-tertiary">check</span> Hardware Escrow Proof</span>
+<span class="text-outline font-label-lg truncate max-w-[200px]">SHA256: e82f...a109</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-tertiary">check</span> Branch Mesh Propagation</span>
+<span class="text-secondary font-semibold font-label-lg">2/2 Terminals Synced</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Ready for next employee on roster</span>
+<button class="px-5 py-2 rounded bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-headline-sm text-headline-sm flex items-center gap-2" onclick="advanceStep(1)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Enrol Another Employee</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hardware Touch Footer Controls -->
+<div class="relative z-10 pt-space-md flex items-center justify-between text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+<span>MQTT TOPIC: /devices/lagos-04/enrolment</span>
+</div>
+<div class="flex items-center gap-1 font-label-lg text-outline-variant">
+<span>BAMP OS v3.2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hardware Sensor Diagnostics Strip -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">lens</span>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Sensor Prism</div>
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">Clean (0.2% dust)</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">encrypted</span>
+<div>
+<div class="font-label-sm text-label-sm text-outline">HSM Module</div>
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">Locked & Active</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cell_tower</span>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Mesh Latency</div>
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">18ms to Central</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: Cloud Escrow & Roster Audit Telemetry Console (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col space-y-space-md">
+<!-- Real-Time Escrow Status Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Cloud Escrow & Key Telemetry</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-badge text-label-badge">LIVE SYNC</span>
+</div>
+<!-- Architecture Callout Pill -->
+<div class="bg-surface-container rounded-xl p-space-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">vpn_key</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-on-surface font-semibold">NFR-3.1 Compliant:</span> AES-256 envelope encryption. Keys stored in hardware KMS separate from primary database.
+          </p>
+</div>
+<!-- Terminal Distribution Matrix -->
+<div class="space-y-space-xs">
+<div class="font-label-sm text-label-sm text-outline uppercase font-semibold">Branch Device Distribution Matrix</div>
+<!-- Lagos Terminal 01 -->
+<div class="bg-surface-container rounded p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<div class="truncate">
+<div class="font-body-sm text-body-sm text-on-surface font-semibold truncate">Terminal 01 (Lagos Main Reception)</div>
+<div class="font-label-sm text-label-sm text-outline">MAC: 00:1B:44:11:3A:B7</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold shrink-0">
+              SYNCED (200 OK)
+            </span>
+</div>
+<!-- Lagos Terminal 02 -->
+<div class="bg-surface-container rounded p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<div class="truncate">
+<div class="font-body-sm text-body-sm text-on-surface font-semibold truncate">Terminal 02 (Lagos Turnstile West)</div>
+<div class="font-label-sm text-label-sm text-outline">MAC: 00:1B:44:11:3A:C2</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold shrink-0">
+              SYNCED (200 OK)
+            </span>
+</div>
+<!-- Central Escrow Vault -->
+<div class="bg-surface-container rounded p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+<div class="truncate">
+<div class="font-body-sm text-body-sm text-on-surface font-semibold truncate">BAMP Central Escrow (AWS eu-west-1)</div>
+<div class="font-label-sm text-label-sm text-outline">Vault Tier: Hardware HSM-Managed</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold shrink-0">
+              ESCROW READY
+            </span>
+</div>
+</div>
+<!-- Metric Sparkline Simulation -->
+<div class="bg-surface-container rounded p-space-sm space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>Branch Replication Throughput (p95)</span>
+<span class="text-tertiary font-label-lg font-semibold">184 ms</span>
+</div>
+<div class="h-10 w-full flex items-end gap-1 pt-2">
+<div class="w-full bg-primary/20 hover:bg-primary h-[40%] rounded-t transition-all"></div>
+<div class="w-full bg-primary/30 hover:bg-primary h-[60%] rounded-t transition-all"></div>
+<div class="w-full bg-primary/20 hover:bg-primary h-[35%] rounded-t transition-all"></div>
+<div class="w-full bg-primary/40 hover:bg-primary h-[70%] rounded-t transition-all"></div>
+<div class="w-full bg-primary/50 hover:bg-primary h-[85%] rounded-t transition-all"></div>
+<div class="w-full bg-tertiary hover:bg-tertiary h-[95%] rounded-t transition-all"></div>
+<div class="w-full bg-tertiary/80 hover:bg-tertiary h-[90%] rounded-t transition-all"></div>
+<div class="w-full bg-tertiary hover:bg-tertiary h-[100%] rounded-t transition-all"></div>
+</div>
+</div>
+</div>
+<!-- Supervisor Non-Repudiation Audit Trail -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Supervisor Compliance Checklist</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-label-lg">PRD SEC-10</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Check 1 -->
+<div class="flex items-start gap-2.5 bg-surface-container/60 p-2.5 rounded">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+<div class="min-w-0">
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">Supervisor Physical Presence Validated</div>
+<div class="font-label-sm text-label-sm text-outline">
+                Marcus Adeboye biometrics authenticated at physical kiosk. Non-repudiation audit stamp created.
+              </div>
+</div>
+</div>
+<!-- Check 2 -->
+<div class="flex items-start gap-2.5 bg-surface-container/60 p-2.5 rounded">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+<div class="min-w-0">
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">Geofence & Hardware MAC Bound</div>
+<div class="font-label-sm text-label-sm text-outline">
+                GPS: 6.5244° N, 3.3792° E (Lagos Terminal Bounds Verified ±2m tolerance).
+              </div>
+</div>
+</div>
+<!-- Check 3 -->
+<div class="flex items-start gap-2.5 bg-surface-container/60 p-2.5 rounded">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+<div class="min-w-0">
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">Web Roster Integrity Verified</div>
+<div class="font-label-sm text-label-sm text-outline">
+                Employee record pre-approved via cloud HR sync. Terminal has zero write privilege on HR roster.
+              </div>
+</div>
+</div>
+<!-- Check 4 -->
+<div class="flex items-start gap-2.5 bg-surface-container/60 p-2.5 rounded">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+<div class="min-w-0">
+<div class="font-body-sm text-body-sm text-on-surface font-semibold">Dual Fallback Redundancy Met</div>
+<div class="font-label-sm text-label-sm text-outline">
+                2 fingers recorded per employee (FR-2.4) ensuring failover in event of injury.
+              </div>
+</div>
+</div>
+</div>
+<!-- Terminal Verification Certificate Box -->
+<div class="bg-surface-container rounded p-space-sm flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">fingerprint</span>
+<span class="text-outline">Escrow Receipt Token:</span>
+</div>
+<span class="font-label-lg text-secondary">0x8F4A...33BC</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Event Bus Feed (Telemetry Table) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">receipt_long</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Live Enrolment & Escrow Event Stream</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-outline">AUTO-REFRESHING EVENT STREAM</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-outline uppercase font-label-sm text-label-sm">
+<tr>
+<th class="py-2 px-3 font-semibold">Timestamp (UTC+1)</th>
+<th class="py-2 px-3 font-semibold">Event Code</th>
+<th class="py-2 px-3 font-semibold">Terminal</th>
+<th class="py-2 px-3 font-semibold">Supervisor / Actor</th>
+<th class="py-2 px-3 font-semibold">Target Employee</th>
+<th class="py-2 px-3 font-semibold">Cryptographic Hash</th>
+<th class="py-2 px-3 font-semibold text-right">Result</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface-variant font-label-sm text-label-sm">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-label-lg text-on-surface">14:26:08.412</td>
+<td class="py-2.5 px-3 text-secondary font-semibold font-label-lg">EVT_ESCROW_COMMITTED</td>
+<td class="py-2.5 px-3 text-on-surface">T-LAGOS-04</td>
+<td class="py-2.5 px-3">Marcus Adeboye (SUP-092)</td>
+<td class="py-2.5 px-3 font-semibold text-on-surface">Zainab Okonjo (EMP-5519)</td>
+<td class="py-2.5 px-3 font-label-lg text-outline">e82f1b7c...a109</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold">SUCCESS</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-label-lg text-on-surface">14:25:52.190</td>
+<td class="py-2.5 px-3 text-primary font-semibold font-label-lg">EVT_TEMPLATE_SEALED</td>
+<td class="py-2.5 px-3 text-on-surface">T-LAGOS-04</td>
+<td class="py-2.5 px-3">Enclave Daemon</td>
+<td class="py-2.5 px-3 font-semibold text-on-surface">Zainab Okonjo (EMP-5519)</td>
+<td class="py-2.5 px-3 font-label-lg text-outline">4b772c10...68df</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-semibold">PROCESSED</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-label-lg text-on-surface">14:24:19.004</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-semibold font-label-lg">EVT_SUP_AUTHENTICATED</td>
+<td class="py-2.5 px-3 text-on-surface">T-LAGOS-04</td>
+<td class="py-2.5 px-3">Marcus Adeboye (SUP-092)</td>
+<td class="py-2.5 px-3 text-outline">N/A (Session Opened)</td>
+<td class="py-2.5 px-3 font-label-lg text-outline">f0289a91...4401</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold">VERIFIED</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2.5 px-3 font-label-lg text-on-surface">14:18:02.887</td>
+<td class="py-2.5 px-3 text-secondary font-semibold font-label-lg">EVT_MESH_PROPAGATE</td>
+<td class="py-2.5 px-3 text-on-surface">T-LAGOS-01</td>
+<td class="py-2.5 px-3">Mesh Broadcaster</td>
+<td class="py-2.5 px-3 font-semibold text-on-surface">Babajide Bello (EMP-5518)</td>
+<td class="py-2.5 px-3 font-label-lg text-outline">7844aa11...5b22</td>
+<td class="py-2.5 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold">ACK_RECEIVED</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script>
+  let currentStep = 1;
+
+  function advanceStep(step) {
+    currentStep = step;
+
+    // Hide all step screens
+    for (let i = 1; i <= 5; i++) {
+      const el = document.getElementById('flowStep' + i);
+      const dot = document.getElementById('stepDot' + i);
+      if (el) el.classList.add('hidden');
+      if (dot) {
+        if (i <= step) {
+          dot.className = 'h-2 flex-1 rounded bg-primary transition-all duration-300';
+        } else {
+          dot.className = 'h-2 flex-1 rounded bg-surface-container-high transition-all duration-300';
+        }
+      }
+    }
+
+    // Show target step
+    const targetEl = document.getElementById('flowStep' + step);
+    if (targetEl) targetEl.classList.remove('hidden');
+
+    // Update label
+    const label = document.getElementById('stepLabel');
+    if (label) {
+      const stepNames = [
+        'Step 1 of 5: Supervisor Auth',
+        'Step 2 of 5: Roster Selection',
+        'Step 3 of 5: Dual Biometrics',
+        'Step 4 of 5: ISO Vector Enclave',
+        'Step 5 of 5: Escrow Upload'
+      ];
+      label.textContent = stepNames[step - 1];
+    }
+  }
+
+  function resetFlow() {
+    advanceStep(1);
+  }
+
+  // Update clock simulation
+  setInterval(() => {
+    const clock = document.getElementById('terminalClock');
+    if (clock) {
+      const now = new Date();
+      clock.textContent = now.toTimeString().split(' ')[0];
+    }
+  }, 1000);
+</script></main></div></body></html>

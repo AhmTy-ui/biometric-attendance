@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#2c3039", "on-background": "#dfe2ee", "on-tertiary": "#003824", "on-surface-variant": "#c3c6d7", "inverse-surface": "#dfe2ee", "on-tertiary-fixed-variant": "#005236", "primary-container": "#2563eb", "tertiary-fixed": "#6ffbbe", "tertiary-fixed-dim": "#4edea3", "on-secondary-container": "#002c47", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "surface-container-high": "#262a33", "surface-tint": "#b4c5ff", "on-primary": "#002a78", "on-secondary": "#003351", "surface-variant": "#31353e", "primary": "#b4c5ff", "secondary-container": "#3198dc", "primary-fixed": "#dbe1ff", "surface-container-low": "#181c24", "surface-dim": "#0f131c", "surface": "#0f131c", "error": "#ffb4ab", "secondary-fixed": "#cce5ff", "secondary": "#93ccff", "on-secondary-fixed": "#001d31", "on-error": "#690005", "on-surface": "#dfe2ee", "on-primary-container": "#eeefff", "on-secondary-fixed-variant": "#004b73", "outline": "#8d90a0", "on-error-container": "#ffdad6", "primary-fixed-dim": "#b4c5ff", "surface-container-highest": "#31353e", "tertiary": "#4edea3", "background": "#0f131c", "secondary-fixed-dim": "#93ccff", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#0a0e16", "surface-container": "#1c2028", "error-container": "#93000a", "outline-variant": "#434655", "inverse-primary": "#0053db", "surface-bright": "#353942", "tertiary-container": "#007d55" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1.5rem", "space-md": "0.75rem", "gutter-dense": "0.5rem", "margin-mobile": "1rem", "space-lg": "1.25rem" }, fontFamily: { "label-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-badge": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest"><img alt="BAMP Enterprise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XfD_O6uF0DR5j2vcAF2BkAiLYfzFJDNTkNA591_6oz5G_wJEKDnVtXSd-fm5l_l7upS1pvDJxfigy-FMhivSz_M0cNc1skgBfhH342rQHpClSMakBmRfgAR9SaTQCVRsI42MYGzLmzFoRSzkqU54ErKSKNdGhCJk0DULib0c8oEoQBFlG0hwUI81Xe28A81pBQj27maRu2vfvsYMj7w3E_v5Ud1s5BI_M-BSVYKpFkJ5iadgshN75SaLZX"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">BAMP CORE</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mission Operations</span></div></div><div class="overflow-y-auto flex-1 px-space-sm py-space-sm space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Overview</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">grid_view</span><span>Command Center</span></div><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Attendance</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-ingestion-stream" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">stream</span><span>Live Ingestion Stream</span></div><span class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-tertiary">LIVE</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="attendance-reconciliation-dlq" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">published_with_changes</span><span>Reconciliation &amp; DLQ</span></div><span class="font-label-sm text-label-sm px-1.5 rounded bg-error-container text-on-error-container">2</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">analytics</span><span>Reports &amp; Analytics</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workforce &amp; Roster</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="employee-sync-directory" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">badge</span><span>Sync Directory</span></div><span class="font-label-sm text-label-sm text-outline">SSOT</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="locations-branches" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">storefront</span><span>Locations &amp; Branches</span></div><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Devices &amp; Hardware</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="device-fleet-registry" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">router</span><span>Device Fleet Registry</span></div><span class="font-label-sm text-label-sm text-tertiary font-label-lg">98.4%</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="firmware-ota-deployments" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">system_update</span><span>Firmware &amp; OTA</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="biometric-enrolment-terminal" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">fingerprint</span><span>Enrolment Terminal</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System &amp; Compliance</div><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integration-web-adapter" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">hub</span><span>Integration Adapter</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="security-audit-trail" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">verified_user</span><span>Security Audit Trail</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="system-settings-rbac" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">tune</span><span>Settings &amp; RBAC</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-tertiary"></span><span>BAMP DAEMON v4.11</span></div><span class="font-label-sm text-label-sm text-outline-variant font-label-lg">SEC-A09</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur border-b border-outline-variant/40 z-40 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-outline-variant/40 rounded"><div class="relative flex items-center justify-center h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-tertiary"></span></div><span class="font-label-sm text-label-sm text-tertiary whitespace-nowrap">MQTT &amp; Dual-Sync Healthy</span><span class="text-outline text-[10px]">|</span><span class="font-label-sm text-label-sm text-outline whitespace-nowrap">P95 4.2s</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-body-sm text-body-sm text-on-surface truncate max-w-[150px]">Apex Holdings - 14 Branches</span><span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span></div></div><div class="flex-1 max-w-xl mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline">search</span><input class="w-full bg-surface-container-low border border-outline-variant/40 rounded h-8 pl-8 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Search terminals, staff ID, sync events, locations..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 font-label-sm text-label-sm bg-surface-container-high text-outline rounded border border-outline-variant/40">/</kbd></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded font-label-sm text-label-sm text-secondary"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span>MQTT TLS: Active (Port 8883)</span></div><div class="flex items-center gap-1 px-2 py-1 bg-surface-container-low border border-outline-variant/40 rounded cursor-pointer hover:border-secondary transition-colors" title="Active Offline Buffers"><span class="material-symbols-outlined text-[16px] text-secondary">cloud_off</span><span class="font-label-sm text-label-sm text-on-surface">3 Buffering</span><span class="font-label-sm text-label-sm text-outline">(428)</span></div><button class="relative p-1.5 rounded bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error-container text-on-error-container font-label-sm text-[9px] font-bold border border-background">2</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/30"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlj8VFrNyEhwKFZarVvarBMnrK0R4ylSyfCRaL6liD53jTEuduW6Kgi5VpGOhKigITegAhjXuv55PIwLnv1ogAf9bVw_H-2MZWU1rwEWb_beYFFbYaZhTrMkEQf61qnuhxeRSSh1DBQOvWUYjEv60Ub-OlrsNZOZje2vgkodC1FWnFQkbigJgwibX60JFozqFRxaDvb8qEc360OuAefMDSjNlhmaKyqow60Bi1-NCgvxIH5_xUVWt7-g"/><span class="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-[10px] text-tertiary">lock</span></span></div><div class="hidden lg:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-body-sm text-body-sm text-on-surface font-semibold max-w-[140px] truncate">Dr. Elena Vance</span><span class="font-label-sm text-[9px] tracking-wider uppercase px-1 py-0.2 bg-primary-container text-on-primary-container rounded font-bold">SYSTEM ADMIN</span></div><span class="font-label-sm text-[10px] text-outline truncate max-w-[170px]">Head of Global SecOps</span></div></div></div></header><div class="fixed top-16 left-72 right-0 h-10 bg-surface-container-low border-b border-outline-variant/30 z-30 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline"><span class="material-symbols-outlined text-[15px]">dns</span><span>BAMP</span><span class="text-outline-variant">/</span></div><div class="flex items-center gap-1.5"><span class="text-outline">Fleet Domain:</span><select class="bg-surface-container border border-outline-variant/40 rounded px-2 py-0.5 font-label-sm text-label-sm text-on-surface focus:outline-none focus:border-primary-container"><option>All Branches (14 Active Locations)</option><option>Lagos Hub Terminal 04</option><option>Abuja HQ - Gate Alpha</option><option>London Ops Centre</option><option>Nairobi Assembly Plant</option></select></div></div><div class="flex items-center gap-space-md shrink-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline font-label-lg"><span class="material-symbols-outlined text-[14px]">schedule</span><span>UTC 14:26:08 | LOCAL +01:00</span></div><div class="flex items-center gap-1.5"><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">sync</span><span>Trigger Roster Sync</span></button><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">bolt</span><span>Flush Buffers</span></button></div></div></div><main class="relative pt-26 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-header & SSOT Notification -->
+<div class="px-gutter py-space-md flex flex-col gap-space-md">
+<!-- Title & Top Telemetry Actions -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Workforce Roster &amp; Biometric Enrolment Registry</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            FR-1.1 COMPLIANT
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Authoritative workforce directory, cryptographic biometric vector escrow, and edge terminal NVRAM synchronisation ledger.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-2 px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">cloud_done</span>
+<span>Last ERP Sync: <strong class="text-on-surface font-label-md text-label-md">3 mins ago</strong></span>
+<span class="text-outline text-[10px]">|</span>
+<span class="text-secondary font-label-md text-label-md">Webhook Adapter v4.8</span>
+</div>
+<button class="px-3 py-1.5 rounded bg-primary-container hover:bg-inverse-primary text-on-primary-container font-headline-sm text-headline-sm transition-all flex items-center gap-1.5 shadow-md active:scale-95" id="triggerSyncBtn">
+<span class="material-symbols-outlined text-[16px] text-on-primary-container">sync</span>
+<span>Trigger ERP Sync</span>
+</button>
+<button class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">file_download</span>
+<span>Export Matrix</span>
+</button>
+</div>
+</div>
+<!-- Strict SSOT Banner -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-start gap-space-sm shadow-sm">
+<div class="p-1 rounded bg-secondary/10 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex-1 flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<p>
+<strong class="text-on-surface font-medium">Single Source of Truth Enforced (FR-1.1 &amp; Section 8):</strong>
+          Employee identities, work authorization contracts, and multi-branch access rights are ingested strictly via Web ERP. Local terminal creation is permanently locked. For orphaned records, re-trigger ingestion from source connector.
+        </p>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lock</span> Read-Only Hardware Escrow
+        </span>
+</div>
+</div>
+<!-- High-Impact KPI Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-sm">
+<!-- KPI 1 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Workforce</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">badge</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">5,420</span>
+<span class="font-label-sm text-label-sm text-tertiary">Active Staff</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 100% ERP SSOT Linked
+          </span>
+<span class="font-label-md text-label-md">0 Orphaned</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary-container"></div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Biometric Enrolment Rate</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">fingerprint</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">94.6%</span>
+<span class="font-label-sm text-label-sm text-tertiary">+0.4% this week</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>5,128 Dual • 198 Single</span>
+<span class="text-error font-label-md text-label-md">94 Pending</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-tertiary"></div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Terminal Mesh NVRAM</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">memory</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">138<span class="text-on-surface-variant font-headline-md text-headline-md">/142</span></span>
+<span class="font-label-sm text-label-sm text-secondary">Terminals Live</span>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">97.2% Sync Complete</span>
+<span class="text-secondary-container font-label-md text-label-md">4 Buffering</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary"></div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Supervisor Actions Required</span>
+<span class="material-symbols-outlined text-[18px] text-error">assignment_late</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-error tracking-tight">94</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unenrolled Nudges</span>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Targeting Hub Turnstiles</span>
+<span class="text-error font-label-md text-label-md flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">priority_high</span> Action
+          </span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-error-container"></div>
+</div>
+</div>
+<!-- Filter & Operational Search Toolbar -->
+<div class="p-space-sm rounded bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex flex-wrap items-center gap-space-xs flex-1">
+<!-- Search -->
+<div class="relative min-w-[260px] flex-1 max-w-sm">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[18px] text-outline">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded pl-8 pr-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-primary-container" id="searchInput" placeholder="Search staff name, EMP-ID, or SSOT Ref..." type="text"/>
+</div>
+<!-- Location Dropdown -->
+<div class="flex items-center gap-1 bg-surface-container-lowest rounded px-2.5 py-1">
+<span class="material-symbols-outlined text-[16px] text-outline">storefront</span>
+<select class="bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer pr-1" id="locationFilter">
+<option value="all">All Branches (14 Active)</option>
+<option value="lagos">Lagos Industrial Hub</option>
+<option value="abuja">Abuja HQ - Gate Alpha</option>
+<option value="ph">Port Harcourt Terminal</option>
+<option value="kano">Kano Distribution Yard</option>
+<option value="london">London Ops Centre</option>
+</select>
+</div>
+<!-- Biometric Status Filter -->
+<div class="flex items-center gap-1 bg-surface-container-lowest rounded px-2.5 py-1">
+<span class="material-symbols-outlined text-[16px] text-outline">fingerprint</span>
+<select class="bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer pr-1" id="biometricFilter">
+<option value="all">Biometric: All Statuses</option>
+<option value="dual">Dual Enrolled (Optimal)</option>
+<option value="single">Single Enrolled (Fallback)</option>
+<option value="pending">Pending Enrolment</option>
+<option value="purged">Quarantined / Purged</option>
+</select>
+</div>
+<!-- Employment Status -->
+<div class="flex items-center gap-1 bg-surface-container-lowest rounded px-2.5 py-1">
+<span class="material-symbols-outlined text-[16px] text-outline">work</span>
+<select class="bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer pr-1" id="statusFilter">
+<option value="all">Status: All (5,420)</option>
+<option value="active">Active Duty</option>
+<option value="leave">On Leave / Relieved</option>
+<option value="terminated">Terminated (Zeroized)</option>
+</select>
+</div>
+</div>
+<!-- Quick Metrics Indicator -->
+<div class="flex items-center gap-space-sm text-outline font-label-sm text-label-sm">
+<span>Displaying <strong class="text-on-surface font-label-md text-label-md" id="visibleCount">6</strong> of 5,420 subjects</span>
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface" title="Reset Filters">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Main Table and Detail Drawer Container -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Table Master View (8 Cols on xl, 12 on smaller) -->
+<div class="xl:col-span-8 flex flex-col rounded bg-surface-container-low overflow-hidden shadow-md">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-lowest font-label-sm text-label-sm text-outline uppercase tracking-wider select-none">
+<tr>
+<th class="py-2.5 px-3">Subject / Identity</th>
+<th class="py-2.5 px-3">ERP SSOT Mapping</th>
+<th class="py-2.5 px-3">Assigned Location</th>
+<th class="py-2.5 px-3">Biometric Escrow</th>
+<th class="py-2.5 px-3">NVRAM Mesh</th>
+<th class="py-2.5 px-3">Live Clocking State</th>
+<th class="py-2.5 px-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface" id="workforceTableBody">
+<!-- Row 1: Oluwaseun Adeyemi -->
+<tr class="employee-row bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors" data-emp-id="EMP-4891" onclick="selectEmployee('EMP-4891')">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded object-cover shadow-sm" data-alt="Corporate headshot portrait of a Nigerian male operations coordinator in navy tech blazer with ambient industrial office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwvUoV_WWDrsqe2Lx--pMcuZPzpCBlu3lSxObSoQ8RQgeJuSmgMILhK0VnttEPT5_0rODH_PfPdrtIm9VvfiuZrBjoj13Ubv-iUjxTJYgBGcGZx5eL1prWjQUcRsFmrw4Ig1WoOuxHa5aFqBdegub9kKdeFb_jpQMFtgNFrYvfXVppjFphYnDQzU0LVUN84tKNbLTMvHePCicma8VODXswatpmfHHQakcVPzged1fVq5WBuYAXUeevow"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Oluwaseun Adeyemi</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline">
+<span class="font-label-md text-label-md text-secondary">EMP-4891</span>
+<span>•</span>
+<span class="truncate max-w-[120px]">Lead Logistics Coord.</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant font-mono">SSOT-EXT-98214</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Ingested 14:22
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Lagos Industrial Hub</span>
+<span class="font-label-sm text-label-sm text-outline">Turnstile 01 • Bay 04</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">fingerprint</span>
+                    Dual (99.8% / 98.4%)
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-full h-full bg-tertiary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4/4 Nodes</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> IN 07:44 AM
+                    </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">99.8% Conf. (42ms)</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-primary" title="View Escrow Cryptography">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-secondary" title="Push Template to Edge NVRAM">
+<span class="material-symbols-outlined text-[16px]">publish</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Sarah Chen -->
+<tr class="employee-row bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors" data-emp-id="EMP-1049" onclick="selectEmployee('EMP-1049')">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded object-cover shadow-sm" data-alt="Corporate professional female Asian engineer wearing glasses and modern dark operations uniform in high-tech facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoWAdie91_jJUn6b6y0UbQnV2SbVblM-yGigDbnPiTJZcYBLzB57naf1QY6QZCJ-qCidgxIR8bSEYiO-mwVGls9Gen_YdiEBbN90e6Mc7tZ7xqJb26yv9h4kGuXVMM2hkckV2gjvgtZrsnM-peblyGGVMXEo4AYyqQYT2gca9BtvIQc6gP1yqLWkcIsna7v5Wx6zL5kBPI4SjAWuU6_M_m7UkcY7g1QnC-OWk2KWyzcEVFAQ46mQyU4g"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Sarah Chen</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline">
+<span class="font-label-md text-label-md text-secondary">EMP-1049</span>
+<span>•</span>
+<span class="truncate max-w-[120px]">Senior Plant Architect</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant font-mono">SSOT-EXT-98103</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Ingested 14:15
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Abuja HQ - Gate Alpha</span>
+<span class="font-label-sm text-label-sm text-outline">Turnstiles A, B, C</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">fingerprint</span>
+                    Dual (99.1% / 99.4%)
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-full h-full bg-tertiary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6/6 Nodes</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> IN 08:02 AM
+                    </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">99.4% Conf. (38ms)</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-primary" title="View Escrow Cryptography">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-secondary" title="Push Template to Edge NVRAM">
+<span class="material-symbols-outlined text-[16px]">publish</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Marcus Danladi -->
+<tr class="employee-row bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors" data-emp-id="EMP-9002" onclick="selectEmployee('EMP-9002')">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center font-label-md text-label-md text-secondary">
+                      MD
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Marcus Danladi</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline">
+<span class="font-label-md text-label-md text-secondary">EMP-9002</span>
+<span>•</span>
+<span class="truncate max-w-[120px]">Field Tech Lead</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant font-mono">SSOT-EXT-97992</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Ingested 14:02
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Port Harcourt Terminal</span>
+<span class="font-label-sm text-label-sm text-outline">Dock Terminal 02</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">touch_app</span>
+                    Single (97.2%)
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-2/3 h-full bg-secondary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">2/3 (1 Buf)</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-semibold">NOT CLOCKED IN</span>
+<span class="font-label-sm text-label-sm text-outline">Shift: 14:00 - 22:00</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-primary" title="View Escrow Cryptography">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-secondary" title="Force Mesh Sync">
+<span class="material-symbols-outlined text-[16px]">sync_saved_locally</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Tariq Mansoor (Terminated / Zeroized) -->
+<tr class="employee-row bg-surface-container-lowest/60 hover:bg-surface-container cursor-pointer transition-colors opacity-75" data-emp-id="EMP-3810" onclick="selectEmployee('EMP-3810')">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-error-container/20 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">person_off</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant line-through truncate">Tariq Mansoor</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline">
+<span class="font-label-md text-label-md text-outline">EMP-3810</span>
+<span>•</span>
+<span class="truncate max-w-[120px]">Ex-Warehouse Mgr</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-outline font-mono">SSOT-EXT-94102</span>
+<span class="font-label-sm text-label-sm text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">block</span> ERP Contract Void
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-outline">Revoked - All Nodes</span>
+<span class="font-label-sm text-label-sm text-error">Access Barred</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">delete_sweep</span>
+                    Zeroized / Purged
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-error font-mono">PURGED (142/142)</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-error font-semibold">ACCESS REVOKED</span>
+<span class="font-label-sm text-label-sm text-outline">Zeroized 12 May</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-error" title="Audit Purge Ledger">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Zainab Okonjo (Pending Enrolment) -->
+<tr class="employee-row bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors" data-emp-id="EMP-5519" onclick="selectEmployee('EMP-5519')">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded object-cover shadow-sm" data-alt="Corporate headshot of an African female business intelligence analyst with neat hair and professional smart casual styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxCXeagUKH_0wSXrG9FSgWlzmPOPJJgPSnmFVJZkCvLkqsv-C2xWFVk3_6d7Tdu_1ngq9W4oM8R5F0zISqw1ILJ2zRFvjUSTI_bIYWA2Y5ZP6jegxsaaBpHRoQi70tBAZBYaZucpdyQO6-ZAKQp9qr3LusioOwaS4POhFhWvktaRk5hepd69VghItf3JeSQYIItHAaB4oe4pJ3EwPQkO_aRFNHAljGRSpOCQ4p819X6kI9Fs8uv99VQQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Zainab Okonjo</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline">
+<span class="font-label-md text-label-md text-secondary">EMP-5519</span>
+<span>•</span>
+<span class="truncate max-w-[120px]">Data Analyst (New)</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant font-mono">SSOT-EXT-99401</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Ingested Today
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Lagos Industrial Hub</span>
+<span class="font-label-sm text-label-sm text-outline">Floor 3 Engineering</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container/30 text-error font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">pending</span>
+                    Pending Enrolment
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline font-mono">Awaiting Template</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-semibold">NO BIO CAPTURE</span>
+<span class="font-label-sm text-label-sm text-error">Nudge Sent 09:00</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm hover:bg-inverse-primary" title="Dispatch Enrolment Terminal Prompt">
+                      Nudge
+                    </button>
+</div>
+</td>
+</tr>
+<!-- Row 6: David Adeleke -->
+<tr class="employee-row bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors" data-emp-id="EMP-9921" onclick="selectEmployee('EMP-9921')">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded object-cover shadow-sm" data-alt="Portrait of a young African male technical operations specialist in dark smart casual shirt in modern tech center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOLzBxKcqRpGJA_MnsM0Rdgh1ORS0LEYPR7exTLTHARtxJfXxi1-qJ6oZfb_vbSsdmhyJSVqi1Kj2LHC59hb3CmlrG7sSP6QabNXyxcMYjRr13ybNY7zo36_3_2OdeBHtq1mLKizQrz9c64e7efHSmp7WSFILgIDYBqJQFEp6-17vdG-rkaqASiENv9Og2VAwoTHloPCEoOK9zdQTeCPk0tUH5ZG4iSJJQ6-kzWQbOu-ckoa7Hvmqn1Q"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">David Adeleke</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline">
+<span class="font-label-md text-label-md text-secondary">EMP-9921</span>
+<span>•</span>
+<span class="truncate max-w-[120px]">Hardware Operations</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant font-mono">SSOT-EXT-98542</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Ingested 14:18
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Abuja HQ - Gate Alpha</span>
+<span class="font-label-sm text-label-sm text-outline">Security Gate A</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">fingerprint</span>
+                    Dual (99.5% / 98.7%)
+                  </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5">
+<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-full h-full bg-tertiary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6/6 Nodes</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> IN 07:31 AM
+                    </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">99.5% Conf. (45ms)</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-primary" title="View Escrow Cryptography">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-secondary" title="Push Template to Edge NVRAM">
+<span class="material-symbols-outlined text-[16px]">publish</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination -->
+<div class="p-space-sm bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-2">
+<span>Rows per page:</span>
+<select class="bg-surface-container text-on-surface rounded px-1.5 py-0.5 focus:outline-none">
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+<span>Showing 1 - 6 of 5,420 records</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container text-outline hover:text-on-surface" disabled="">
+<span class="material-symbols-outlined text-[16px]">first_page</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-outline hover:text-on-surface" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold font-mono">1</span>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono hover:bg-surface-container-high">2</button>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono hover:bg-surface-container-high">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono hover:bg-surface-container-high">217</button>
+<button class="p-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<button class="p-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick-Inspect Context Detail Panel (4 Cols on xl) -->
+<div class="xl:col-span-4 flex flex-col gap-space-sm rounded bg-surface-container-low p-space-md shadow-md" id="inspectorPanel">
+<!-- Inspector Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">security_update_good</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Biometric Escrow Inspector</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">
+            SEC-A09 VALIDATED
+          </span>
+</div>
+<!-- Subject Brief Card -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded object-cover shadow-sm" data-alt="Close up photo of male Nigerian security operations coordinator with smart ID lanyard" id="inspAvatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwLHlzxm1PO1UmSJfABStjKhKSvl3eoihwwviFVJOsRyEdEh4agiYl3LHjjoK9cAlTIcPGj6IHPTwMe59YZyzdB9n9fd-1t-AoZBj5VfE4yLEM62nyR0jHWmFwVtY0gIcdATtuin3PPbC-IPJfJUeI61qw-xz_Ux-5iFyvWGAMPctebVt4OpVOXhJ78bkATQ_MuvBjreIMzAMouN8-M7LxfYwI90Tn_qEiud-nn8XAF7u3Pkciv8S__w"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface truncate" id="inspName">Oluwaseun Adeyemi</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="text-secondary font-mono" id="inspId">EMP-4891</span>
+<span class="text-outline">•</span>
+<span class="text-outline-variant truncate" id="inspRole">Lead Logistics Coord.</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary" id="inspLocation">Lagos Industrial Hub (Turnstiles 01 &amp; 04)</span>
+</div>
+</div>
+<!-- Cryptographic Telemetry Vector -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-outline">
+<span>KMS Key Container ID:</span>
+<span class="font-mono text-on-surface">KMS-AES-256-GCM-v92</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Template Hash (SHA-256):</span>
+<span class="font-mono text-secondary truncate max-w-[180px]">e3b0c44298fc1c149afbf4c8996fb92427ae...</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Enrolment Terminal:</span>
+<span class="font-mono text-on-surface">TERM-LAG-ENROL-01</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Enrolment Timestamp:</span>
+<span class="font-mono text-on-surface">2025-01-14T09:12:04.182Z</span>
+</div>
+</div>
+<!-- Biometric Finger Quality Metrics -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Template Vectors &amp; Minutiae Health</span>
+<!-- Primary Finger -->
+<div class="p-space-xs rounded bg-surface-container-lowest flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">fingerprint</span>
+                Primary: Right Index (Slot 0)
+              </span>
+<span class="text-tertiary font-mono font-bold">99.8% Match</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-[99.8%] h-full bg-tertiary"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[10px] text-outline">
+<span>Minutiae count: 68 points</span>
+<span>NFIQ 2.0 Quality: Excellent</span>
+</div>
+</div>
+<!-- Secondary Fallback Finger -->
+<div class="p-space-xs rounded bg-surface-container-lowest flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">fingerprint</span>
+                Fallback: Right Thumb (Slot 1)
+              </span>
+<span class="text-secondary font-mono font-bold">98.4% Match</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-[98.4%] h-full bg-secondary"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[10px] text-outline">
+<span>Minutiae count: 61 points</span>
+<span>NFIQ 2.0 Quality: High</span>
+</div>
+</div>
+</div>
+<!-- NVRAM Mesh Distribution Status -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Terminal Access Control List (ACL)</span>
+<div class="space-y-1">
+<div class="p-1.5 rounded bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface">Lagos Hub Turnstile 01</span>
+</div>
+<span class="text-tertiary font-mono">NVRAM Synced</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface">Lagos Hub Turnstile 04</span>
+</div>
+<span class="text-tertiary font-mono">NVRAM Synced</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface">Lagos Engineering Gate</span>
+</div>
+<span class="text-tertiary font-mono">NVRAM Synced</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface">Lagos Executive Exit</span>
+</div>
+<span class="text-tertiary font-mono">NVRAM Synced</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-2 flex flex-col gap-1.5">
+<div class="grid grid-cols-2 gap-2">
+<button class="py-1.5 px-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">history</span>
+<span>Access Logs</span>
+</button>
+<button class="py-1.5 px-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sync</span>
+<span>Push NVRAM</span>
+</button>
+</div>
+<button class="w-full py-1.5 px-2 rounded bg-error-container/20 hover:bg-error-container/40 text-error font-headline-sm text-headline-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">device_reset</span>
+<span>Flag for Supervisor Biometric Re-enrolment</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript -->
+<script>
+    const employeeData = {
+      'EMP-4891': {
+        name: 'Oluwaseun Adeyemi',
+        role: 'Lead Logistics Coord.',
+        location: 'Lagos Industrial Hub (Turnstiles 01 & 04)',
+        kms: 'KMS-AES-256-GCM-v92',
+        hash: 'e3b0c44298fc1c149afbf4c8996fb92427ae...',
+        term: 'TERM-LAG-ENROL-01',
+        time: '2025-01-14T09:12:04.182Z',
+        f1Score: '99.8%',
+        f2Score: '98.4%',
+        f1Name: 'Primary: Right Index (Slot 0)',
+        f2Name: 'Fallback: Right Thumb (Slot 1)'
+      },
+      'EMP-1049': {
+        name: 'Sarah Chen',
+        role: 'Senior Plant Architect',
+        location: 'Abuja HQ - Gate Alpha (Turnstiles A, B, C)',
+        kms: 'KMS-AES-256-GCM-v88',
+        hash: '7d1a54127b222502f5b79b5fb0803061152a...',
+        term: 'TERM-ABJ-HQ-01',
+        time: '2025-01-18T11:45:12.019Z',
+        f1Score: '99.1%',
+        f2Score: '99.4%',
+        f1Name: 'Primary: Left Index (Slot 0)',
+        f2Name: 'Fallback: Left Thumb (Slot 1)'
+      },
+      'EMP-9002': {
+        name: 'Marcus Danladi',
+        role: 'Field Tech Lead',
+        location: 'Port Harcourt Terminal (Dock 02)',
+        kms: 'KMS-AES-256-GCM-v91',
+        hash: '2c624232cdd221771294dfbb379ac8ab850e...',
+        term: 'TERM-PH-ENROL-03',
+        time: '2025-02-01T08:22:40.941Z',
+        f1Score: '97.2%',
+        f2Score: 'Disabled',
+        f1Name: 'Primary: Right Thumb (Slot 0)',
+        f2Name: 'Fallback: None Registered'
+      },
+      'EMP-3810': {
+        name: 'Tariq Mansoor (Terminated)',
+        role: 'Ex-Warehouse Mgr [ZEROIZED]',
+        location: 'Access Revoked across all 142 Readers',
+        kms: 'REVOKED-EXPIRED-KMS',
+        hash: 'PURGED-HEX-00000000000000000000000000...',
+        term: 'TERMINATED-HR-SSOT',
+        time: '2025-05-12T16:00:00.000Z',
+        f1Score: '0.0%',
+        f2Score: '0.0%',
+        f1Name: 'Slot 0: Zeroized',
+        f2Name: 'Slot 1: Zeroized'
+      },
+      'EMP-5519': {
+        name: 'Zainab Okonjo',
+        role: 'Data Analyst (New Ingestion)',
+        location: 'Lagos Industrial Hub (Floor 3 Engineering)',
+        kms: 'PENDING_CREATION',
+        hash: 'AWAITING_ENROLMENT_CAPTURE...',
+        term: 'TERM-LAG-ENROL-01 (Assigned)',
+        time: 'Awaiting Hardware Verification',
+        f1Score: 'Pending',
+        f2Score: 'Pending',
+        f1Name: 'Primary: Unregistered',
+        f2Name: 'Fallback: Unregistered'
+      },
+      'EMP-9921': {
+        name: 'David Adeleke',
+        role: 'Hardware Operations',
+        location: 'Abuja HQ - Gate Alpha (Security Gate A)',
+        kms: 'KMS-AES-256-GCM-v93',
+        hash: '3f79bb7b435b0532145166de21f6b048eb88...',
+        term: 'TERM-ABJ-HQ-02',
+        time: '2025-01-20T14:02:11.890Z',
+        f1Score: '99.5%',
+        f2Score: '98.7%',
+        f1Name: 'Primary: Right Index (Slot 0)',
+        f2Name: 'Fallback: Left Index (Slot 1)'
+      }
+    };
+
+    function selectEmployee(id) {
+      const data = employeeData[id];
+      if (!data) return;
+
+      // Update inspector DOM
+      document.getElementById('inspName').textContent = data.name;
+      document.getElementById('inspId').textContent = id;
+      document.getElementById('inspRole').textContent = data.role;
+      document.getElementById('inspLocation').textContent = data.location;
+
+      // Highlight active row
+      document.querySelectorAll('.employee-row').forEach(row => {
+        row.classList.remove('bg-surface-container', 'ring-1', 'ring-primary-container');
+        if (row.getAttribute('data-emp-id') === id) {
+          row.classList.add('bg-surface-container');
+        }
+      });
+    }
+
+    // Trigger ERP Sync Simulation
+    const triggerSyncBtn = document.getElementById('triggerSyncBtn');
+    if (triggerSyncBtn) {
+      triggerSyncBtn.addEventListener('click', () => {
+        const originalHtml = triggerSyncBtn.innerHTML;
+        triggerSyncBtn.disabled = true;
+        triggerSyncBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[16px] animate-spin">refresh</span>
+          <span>Syncing ERP...</span>
+        `;
+        setTimeout(() => {
+          triggerSyncBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[16px] text-tertiary">done</span>
+            <span>Roster Synchronised</span>
+          `;
+          setTimeout(() => {
+            triggerSyncBtn.innerHTML = originalHtml;
+            triggerSyncBtn.disabled = false;
+          }, 2000);
+        }, 1500);
+      });
+    }
+
+    // Search input filter simulation
+    const searchInput = document.getElementById('searchInput');
+    const tableBody = document.getElementById('workforceTableBody');
+    const visibleCount = document.getElementById('visibleCount');
+
+    if (searchInput && tableBody) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        let visible = 0;
+        tableBody.querySelectorAll('tr').forEach(row => {
+          const text = row.textContent.toLowerCase();
+          if (text.includes(query)) {
+            row.style.display = '';
+            visible++;
+          } else {
+            row.style.display = 'none';
+          }
+        });
+        if (visibleCount) {
+          visibleCount.textContent = visible;
+        }
+      });
+    }
+  </script>
+</div></main></div></body></html>

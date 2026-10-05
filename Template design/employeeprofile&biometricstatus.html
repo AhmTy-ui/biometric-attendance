@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#2c3039", "on-background": "#dfe2ee", "on-tertiary": "#003824", "on-surface-variant": "#c3c6d7", "inverse-surface": "#dfe2ee", "on-tertiary-fixed-variant": "#005236", "primary-container": "#2563eb", "tertiary-fixed": "#6ffbbe", "tertiary-fixed-dim": "#4edea3", "on-secondary-container": "#002c47", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "surface-container-high": "#262a33", "surface-tint": "#b4c5ff", "on-primary": "#002a78", "on-secondary": "#003351", "surface-variant": "#31353e", "primary": "#b4c5ff", "secondary-container": "#3198dc", "primary-fixed": "#dbe1ff", "surface-container-low": "#181c24", "surface-dim": "#0f131c", "surface": "#0f131c", "error": "#ffb4ab", "secondary-fixed": "#cce5ff", "secondary": "#93ccff", "on-secondary-fixed": "#001d31", "on-error": "#690005", "on-surface": "#dfe2ee", "on-primary-container": "#eeefff", "on-secondary-fixed-variant": "#004b73", "outline": "#8d90a0", "on-error-container": "#ffdad6", "primary-fixed-dim": "#b4c5ff", "surface-container-highest": "#31353e", "tertiary": "#4edea3", "background": "#0f131c", "secondary-fixed-dim": "#93ccff", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#0a0e16", "surface-container": "#1c2028", "error-container": "#93000a", "outline-variant": "#434655", "inverse-primary": "#0053db", "surface-bright": "#353942", "tertiary-container": "#007d55" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1.5rem", "space-md": "0.75rem", "gutter-dense": "0.5rem", "margin-mobile": "1rem", "space-lg": "1.25rem" }, fontFamily: { "label-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-badge": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest"><img alt="BAMP Enterprise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XfD_O6uF0DR5j2vcAF2BkAiLYfzFJDNTkNA591_6oz5G_wJEKDnVtXSd-fm5l_l7upS1pvDJxfigy-FMhivSz_M0cNc1skgBfhH342rQHpClSMakBmRfgAR9SaTQCVRsI42MYGzLmzFoRSzkqU54ErKSKNdGhCJk0DULib0c8oEoQBFlG0hwUI81Xe28A81pBQj27maRu2vfvsYMj7w3E_v5Ud1s5BI_M-BSVYKpFkJ5iadgshN75SaLZX"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">BAMP CORE</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mission Operations</span></div></div><div class="overflow-y-auto flex-1 px-space-sm py-space-sm space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Overview</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">grid_view</span><span>Command Center</span></div><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Attendance</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-ingestion-stream" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">stream</span><span>Live Ingestion Stream</span></div><span class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-tertiary">LIVE</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="attendance-reconciliation-dlq" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">published_with_changes</span><span>Reconciliation &amp; DLQ</span></div><span class="font-label-sm text-label-sm px-1.5 rounded bg-error-container text-on-error-container">2</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">analytics</span><span>Reports &amp; Analytics</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workforce &amp; Roster</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="employee-sync-directory" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">badge</span><span>Sync Directory</span></div><span class="font-label-sm text-label-sm text-outline">SSOT</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="locations-branches" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">storefront</span><span>Locations &amp; Branches</span></div><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Devices &amp; Hardware</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="device-fleet-registry" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">router</span><span>Device Fleet Registry</span></div><span class="font-label-sm text-label-sm text-tertiary font-label-lg">98.4%</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="firmware-ota-deployments" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">system_update</span><span>Firmware &amp; OTA</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="biometric-enrolment-terminal" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">fingerprint</span><span>Enrolment Terminal</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System &amp; Compliance</div><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integration-web-adapter" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">hub</span><span>Integration Adapter</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="security-audit-trail" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">verified_user</span><span>Security Audit Trail</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="system-settings-rbac" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">tune</span><span>Settings &amp; RBAC</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-tertiary"></span><span>BAMP DAEMON v4.11</span></div><span class="font-label-sm text-label-sm text-outline-variant font-label-lg">SEC-A09</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur border-b border-outline-variant/40 z-40 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-outline-variant/40 rounded"><div class="relative flex items-center justify-center h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-tertiary"></span></div><span class="font-label-sm text-label-sm text-tertiary whitespace-nowrap">MQTT &amp; Dual-Sync Healthy</span><span class="text-outline text-[10px]">|</span><span class="font-label-sm text-label-sm text-outline whitespace-nowrap">P95 4.2s</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-body-sm text-body-sm text-on-surface truncate max-w-[150px]">Apex Holdings - 14 Branches</span><span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span></div></div><div class="flex-1 max-w-xl mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline">search</span><input class="w-full bg-surface-container-low border border-outline-variant/40 rounded h-8 pl-8 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Search terminals, staff ID, sync events, locations..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 font-label-sm text-label-sm bg-surface-container-high text-outline rounded border border-outline-variant/40">/</kbd></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded font-label-sm text-label-sm text-secondary"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span>MQTT TLS: Active (Port 8883)</span></div><div class="flex items-center gap-1 px-2 py-1 bg-surface-container-low border border-outline-variant/40 rounded cursor-pointer hover:border-secondary transition-colors" title="Active Offline Buffers"><span class="material-symbols-outlined text-[16px] text-secondary">cloud_off</span><span class="font-label-sm text-label-sm text-on-surface">3 Buffering</span><span class="font-label-sm text-label-sm text-outline">(428)</span></div><button class="relative p-1.5 rounded bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error-container text-on-error-container font-label-sm text-[9px] font-bold border border-background">2</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/30"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlj8VFrNyEhwKFZarVvarBMnrK0R4ylSyfCRaL6liD53jTEuduW6Kgi5VpGOhKigITegAhjXuv55PIwLnv1ogAf9bVw_H-2MZWU1rwEWb_beYFFbYaZhTrMkEQf61qnuhxeRSSh1DBQOvWUYjEv60Ub-OlrsNZOZje2vgkodC1FWnFQkbigJgwibX60JFozqFRxaDvb8qEc360OuAefMDSjNlhmaKyqow60Bi1-NCgvxIH5_xUVWt7-g"/><span class="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-[10px] text-tertiary">lock</span></span></div><div class="hidden lg:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-body-sm text-body-sm text-on-surface font-semibold max-w-[140px] truncate">Dr. Elena Vance</span><span class="font-label-sm text-[9px] tracking-wider uppercase px-1 py-0.2 bg-primary-container text-on-primary-container rounded font-bold">SYSTEM ADMIN</span></div><span class="font-label-sm text-[10px] text-outline truncate max-w-[170px]">Head of Global SecOps</span></div></div></div></header><div class="fixed top-16 left-72 right-0 h-10 bg-surface-container-low border-b border-outline-variant/30 z-30 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline"><span class="material-symbols-outlined text-[15px]">dns</span><span>BAMP</span><span class="text-outline-variant">/</span></div><div class="flex items-center gap-1.5"><span class="text-outline">Fleet Domain:</span><select class="bg-surface-container border border-outline-variant/40 rounded px-2 py-0.5 font-label-sm text-label-sm text-on-surface focus:outline-none focus:border-primary-container"><option>All Branches (14 Active Locations)</option><option>Lagos Hub Terminal 04</option><option>Abuja HQ - Gate Alpha</option><option>London Ops Centre</option><option>Nairobi Assembly Plant</option></select></div></div><div class="flex items-center gap-space-md shrink-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline font-label-lg"><span class="material-symbols-outlined text-[14px]">schedule</span><span>UTC 14:26:08 | LOCAL +01:00</span></div><div class="flex items-center gap-1.5"><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">sync</span><span>Trigger Roster Sync</span></button><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">bolt</span><span>Flush Buffers</span></button></div></div></div><main class="relative pt-26 bg-background min-h-screen"><div class="flex flex-col w-full px-margin py-space-md space-y-space-md max-w-[1720px] mx-auto">
+<!-- Top Operational Metadata Strip & SSOT Lock State Banner -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded border border-outline-variant/30 text-on-surface">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-lowest rounded text-secondary font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock</span>
+<span>SSOT IMMUTABLE RECORD</span>
+</div>
+<span class="text-outline text-label-sm">|</span>
+<div class="flex items-center gap-1.5 min-w-0 font-body-sm text-body-sm text-on-surface-variant truncate">
+<span>Sourced via Web ERP Sync:</span>
+<code class="font-label-sm text-label-sm text-secondary bg-surface-container px-1 py-0.5 rounded truncate">api.workforce-web-erp.internal/v2/roster/EMP-4891</code>
+</div>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline shrink-0">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>Dual-Finger Enrolled &amp; Escrow Sealed</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span>Last Pulled: 2m 14s ago (Auto-Sync Interval: 300s)</span>
+<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" id="btn-resync" onclick="triggerResyncAnimation()">
+<span class="material-symbols-outlined text-[14px] text-secondary" id="resync-icon">sync</span>
+<span>Re-pull from SSOT</span>
+</button>
+</div>
+</div>
+<!-- Breadcrumbs & Profile Master Action Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded">
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded object-cover" data-alt="High resolution enterprise portrait photo of Nigerian logistics manager Oluwaseun Adeyemi, wearing navy high-visibility vest and dark polo shirt, crisp low-key security studio lighting, deep slate background with blue rim light, intense focused expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO7nhkWco1u-isfrmo7uudpZuYnptf5HroDaHxKjQumPvKZqUYHSyyMkba0cEsIynJ4GI6k9eB0gfPwQSvD2AsRUyrbaCLl-xmVexTS1Mu9dvzbum1SNP5NIbjYxEA9sUzYV2cUJ9YLC69WsMyZMrHpeAOzqqqpvT9ARM2Srog-I7RkiV1c7kSdDxLYOfRyZjHoVJ6_etl1xQ1GcukcmNt8NwHeOzMP_m2td1oglIGXA53lBLuP-Bllw"/>
+<span class="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight truncate">Oluwaseun Adeyemi</h1>
+<span class="px-2 py-0.5 bg-tertiary-container/30 text-tertiary text-label-badge font-label-badge rounded flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+            ACTIVE SSOT
+          </span>
+<span class="px-2 py-0.5 bg-surface-container text-secondary text-label-badge font-label-badge rounded">
+            ROSTER v42.09
+          </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-on-surface font-semibold">Lead Logistics Coordinator</span>
+<span class="text-outline">•</span>
+<span>Dept: Supply Chain &amp; Global Distribution</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline">EMP-4891</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-low px-1.5 py-0.2 rounded">REF: SSOT-EXT-98214</span>
+</div>
+</div>
+</div>
+<!-- Master Command Actions -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="px-3 py-1.5 bg-primary-container text-on-primary-container hover:bg-inverse-primary rounded font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors shadow-sm" onclick="pushTemplateModal()">
+<span class="material-symbols-outlined text-[16px]">sensors</span>
+<span>Push Template to Terminals</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors" onclick="openAttestationModal()">
+<span class="material-symbols-outlined text-[16px] text-secondary">encrypted</span>
+<span>Cryptographic Attestation</span>
+</button>
+<button class="px-3 py-1.5 bg-error-container/20 hover:bg-error-container/40 text-error rounded font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors" onclick="openFlagModal()">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span>Flag for Re-enrolment</span>
+</button>
+</div>
+</div>
+<!-- Roster Lifecycle & Purge Guard Banner -->
+<div class="flex items-start sm:items-center justify-between gap-space-md p-space-sm bg-surface-container-low rounded">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">shield_lock</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">Automatic Zeroization Purge Policy (FR-1.3 / NFR-3.2):</span>
+        If marked <code class="font-label-sm text-label-sm text-error bg-surface-container px-1 py-0.2 rounded">INACTIVE</code> or de-provisioned in Web ERP, all biometric templates are cryptographically wiped from physical NVRAM across all 14 branch edge readers within 1 MQTT publish cycle (&lt;4.2s), preserving irreversible historical clock audit logs.
+      </div>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0 font-label-lg hidden md:inline">POLICY ID: BAMP-SEC-Z09</span>
+</div>
+<!-- 3-Column Asymmetric High-Density Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- COLUMN 1: Immutable Identity & Cryptographic Biometric Escrow (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-md">
+<!-- Card 1.1: Web ERP Immutable Source Card -->
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">cloud_sync</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Web ERP Source of Record</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">READ-ONLY SSOT</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-body-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Canonical ID</span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5">EMP-4891</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">ERP System Ref</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5">SSOT-EXT-98214</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Work Location</span>
+<span class="text-on-surface mt-0.5 font-medium">Lagos Industrial Hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Access Group</span>
+<span class="text-on-surface mt-0.5 font-medium">Ops Level 3 (Shift A)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Sync State</span>
+<div class="flex items-center gap-1 mt-0.5 text-tertiary font-label-sm text-label-sm">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+<span>SYNCHRONIZED</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">ERP Contract Status</span>
+<span class="text-on-surface mt-0.5">Full-Time Indefinite</span>
+</div>
+</div>
+<div class="mt-space-xs p-2 bg-surface-container-low rounded text-body-sm text-outline flex items-center justify-between">
+<span class="text-[11px]">Any personnel alterations must be performed in Web ERP master. Direct database writes are disallowed.</span>
+</div>
+</div>
+<!-- Card 1.2: Enrolled Biometrics & Cryptographic Escrow -->
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">fingerprint</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Biometric Vector Escrow</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-1.5 py-0.2 rounded font-semibold">ISO 19794-2</span>
+</div>
+<!-- Enrolled Templates Dual Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Primary Finger -->
+<div class="bg-surface-container-low rounded p-2.5 flex flex-col justify-between space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Primary Finger</span>
+<span class="px-1.5 py-0.2 bg-tertiary-container/40 text-tertiary font-label-sm text-label-sm rounded font-bold">99.8%</span>
+</div>
+<div class="flex items-center gap-3 my-1">
+<div class="w-12 h-14 bg-surface-container rounded flex items-center justify-center relative overflow-hidden shrink-0">
+<!-- Abstract Vector Fingerprint Scan Matrix -->
+<svg class="w-10 h-10 text-secondary/80" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.41 3.12 7.24"></path>
+<path d="M12 6c-3.31 0-6 2.69-6 6 0 1.66.67 3.16 1.76 4.24"></path>
+<path d="M12 10c-1.1 0-2 .9-2 2 0 .55.22 1.05.59 1.41"></path>
+<path d="M12 14c.55 0 1 .45 1 1 0 .83-.67 1.5-1.5 1.5"></path>
+<path d="M15.54 17.54C14.54 18.45 13.33 19 12 19c-3.87 0-7-3.13-7-7"></path>
+<path d="M19 12c0-3.87-3.13-7-7-7"></path>
+<path d="M21.9 14.5C21.4 8.7 16.7 4 11 4"></path>
+</svg>
+<div class="absolute inset-x-0 top-0 h-0.5 bg-tertiary/70 animate-pulse"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Right Index</span>
+<span class="font-label-sm text-label-sm text-outline">FMT: MINUTIAE-A</span>
+<span class="font-label-sm text-label-sm text-tertiary mt-1">Liveness: 100% (No Spoof)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1 border-t border-outline-variant/20">
+<span>Points: 84 Minutiae</span>
+<span class="text-secondary font-label-lg">ESCROW-OK</span>
+</div>
+</div>
+<!-- Secondary Fallback Finger -->
+<div class="bg-surface-container-low rounded p-2.5 flex flex-col justify-between space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold">Fallback Finger</span>
+<span class="px-1.5 py-0.2 bg-surface-container text-on-surface font-label-sm text-label-sm rounded font-bold">98.4%</span>
+</div>
+<div class="flex items-center gap-3 my-1">
+<div class="w-12 h-14 bg-surface-container rounded flex items-center justify-center relative overflow-hidden shrink-0">
+<svg class="w-10 h-10 text-on-surface-variant/70" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.41 3.12 7.24"></path>
+<path d="M12 6c-3.31 0-6 2.69-6 6 0 1.66.67 3.16 1.76 4.24"></path>
+<path d="M12 10c-1.1 0-2 .9-2 2 0 .55.22 1.05.59 1.41"></path>
+<path d="M14 12c0 1.1-.9 2-2 2"></path>
+<path d="M17 12c0 2.76-2.24 5-5 5"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Left Thumb</span>
+<span class="font-label-sm text-label-sm text-outline">FMT: MINUTIAE-A</span>
+<span class="font-label-sm text-label-sm text-tertiary mt-1">Liveness: 99.2%</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1 border-t border-outline-variant/20">
+<span>Points: 72 Minutiae</span>
+<span class="text-secondary font-label-lg">ESCROW-OK</span>
+</div>
+</div>
+</div>
+<!-- Security & KMS Metadata Block (NFR-3.1 Isolation) -->
+<div class="bg-surface-container-lowest rounded p-2.5 border border-outline-variant/30 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">vpn_key</span>
+              KMS Envelope Encryption (NFR-3.1)
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary">ISOLATED VAULT</span>
+</div>
+<div class="space-y-1 font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-outline">
+<span>AES-256 Key ID:</span>
+<span class="text-on-surface font-label-lg text-[10px] truncate max-w-[190px]">kms-af-south-1:99a8b1c4-bamp</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Descriptor SHA-256:</span>
+<span class="text-secondary font-label-lg text-[10px] truncate max-w-[190px]">e3b0c44298fc1c149afbf4c8996fb92427ae</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Enrollment Device:</span>
+<span class="text-on-surface">BIO-TERM-LG-04 (Hardware Rev C)</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Enrolling Supervisor:</span>
+<span class="text-on-surface">Marcus Adeboye (SUP-092)</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Enrollment Timestamp:</span>
+<span class="text-on-surface">2025-01-14 09:22:15 UTC+01:00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 2: Terminal Roster Propagation & NVRAM Distribution Matrix (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-md">
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col h-full">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">hub</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Edge Hardware NVRAM Distribution</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded font-label-lg">3 OF 4 SYNCED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant my-space-xs">
+          Real-time delivery status of EMP-4891's biometric cryptographic template onto distributed hardware edge terminals via MQTT TLS.
+        </p>
+<!-- Hardware Distribution Cards List -->
+<div class="space-y-space-xs flex-1">
+<!-- Terminal 1: Lagos Hub Main Entrance -->
+<div class="p- space-sm bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Lagos Hub - Main Entrance</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-1.5 py-0.2 rounded font-semibold">SYNCED</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-outline pt-1">
+<div>
+<span class="text-[10px] block">Terminal</span>
+<span class="text-on-surface font-label-lg">TER-LG-01</span>
+</div>
+<div>
+<span class="text-[10px] block">NVRAM Slot</span>
+<span class="text-secondary font-label-lg">#0489 (v42)</span>
+</div>
+<div class="text-right">
+<span class="text-[10px] block">ACK Latency</span>
+<span class="text-tertiary font-label-lg">38ms</span>
+</div>
+</div>
+</div>
+<!-- Terminal 2: Lagos Hub Dock Alpha -->
+<div class="p- space-sm bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Lagos Hub - Dock Alpha Gate</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-1.5 py-0.2 rounded font-semibold">SYNCED</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-outline pt-1">
+<div>
+<span class="text-[10px] block">Terminal</span>
+<span class="text-on-surface font-label-lg">TER-LG-04</span>
+</div>
+<div>
+<span class="text-[10px] block">NVRAM Slot</span>
+<span class="text-secondary font-label-lg">#0489 (v42)</span>
+</div>
+<div class="text-right">
+<span class="text-[10px] block">ACK Latency</span>
+<span class="text-tertiary font-label-lg">44ms</span>
+</div>
+</div>
+</div>
+<!-- Terminal 3: Abuja HQ East Gate (Pending Buffer) -->
+<div class="p- space-sm bg-surface-container-low rounded border border-secondary-container/40 flex flex-col space-y-1.5 bg-surface-container-high/40">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Abuja HQ - East Security Gate</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-1.5 py-0.2 rounded font-semibold">QUEUED BUFFER</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-outline pt-1">
+<div>
+<span class="text-[10px] block">Terminal</span>
+<span class="text-on-surface font-label-lg">TER-ABJ-02</span>
+</div>
+<div>
+<span class="text-[10px] block">Pending Delta</span>
+<span class="text-secondary font-label-lg">Pkg #9112</span>
+</div>
+<div class="text-right">
+<span class="text-[10px] block">Link Status</span>
+<span class="text-secondary font-label-lg">MQTT Retrying</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1 mt-1 overflow-hidden">
+<div class="bg-secondary-container h-1 rounded-full w-2/3 animate-pulse"></div>
+</div>
+</div>
+<!-- Terminal 4: Port Harcourt Refinery Entry -->
+<div class="p- space-sm bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Port Harcourt - Refin. Terminal</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-1.5 py-0.2 rounded font-semibold">SYNCED</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-outline pt-1">
+<div>
+<span class="text-[10px] block">Terminal</span>
+<span class="text-on-surface font-label-lg">TER-PH-01</span>
+</div>
+<div>
+<span class="text-[10px] block">NVRAM Slot</span>
+<span class="text-secondary font-label-lg">#0104 (v42)</span>
+</div>
+<div class="text-right">
+<span class="text-[10px] block">ACK Latency</span>
+<span class="text-tertiary font-label-lg">82ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Terminal Fleet Health Diagnostic Bar -->
+<div class="mt-space-sm p-space-sm bg-surface-container rounded border border-outline-variant/30 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-label-sm text-label-sm">Mesh Integrity: 100% SHA Match</span>
+</div>
+<button class="text-secondary hover:text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1" onclick="forceMeshVerify()">
+<span>Force Hash Audit</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- COLUMN 3: Recent Biometric Punch Feed & Quality Telemetry (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-md">
+<!-- Card 3.1: Verification Confidence Sparkline & Liveness Stats -->
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">analytics</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Punch Match Fidelity</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">LAST 7 DAYS</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<div>
+<span class="font-headline-xl text-headline-xl text-on-surface font-label-lg">99.4%</span>
+<span class="font-body-sm text-body-sm text-tertiary ml-2">▲ 0.4% baseline</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">FAR &lt; 0.0001% | FRR 0.12%</span>
+</div>
+<!-- Inline SVG Sparkline Chart -->
+<div class="w-full h-14 relative mt-1">
+<svg class="w-full h-full text-tertiary overflow-visible" preserveaspectratio="none" viewbox="0 0 300 60">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,45 Q 30,35 60,38 T 120,25 T 180,28 T 240,15 T 300,10 L 300,60 L 0,60 Z" fill="url(#chartGradient)"></path>
+<path d="M0,45 Q 30,35 60,38 T 120,25 T 180,28 T 240,15 T 300,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+<!-- Data Points -->
+<circle class="outline outline-2 outline-background" cx="60" cy="38" fill="#4edea3" r="3"></circle>
+<circle class="outline outline-2 outline-background" cx="120" cy="25" fill="#4edea3" r="3"></circle>
+<circle class="outline outline-2 outline-background" cx="180" cy="28" fill="#4edea3" r="3"></circle>
+<circle class="outline outline-2 outline-background" cx="240" cy="15" fill="#4edea3" r="3"></circle>
+<circle class="animate-ping" cx="300" cy="10" fill="#6ffbbe" r="3.5"></circle>
+<circle cx="300" cy="10" fill="#4edea3" r="3"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span>Mon 98.9%</span>
+<span>Tue 99.2%</span>
+<span>Wed 99.1%</span>
+<span>Thu 99.6%</span>
+<span class="text-tertiary font-bold">Today 99.8%</span>
+</div>
+</div>
+<!-- Card 3.2: Real-Time Biometric Punch Feed -->
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col flex-1 space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">history</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recent Punches &amp; ERP Push</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            LIVE FEED
+          </span>
+</div>
+<!-- Punch Items -->
+<div class="space-y-space-sm pt-1">
+<!-- Punch 1: Today Clock IN -->
+<div class="p-2.5 bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge rounded font-bold">IN</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">07:44:12 UTC+01:00</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-label-lg">99.8% Match</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="truncate max-w-[140px]">TER-LG-01 (Turnstile A)</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+<span>Acked HTTP 200</span>
+</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[10px] text-outline-variant pt-1 border-t border-outline-variant/10">
+<span>Biometric Idempotency Hash: c89a...4b10</span>
+<span>Delay: 1.1s</span>
+</div>
+</div>
+<!-- Punch 2: Yesterday Clock OUT -->
+<div class="p-2.5 bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 bg-surface-container text-secondary font-label-badge text-label-badge rounded font-bold">OUT</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">17:15:08 UTC+01:00</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-label-lg">99.4% Match</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="truncate max-w-[140px]">TER-LG-04 (Dock Gate)</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+<span>Acked HTTP 200</span>
+</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[10px] text-outline-variant pt-1 border-t border-outline-variant/10">
+<span>Biometric Idempotency Hash: fa33...1992</span>
+<span>Delay: 0.9s</span>
+</div>
+</div>
+<!-- Punch 3: Yesterday Clock IN -->
+<div class="p-2.5 bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge rounded font-bold">IN</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">07:51:30 UTC+01:00</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-label-lg">99.1% Match</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="truncate max-w-[140px]">TER-LG-01 (Turnstile A)</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+<span>Acked HTTP 200</span>
+</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[10px] text-outline-variant pt-1 border-t border-outline-variant/10">
+<span>Biometric Idempotency Hash: b220...88a1</span>
+<span>Delay: 1.4s</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-auto py-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" onclick="viewFullAuditLog()">
+<span>Inspect Complete Biometric Audit Trail (342 Events)</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Warning / Re-enrolment Confirmation Slide-over / Modal (Initially Hidden) -->
+<div class="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4 hidden" id="re-enrol-modal">
+<div class="bg-surface-container-lowest border border-error/40 rounded max-w-lg w-full p-space-md shadow-2xl flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-sm text-error">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Flag For Supervisor Re-enrolment</h3>
+</div>
+<div class="p-space-sm bg-error-container/10 border border-error/20 rounded font-body-sm text-body-sm text-on-surface-variant space-y-2">
+<p class="font-semibold text-error">High Impact Security Operation (FR-2.4)</p>
+<p>Flagging <strong>Oluwaseun Adeyemi (EMP-4891)</strong> will mark active biometric templates as <span class="text-error font-mono">STALE_PENDING_RECAPTURE</span>. The employee will receive a bypass challenge token at terminal gates for 24 hours.</p>
+<p class="text-[11px] text-outline">An audit trail event will be dispatched to compliance with your credentials: <strong class="text-on-surface">Dr. Elena Vance (Head of Global SecOps)</strong>.</p>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-outline uppercase">Select Reason</label>
+<select class="w-full bg-surface-container border border-outline-variant/40 rounded px-space-sm py-1.5 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-error">
+<option>Physical Trauma / Epithelial Degradation (Match &lt; 90%)</option>
+<option>Security Audit Spot Check / Random Quality Review</option>
+<option>Suspected Template Cross-Pollination / Hardware Calibration Issue</option>
+<option>Supervisor Administrative Override</option>
+</select>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-body-sm text-body-sm" onclick="closeFlagModal()">
+          Cancel
+        </button>
+<button class="px-3 py-1.5 bg-error-container hover:bg-error text-on-error-container hover:text-on-error rounded font-body-sm text-body-sm font-semibold flex items-center gap-1.5 transition-colors" onclick="confirmFlagReenrolment()">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Confirm &amp; Dispatch Flag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cryptographic Attestation Modal (Initially Hidden) -->
+<div class="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4 hidden" id="attestation-modal">
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded max-w-xl w-full p-space-md shadow-2xl flex flex-col space-y-space-md">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Cryptographic Proof of Biometric Origin</h3>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="closeAttestationModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p- space-sm bg-surface-container rounded border border-outline-variant/30 font-label-sm text-label-sm space-y-2 text-on-surface font-mono overflow-x-auto text-[11px]">
+<div class="text-tertiary">// BAMP HARDWARE SECURITY ATTESTATION TOKEN</div>
+<div>Subject: EMP-4891 (Oluwaseun Adeyemi)</div>
+<div>Issuer: BAMP HSM Secure Element v3.4 (NIST SP 800-56A)</div>
+<div>Timestamp: 2025-01-14T08:22:15.981Z</div>
+<div>EnvelopeKeyARN: arn:aws:kms:af-south-1:01928374:key/bamp-escrow-99a8b1</div>
+<div class="text-secondary">Signature (ECDSA-SHA256):</div>
+<div class="text-outline-variant break-all">3045022100e4ab912f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d02206f7e8d9c0b1a2f3e4d5c6b7a8f9e0d1c2b3a4f5e6d7c8b9a0f1e2d3c4b5a6f7e</div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Zero Knowledge Verified (NFR-3.1 Compliance)</span>
+</span>
+<button class="px-3 py-1.5 bg-primary-container text-on-primary-container rounded" onclick="closeAttestationModal()">
+          Done
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 hidden bg-surface-container-highest border border-tertiary/40 rounded p-space-sm shadow-xl flex items-center gap-space-sm text-on-surface" id="toast-banner">
+<span class="material-symbols-outlined text-tertiary text-[20px]">sync</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface" id="toast-title">SSOT Re-pull Dispatched</span>
+<span class="font-body-sm text-body-sm text-outline" id="toast-body">Querying api.workforce-web-erp.internal...</span>
+</div>
+</div>
+</div>
+<script>
+  // Active Navigation Anchor Highlight for 'Sync Directory'
+  (function setActiveNav() {
+    const navLinks = document.querySelectorAll('aside nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'employee-sync-directory') {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.classList.remove('text-outline');
+          icon.classList.add('text-on-primary-container');
+        }
+      }
+    });
+  })();
+
+  // Toast Helper
+  function showToast(title, body, duration = 3000) {
+    const toast = document.getElementById('toast-banner');
+    document.getElementById('toast-title').textContent = title;
+    document.getElementById('toast-body').textContent = body;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, duration);
+  }
+
+  // Trigger SSOT Re-sync animation & notification
+  function triggerResyncAnimation() {
+    const icon = document.getElementById('resync-icon');
+    const btn = document.getElementById('btn-resync');
+    icon.classList.add('animate-spin');
+    btn.disabled = true;
+
+    showToast('Querying SSOT Master', 'Checking Web ERP for schema drift on EMP-4891...');
+
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      btn.disabled = false;
+      showToast('SSOT Record In Sync', 'No updates found. EMP-4891 is canonical v42.09.');
+    }, 1800);
+  }
+
+  // Push Template across edge fleet
+  function pushTemplateModal() {
+    showToast('Publishing MQTT Packets', 'Broadcasting ISO 19794-2 payload to 4 physical reader nodes...');
+  }
+
+  // Cryptographic Attestation Modal
+  function openAttestationModal() {
+    document.getElementById('attestation-modal').classList.remove('hidden');
+  }
+
+  function closeAttestationModal() {
+    document.getElementById('attestation-modal').classList.add('hidden');
+  }
+
+  // Flag for Re-enrolment Modal
+  function openFlagModal() {
+    document.getElementById('re-enrol-modal').classList.remove('hidden');
+  }
+
+  function closeFlagModal() {
+    document.getElementById('re-enrol-modal').classList.add('hidden');
+  }
+
+  function confirmFlagReenrolment() {
+    closeFlagModal();
+    showToast('Flag Placed on EMP-4891', 'Terminal supervisors notified. Recapture challenge scheduled.');
+  }
+
+  // Hash Audit Trigger
+  function forceMeshVerify() {
+    showToast('Triggering Mesh Verification', 'Computing SHA-256 minutiae cross-sums on edge hardware nodes...');
+  }
+
+  function viewFullAuditLog() {
+    showToast('Audit Trail Export', 'Filtering security audit logs for EMP-4891 (Last 365 Days)...');
+  }
+</script></main></div></body></html><!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#2c3039", "on-background": "#dfe2ee", "on-tertiary": "#003824", "on-surface-variant": "#c3c6d7", "inverse-surface": "#dfe2ee", "on-tertiary-fixed-variant": "#005236", "primary-container": "#2563eb", "tertiary-fixed": "#6ffbbe", "tertiary-fixed-dim": "#4edea3", "on-secondary-container": "#002c47", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "surface-container-high": "#262a33", "surface-tint": "#b4c5ff", "on-primary": "#002a78", "on-secondary": "#003351", "surface-variant": "#31353e", "primary": "#b4c5ff", "secondary-container": "#3198dc", "primary-fixed": "#dbe1ff", "surface-container-low": "#181c24", "surface-dim": "#0f131c", "surface": "#0f131c", "error": "#ffb4ab", "secondary-fixed": "#cce5ff", "secondary": "#93ccff", "on-secondary-fixed": "#001d31", "on-error": "#690005", "on-surface": "#dfe2ee", "on-primary-container": "#eeefff", "on-secondary-fixed-variant": "#004b73", "outline": "#8d90a0", "on-error-container": "#ffdad6", "primary-fixed-dim": "#b4c5ff", "surface-container-highest": "#31353e", "tertiary": "#4edea3", "background": "#0f131c", "secondary-fixed-dim": "#93ccff", "on-primary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#0a0e16", "surface-container": "#1c2028", "error-container": "#93000a", "outline-variant": "#434655", "inverse-primary": "#0053db", "surface-bright": "#353942", "tertiary-container": "#007d55" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1.5rem", "space-md": "0.75rem", "gutter-dense": "0.5rem", "margin-mobile": "1rem", "space-lg": "1.25rem" }, fontFamily: { "label-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "label-md": ["JetBrains Mono"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-badge": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-md border-b border-outline-variant/30 flex items-center gap-space-sm bg-surface-container-lowest"><img alt="BAMP Enterprise Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XfD_O6uF0DR5j2vcAF2BkAiLYfzFJDNTkNA591_6oz5G_wJEKDnVtXSd-fm5l_l7upS1pvDJxfigy-FMhivSz_M0cNc1skgBfhH342rQHpClSMakBmRfgAR9SaTQCVRsI42MYGzLmzFoRSzkqU54ErKSKNdGhCJk0DULib0c8oEoQBFlG0hwUI81Xe28A81pBQj27maRu2vfvsYMj7w3E_v5Ud1s5BI_M-BSVYKpFkJ5iadgshN75SaLZX"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">BAMP CORE</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mission Operations</span></div></div><div class="overflow-y-auto flex-1 px-space-sm py-space-sm space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Overview</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">grid_view</span><span>Command Center</span></div><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Attendance</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-ingestion-stream" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">stream</span><span>Live Ingestion Stream</span></div><span class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-tertiary">LIVE</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="attendance-reconciliation-dlq" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">published_with_changes</span><span>Reconciliation &amp; DLQ</span></div><span class="font-label-sm text-label-sm px-1.5 rounded bg-error-container text-on-error-container">2</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">analytics</span><span>Reports &amp; Analytics</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workforce &amp; Roster</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="employee-sync-directory" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">badge</span><span>Sync Directory</span></div><span class="font-label-sm text-label-sm text-outline">SSOT</span></a><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="locations-branches" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">storefront</span><span>Locations &amp; Branches</span></div><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Devices &amp; Hardware</div><a class="group flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="device-fleet-registry" href="#"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">router</span><span>Device Fleet Registry</span></div><span class="font-label-sm text-label-sm text-tertiary font-label-lg">98.4%</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="firmware-ota-deployments" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">system_update</span><span>Firmware &amp; OTA</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="biometric-enrolment-terminal" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">fingerprint</span><span>Enrolment Terminal</span></a></nav><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-space-sm py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System &amp; Compliance</div><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integration-web-adapter" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">hub</span><span>Integration Adapter</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="security-audit-trail" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">verified_user</span><span>Security Audit Trail</span></a><a class="group flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="system-settings-rbac" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">tune</span><span>Settings &amp; RBAC</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-tertiary"></span><span>BAMP DAEMON v4.11</span></div><span class="font-label-sm text-label-sm text-outline-variant font-label-lg">SEC-A09</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur border-b border-outline-variant/40 z-40 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-outline-variant/40 rounded"><div class="relative flex items-center justify-center h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-tertiary"></span></div><span class="font-label-sm text-label-sm text-tertiary whitespace-nowrap">MQTT &amp; Dual-Sync Healthy</span><span class="text-outline text-[10px]">|</span><span class="font-label-sm text-label-sm text-outline whitespace-nowrap">P95 4.2s</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-body-sm text-body-sm text-on-surface truncate max-w-[150px]">Apex Holdings - 14 Branches</span><span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span></div></div><div class="flex-1 max-w-xl mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline">search</span><input class="w-full bg-surface-container-low border border-outline-variant/40 rounded h-8 pl-8 pr-8 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Search terminals, staff ID, sync events, locations..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 font-label-sm text-label-sm bg-surface-container-high text-outline rounded border border-outline-variant/40">/</kbd></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low border border-outline-variant/30 rounded font-label-sm text-label-sm text-secondary"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span><span>MQTT TLS: Active (Port 8883)</span></div><div class="flex items-center gap-1 px-2 py-1 bg-surface-container-low border border-outline-variant/40 rounded cursor-pointer hover:border-secondary transition-colors" title="Active Offline Buffers"><span class="material-symbols-outlined text-[16px] text-secondary">cloud_off</span><span class="font-label-sm text-label-sm text-on-surface">3 Buffering</span><span class="font-label-sm text-label-sm text-outline">(428)</span></div><button class="relative p-1.5 rounded bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error-container text-on-error-container font-label-sm text-[9px] font-bold border border-background">2</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant/30"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlj8VFrNyEhwKFZarVvarBMnrK0R4ylSyfCRaL6liD53jTEuduW6Kgi5VpGOhKigITegAhjXuv55PIwLnv1ogAf9bVw_H-2MZWU1rwEWb_beYFFbYaZhTrMkEQf61qnuhxeRSSh1DBQOvWUYjEv60Ub-OlrsNZOZje2vgkodC1FWnFQkbigJgwibX60JFozqFRxaDvb8qEc360OuAefMDSjNlhmaKyqow60Bi1-NCgvxIH5_xUVWt7-g"/><span class="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-[10px] text-tertiary">lock</span></span></div><div class="hidden lg:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-body-sm text-body-sm text-on-surface font-semibold max-w-[140px] truncate">Dr. Elena Vance</span><span class="font-label-sm text-[9px] tracking-wider uppercase px-1 py-0.2 bg-primary-container text-on-primary-container rounded font-bold">SYSTEM ADMIN</span></div><span class="font-label-sm text-[10px] text-outline truncate max-w-[170px]">Head of Global SecOps</span></div></div></div></header><div class="fixed top-16 left-72 right-0 h-10 bg-surface-container-low border-b border-outline-variant/30 z-30 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline"><span class="material-symbols-outlined text-[15px]">dns</span><span>BAMP</span><span class="text-outline-variant">/</span></div><div class="flex items-center gap-1.5"><span class="text-outline">Fleet Domain:</span><select class="bg-surface-container border border-outline-variant/40 rounded px-2 py-0.5 font-label-sm text-label-sm text-on-surface focus:outline-none focus:border-primary-container"><option>All Branches (14 Active Locations)</option><option>Lagos Hub Terminal 04</option><option>Abuja HQ - Gate Alpha</option><option>London Ops Centre</option><option>Nairobi Assembly Plant</option></select></div></div><div class="flex items-center gap-space-md shrink-0 font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-outline font-label-lg"><span class="material-symbols-outlined text-[14px]">schedule</span><span>UTC 14:26:08 | LOCAL +01:00</span></div><div class="flex items-center gap-1.5"><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-secondary">sync</span><span>Trigger Roster Sync</span></button><button class="px-2 py-0.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">bolt</span><span>Flush Buffers</span></button></div></div></div><main class="relative pt-26 bg-background min-h-screen"><div class="flex flex-col w-full px-margin py-space-md space-y-space-md max-w-[1720px] mx-auto">
+<!-- Top Operational Metadata Strip & SSOT Lock State Banner -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded border border-outline-variant/30 text-on-surface">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-lowest rounded text-secondary font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock</span>
+<span>SSOT IMMUTABLE RECORD</span>
+</div>
+<span class="text-outline text-label-sm">|</span>
+<div class="flex items-center gap-1.5 min-w-0 font-body-sm text-body-sm text-on-surface-variant truncate">
+<span>Sourced via Web ERP Sync:</span>
+<code class="font-label-sm text-label-sm text-secondary bg-surface-container px-1 py-0.5 rounded truncate">api.workforce-web-erp.internal/v2/roster/EMP-4891</code>
+</div>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline shrink-0">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>Dual-Finger Enrolled &amp; Escrow Sealed</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span>Last Pulled: 2m 14s ago (Auto-Sync Interval: 300s)</span>
+<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" id="btn-resync" onclick="triggerResyncAnimation()">
+<span class="material-symbols-outlined text-[14px] text-secondary" id="resync-icon">sync</span>
+<span>Re-pull from SSOT</span>
+</button>
+</div>
+</div>
+<!-- Breadcrumbs & Profile Master Action Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded">
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded object-cover" data-alt="High resolution enterprise portrait photo of Nigerian logistics manager Oluwaseun Adeyemi, wearing navy high-visibility vest and dark polo shirt, crisp low-key security studio lighting, deep slate background with blue rim light, intense focused expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO7nhkWco1u-isfrmo7uudpZuYnptf5HroDaHxKjQumPvKZqUYHSyyMkba0cEsIynJ4GI6k9eB0gfPwQSvD2AsRUyrbaCLl-xmVexTS1Mu9dvzbum1SNP5NIbjYxEA9sUzYV2cUJ9YLC69WsMyZMrHpeAOzqqqpvT9ARM2Srog-I7RkiV1c7kSdDxLYOfRyZjHoVJ6_etl1xQ1GcukcmNt8NwHeOzMP_m2td1oglIGXA53lBLuP-Bllw"/>
+<span class="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight truncate">Oluwaseun Adeyemi</h1>
+<span class="px-2 py-0.5 bg-tertiary-container/30 text-tertiary text-label-badge font-label-badge rounded flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+            ACTIVE SSOT
+          </span>
+<span class="px-2 py-0.5 bg-surface-container text-secondary text-label-badge font-label-badge rounded">
+            ROSTER v42.09
+          </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-on-surface font-semibold">Lead Logistics Coordinator</span>
+<span class="text-outline">•</span>
+<span>Dept: Supply Chain &amp; Global Distribution</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline">EMP-4891</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-low px-1.5 py-0.2 rounded">REF: SSOT-EXT-98214</span>
+</div>
+</div>
+</div>
+<!-- Master Command Actions -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="px-3 py-1.5 bg-primary-container text-on-primary-container hover:bg-inverse-primary rounded font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors shadow-sm" onclick="pushTemplateModal()">
+<span class="material-symbols-outlined text-[16px]">sensors</span>
+<span>Push Template to Terminals</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors" onclick="openAttestationModal()">
+<span class="material-symbols-outlined text-[16px] text-secondary">encrypted</span>
+<span>Cryptographic Attestation</span>
+</button>
+<button class="px-3 py-1.5 bg-error-container/20 hover:bg-error-container/40 text-error rounded font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors" onclick="openFlagModal()">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span>Flag for Re-enrolment</span>
+</button>
+</div>
+</div>
+<!-- Roster Lifecycle & Purge Guard Banner -->
+<div class="flex items-start sm:items-center justify-between gap-space-md p-space-sm bg-surface-container-low rounded">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">shield_lock</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">Automatic Zeroization Purge Policy (FR-1.3 / NFR-3.2):</span>
+        If marked <code class="font-label-sm text-label-sm text-error bg-surface-container px-1 py-0.2 rounded">INACTIVE</code> or de-provisioned in Web ERP, all biometric templates are cryptographically wiped from physical NVRAM across all 14 branch edge readers within 1 MQTT publish cycle (&lt;4.2s), preserving irreversible historical clock audit logs.
+      </div>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0 font-label-lg hidden md:inline">POLICY ID: BAMP-SEC-Z09</span>
+</div>
+<!-- 3-Column Asymmetric High-Density Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- COLUMN 1: Immutable Identity & Cryptographic Biometric Escrow (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-md">
+<!-- Card 1.1: Web ERP Immutable Source Card -->
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">cloud_sync</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Web ERP Source of Record</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">READ-ONLY SSOT</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-body-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Canonical ID</span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5">EMP-4891</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">ERP System Ref</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5">SSOT-EXT-98214</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Work Location</span>
+<span class="text-on-surface mt-0.5 font-medium">Lagos Industrial Hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Access Group</span>
+<span class="text-on-surface mt-0.5 font-medium">Ops Level 3 (Shift A)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Sync State</span>
+<div class="flex items-center gap-1 mt-0.5 text-tertiary font-label-sm text-label-sm">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+<span>SYNCHRONIZED</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">ERP Contract Status</span>
+<span class="text-on-surface mt-0.5">Full-Time Indefinite</span>
+</div>
+</div>
+<div class="mt-space-xs p-2 bg-surface-container-low rounded text-body-sm text-outline flex items-center justify-between">
+<span class="text-[11px]">Any personnel alterations must be performed in Web ERP master. Direct database writes are disallowed.</span>
+</div>
+</div>
+<!-- Card 1.2: Enrolled Biometrics & Cryptographic Escrow -->
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">fingerprint</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Biometric Vector Escrow</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-1.5 py-0.2 rounded font-semibold">ISO 19794-2</span>
+</div>
+<!-- Enrolled Templates Dual Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Primary Finger -->
+<div class="bg-surface-container-low rounded p-2.5 flex flex-col justify-between space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Primary Finger</span>
+<span class="px-1.5 py-0.2 bg-tertiary-container/40 text-tertiary font-label-sm text-label-sm rounded font-bold">99.8%</span>
+</div>
+<div class="flex items-center gap-3 my-1">
+<div class="w-12 h-14 bg-surface-container rounded flex items-center justify-center relative overflow-hidden shrink-0">
+<!-- Abstract Vector Fingerprint Scan Matrix -->
+<svg class="w-10 h-10 text-secondary/80" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.41 3.12 7.24"></path>
+<path d="M12 6c-3.31 0-6 2.69-6 6 0 1.66.67 3.16 1.76 4.24"></path>
+<path d="M12 10c-1.1 0-2 .9-2 2 0 .55.22 1.05.59 1.41"></path>
+<path d="M12 14c.55 0 1 .45 1 1 0 .83-.67 1.5-1.5 1.5"></path>
+<path d="M15.54 17.54C14.54 18.45 13.33 19 12 19c-3.87 0-7-3.13-7-7"></path>
+<path d="M19 12c0-3.87-3.13-7-7-7"></path>
+<path d="M21.9 14.5C21.4 8.7 16.7 4 11 4"></path>
+</svg>
+<div class="absolute inset-x-0 top-0 h-0.5 bg-tertiary/70 animate-pulse"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Right Index</span>
+<span class="font-label-sm text-label-sm text-outline">FMT: MINUTIAE-A</span>
+<span class="font-label-sm text-label-sm text-tertiary mt-1">Liveness: 100% (No Spoof)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1 border-t border-outline-variant/20">
+<span>Points: 84 Minutiae</span>
+<span class="text-secondary font-label-lg">ESCROW-OK</span>
+</div>
+</div>
+<!-- Secondary Fallback Finger -->
+<div class="bg-surface-container-low rounded p-2.5 flex flex-col justify-between space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold">Fallback Finger</span>
+<span class="px-1.5 py-0.2 bg-surface-container text-on-surface font-label-sm text-label-sm rounded font-bold">98.4%</span>
+</div>
+<div class="flex items-center gap-3 my-1">
+<div class="w-12 h-14 bg-surface-container rounded flex items-center justify-center relative overflow-hidden shrink-0">
+<svg class="w-10 h-10 text-on-surface-variant/70" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.41 3.12 7.24"></path>
+<path d="M12 6c-3.31 0-6 2.69-6 6 0 1.66.67 3.16 1.76 4.24"></path>
+<path d="M12 10c-1.1 0-2 .9-2 2 0 .55.22 1.05.59 1.41"></path>
+<path d="M14 12c0 1.1-.9 2-2 2"></path>
+<path d="M17 12c0 2.76-2.24 5-5 5"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Left Thumb</span>
+<span class="font-label-sm text-label-sm text-outline">FMT: MINUTIAE-A</span>
+<span class="font-label-sm text-label-sm text-tertiary mt-1">Liveness: 99.2%</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1 border-t border-outline-variant/20">
+<span>Points: 72 Minutiae</span>
+<span class="text-secondary font-label-lg">ESCROW-OK</span>
+</div>
+</div>
+</div>
+<!-- Security & KMS Metadata Block (NFR-3.1 Isolation) -->
+<div class="bg-surface-container-lowest rounded p-2.5 border border-outline-variant/30 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">vpn_key</span>
+              KMS Envelope Encryption (NFR-3.1)
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary">ISOLATED VAULT</span>
+</div>
+<div class="space-y-1 font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-outline">
+<span>AES-256 Key ID:</span>
+<span class="text-on-surface font-label-lg text-[10px] truncate max-w-[190px]">kms-af-south-1:99a8b1c4-bamp</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Descriptor SHA-256:</span>
+<span class="text-secondary font-label-lg text-[10px] truncate max-w-[190px]">e3b0c44298fc1c149afbf4c8996fb92427ae</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Enrollment Device:</span>
+<span class="text-on-surface">BIO-TERM-LG-04 (Hardware Rev C)</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Enrolling Supervisor:</span>
+<span class="text-on-surface">Marcus Adeboye (SUP-092)</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Enrollment Timestamp:</span>
+<span class="text-on-surface">2025-01-14 09:22:15 UTC+01:00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 2: Terminal Roster Propagation & NVRAM Distribution Matrix (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-md">
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col h-full">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">hub</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Edge Hardware NVRAM Distribution</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded font-label-lg">3 OF 4 SYNCED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant my-space-xs">
+          Real-time delivery status of EMP-4891's biometric cryptographic template onto distributed hardware edge terminals via MQTT TLS.
+        </p>
+<!-- Hardware Distribution Cards List -->
+<div class="space-y-space-xs flex-1">
+<!-- Terminal 1: Lagos Hub Main Entrance -->
+<div class="p- space-sm bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Lagos Hub - Main Entrance</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-1.5 py-0.2 rounded font-semibold">SYNCED</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-outline pt-1">
+<div>
+<span class="text-[10px] block">Terminal</span>
+<span class="text-on-surface font-label-lg">TER-LG-01</span>
+</div>
+<div>
+<span class="text-[10px] block">NVRAM Slot</span>
+<span class="text-secondary font-label-lg">#0489 (v42)</span>
+</div>
+<div class="text-right">
+<span class="text-[10px] block">ACK Latency</span>
+<span class="text-tertiary font-label-lg">38ms</span>
+</div>
+</div>
+</div>
+<!-- Terminal 2: Lagos Hub Dock Alpha -->
+<div class="p- space-sm bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Lagos Hub - Dock Alpha Gate</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-1.5 py-0.2 rounded font-semibold">SYNCED</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-outline pt-1">
+<div>
+<span class="text-[10px] block">Terminal</span>
+<span class="text-on-surface font-label-lg">TER-LG-04</span>
+</div>
+<div>
+<span class="text-[10px] block">NVRAM Slot</span>
+<span class="text-secondary font-label-lg">#0489 (v42)</span>
+</div>
+<div class="text-right">
+<span class="text-[10px] block">ACK Latency</span>
+<span class="text-tertiary font-label-lg">44ms</span>
+</div>
+</div>
+</div>
+<!-- Terminal 3: Abuja HQ East Gate (Pending Buffer) -->
+<div class="p- space-sm bg-surface-container-low rounded border border-secondary-container/40 flex flex-col space-y-1.5 bg-surface-container-high/40">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Abuja HQ - East Security Gate</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-1.5 py-0.2 rounded font-semibold">QUEUED BUFFER</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-outline pt-1">
+<div>
+<span class="text-[10px] block">Terminal</span>
+<span class="text-on-surface font-label-lg">TER-ABJ-02</span>
+</div>
+<div>
+<span class="text-[10px] block">Pending Delta</span>
+<span class="text-secondary font-label-lg">Pkg #9112</span>
+</div>
+<div class="text-right">
+<span class="text-[10px] block">Link Status</span>
+<span class="text-secondary font-label-lg">MQTT Retrying</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1 mt-1 overflow-hidden">
+<div class="bg-secondary-container h-1 rounded-full w-2/3 animate-pulse"></div>
+</div>
+</div>
+<!-- Terminal 4: Port Harcourt Refinery Entry -->
+<div class="p- space-sm bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Port Harcourt - Refin. Terminal</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/30 px-1.5 py-0.2 rounded font-semibold">SYNCED</span>
+</div>
+<div class="grid grid-cols-3 gap-2 font-label-sm text-label-sm text-outline pt-1">
+<div>
+<span class="text-[10px] block">Terminal</span>
+<span class="text-on-surface font-label-lg">TER-PH-01</span>
+</div>
+<div>
+<span class="text-[10px] block">NVRAM Slot</span>
+<span class="text-secondary font-label-lg">#0104 (v42)</span>
+</div>
+<div class="text-right">
+<span class="text-[10px] block">ACK Latency</span>
+<span class="text-tertiary font-label-lg">82ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Terminal Fleet Health Diagnostic Bar -->
+<div class="mt-space-sm p-space-sm bg-surface-container rounded border border-outline-variant/30 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-label-sm text-label-sm">Mesh Integrity: 100% SHA Match</span>
+</div>
+<button class="text-secondary hover:text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1" onclick="forceMeshVerify()">
+<span>Force Hash Audit</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- COLUMN 3: Recent Biometric Punch Feed & Quality Telemetry (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-space-md">
+<!-- Card 3.1: Verification Confidence Sparkline & Liveness Stats -->
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">analytics</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Punch Match Fidelity</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">LAST 7 DAYS</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<div>
+<span class="font-headline-xl text-headline-xl text-on-surface font-label-lg">99.4%</span>
+<span class="font-body-sm text-body-sm text-tertiary ml-2">▲ 0.4% baseline</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">FAR &lt; 0.0001% | FRR 0.12%</span>
+</div>
+<!-- Inline SVG Sparkline Chart -->
+<div class="w-full h-14 relative mt-1">
+<svg class="w-full h-full text-tertiary overflow-visible" preserveaspectratio="none" viewbox="0 0 300 60">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,45 Q 30,35 60,38 T 120,25 T 180,28 T 240,15 T 300,10 L 300,60 L 0,60 Z" fill="url(#chartGradient)"></path>
+<path d="M0,45 Q 30,35 60,38 T 120,25 T 180,28 T 240,15 T 300,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+<!-- Data Points -->
+<circle class="outline outline-2 outline-background" cx="60" cy="38" fill="#4edea3" r="3"></circle>
+<circle class="outline outline-2 outline-background" cx="120" cy="25" fill="#4edea3" r="3"></circle>
+<circle class="outline outline-2 outline-background" cx="180" cy="28" fill="#4edea3" r="3"></circle>
+<circle class="outline outline-2 outline-background" cx="240" cy="15" fill="#4edea3" r="3"></circle>
+<circle class="animate-ping" cx="300" cy="10" fill="#6ffbbe" r="3.5"></circle>
+<circle cx="300" cy="10" fill="#4edea3" r="3"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span>Mon 98.9%</span>
+<span>Tue 99.2%</span>
+<span>Wed 99.1%</span>
+<span>Thu 99.6%</span>
+<span class="text-tertiary font-bold">Today 99.8%</span>
+</div>
+</div>
+<!-- Card 3.2: Real-Time Biometric Punch Feed -->
+<div class="bg-surface-container-lowest rounded p-space-md flex flex-col flex-1 space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">history</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recent Punches &amp; ERP Push</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            LIVE FEED
+          </span>
+</div>
+<!-- Punch Items -->
+<div class="space-y-space-sm pt-1">
+<!-- Punch 1: Today Clock IN -->
+<div class="p-2.5 bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge rounded font-bold">IN</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">07:44:12 UTC+01:00</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-label-lg">99.8% Match</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="truncate max-w-[140px]">TER-LG-01 (Turnstile A)</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+<span>Acked HTTP 200</span>
+</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[10px] text-outline-variant pt-1 border-t border-outline-variant/10">
+<span>Biometric Idempotency Hash: c89a...4b10</span>
+<span>Delay: 1.1s</span>
+</div>
+</div>
+<!-- Punch 2: Yesterday Clock OUT -->
+<div class="p-2.5 bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 bg-surface-container text-secondary font-label-badge text-label-badge rounded font-bold">OUT</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">17:15:08 UTC+01:00</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-label-lg">99.4% Match</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="truncate max-w-[140px]">TER-LG-04 (Dock Gate)</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+<span>Acked HTTP 200</span>
+</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[10px] text-outline-variant pt-1 border-t border-outline-variant/10">
+<span>Biometric Idempotency Hash: fa33...1992</span>
+<span>Delay: 0.9s</span>
+</div>
+</div>
+<!-- Punch 3: Yesterday Clock IN -->
+<div class="p-2.5 bg-surface-container-low rounded border border-outline-variant/20 flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.2 bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge rounded font-bold">IN</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">07:51:30 UTC+01:00</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-label-lg">99.1% Match</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="truncate max-w-[140px]">TER-LG-01 (Turnstile A)</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+<span>Acked HTTP 200</span>
+</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[10px] text-outline-variant pt-1 border-t border-outline-variant/10">
+<span>Biometric Idempotency Hash: b220...88a1</span>
+<span>Delay: 1.4s</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-auto py-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" onclick="viewFullAuditLog()">
+<span>Inspect Complete Biometric Audit Trail (342 Events)</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Warning / Re-enrolment Confirmation Slide-over / Modal (Initially Hidden) -->
+<div class="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4 hidden" id="re-enrol-modal">
+<div class="bg-surface-container-lowest border border-error/40 rounded max-w-lg w-full p-space-md shadow-2xl flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-sm text-error">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Flag For Supervisor Re-enrolment</h3>
+</div>
+<div class="p-space-sm bg-error-container/10 border border-error/20 rounded font-body-sm text-body-sm text-on-surface-variant space-y-2">
+<p class="font-semibold text-error">High Impact Security Operation (FR-2.4)</p>
+<p>Flagging <strong>Oluwaseun Adeyemi (EMP-4891)</strong> will mark active biometric templates as <span class="text-error font-mono">STALE_PENDING_RECAPTURE</span>. The employee will receive a bypass challenge token at terminal gates for 24 hours.</p>
+<p class="text-[11px] text-outline">An audit trail event will be dispatched to compliance with your credentials: <strong class="text-on-surface">Dr. Elena Vance (Head of Global SecOps)</strong>.</p>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-outline uppercase">Select Reason</label>
+<select class="w-full bg-surface-container border border-outline-variant/40 rounded px-space-sm py-1.5 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-error">
+<option>Physical Trauma / Epithelial Degradation (Match &lt; 90%)</option>
+<option>Security Audit Spot Check / Random Quality Review</option>
+<option>Suspected Template Cross-Pollination / Hardware Calibration Issue</option>
+<option>Supervisor Administrative Override</option>
+</select>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-body-sm text-body-sm" onclick="closeFlagModal()">
+          Cancel
+        </button>
+<button class="px-3 py-1.5 bg-error-container hover:bg-error text-on-error-container hover:text-on-error rounded font-body-sm text-body-sm font-semibold flex items-center gap-1.5 transition-colors" onclick="confirmFlagReenrolment()">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Confirm &amp; Dispatch Flag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cryptographic Attestation Modal (Initially Hidden) -->
+<div class="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4 hidden" id="attestation-modal">
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded max-w-xl w-full p-space-md shadow-2xl flex flex-col space-y-space-md">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Cryptographic Proof of Biometric Origin</h3>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="closeAttestationModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p- space-sm bg-surface-container rounded border border-outline-variant/30 font-label-sm text-label-sm space-y-2 text-on-surface font-mono overflow-x-auto text-[11px]">
+<div class="text-tertiary">// BAMP HARDWARE SECURITY ATTESTATION TOKEN</div>
+<div>Subject: EMP-4891 (Oluwaseun Adeyemi)</div>
+<div>Issuer: BAMP HSM Secure Element v3.4 (NIST SP 800-56A)</div>
+<div>Timestamp: 2025-01-14T08:22:15.981Z</div>
+<div>EnvelopeKeyARN: arn:aws:kms:af-south-1:01928374:key/bamp-escrow-99a8b1</div>
+<div class="text-secondary">Signature (ECDSA-SHA256):</div>
+<div class="text-outline-variant break-all">3045022100e4ab912f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d02206f7e8d9c0b1a2f3e4d5c6b7a8f9e0d1c2b3a4f5e6d7c8b9a0f1e2d3c4b5a6f7e</div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Zero Knowledge Verified (NFR-3.1 Compliance)</span>
+</span>
+<button class="px-3 py-1.5 bg-primary-container text-on-primary-container rounded" onclick="closeAttestationModal()">
+          Done
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 hidden bg-surface-container-highest border border-tertiary/40 rounded p-space-sm shadow-xl flex items-center gap-space-sm text-on-surface" id="toast-banner">
+<span class="material-symbols-outlined text-tertiary text-[20px]">sync</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface" id="toast-title">SSOT Re-pull Dispatched</span>
+<span class="font-body-sm text-body-sm text-outline" id="toast-body">Querying api.workforce-web-erp.internal...</span>
+</div>
+</div>
+</div>
+<script>
+  // Active Navigation Anchor Highlight for 'Sync Directory'
+  (function setActiveNav() {
+    const navLinks = document.querySelectorAll('aside nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'employee-sync-directory') {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.classList.remove('text-outline');
+          icon.classList.add('text-on-primary-container');
+        }
+      }
+    });
+  })();
+
+  // Toast Helper
+  function showToast(title, body, duration = 3000) {
+    const toast = document.getElementById('toast-banner');
+    document.getElementById('toast-title').textContent = title;
+    document.getElementById('toast-body').textContent = body;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, duration);
+  }
+
+  // Trigger SSOT Re-sync animation & notification
+  function triggerResyncAnimation() {
+    const icon = document.getElementById('resync-icon');
+    const btn = document.getElementById('btn-resync');
+    icon.classList.add('animate-spin');
+    btn.disabled = true;
+
+    showToast('Querying SSOT Master', 'Checking Web ERP for schema drift on EMP-4891...');
+
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      btn.disabled = false;
+      showToast('SSOT Record In Sync', 'No updates found. EMP-4891 is canonical v42.09.');
+    }, 1800);
+  }
+
+  // Push Template across edge fleet
+  function pushTemplateModal() {
+    showToast('Publishing MQTT Packets', 'Broadcasting ISO 19794-2 payload to 4 physical reader nodes...');
+  }
+
+  // Cryptographic Attestation Modal
+  function openAttestationModal() {
+    document.getElementById('attestation-modal').classList.remove('hidden');
+  }
+
+  function closeAttestationModal() {
+    document.getElementById('attestation-modal').classList.add('hidden');
+  }
+
+  // Flag for Re-enrolment Modal
+  function openFlagModal() {
+    document.getElementById('re-enrol-modal').classList.remove('hidden');
+  }
+
+  function closeFlagModal() {
+    document.getElementById('re-enrol-modal').classList.add('hidden');
+  }
+
+  function confirmFlagReenrolment() {
+    closeFlagModal();
+    showToast('Flag Placed on EMP-4891', 'Terminal supervisors notified. Recapture challenge scheduled.');
+  }
+
+  // Hash Audit Trigger
+  function forceMeshVerify() {
+    showToast('Triggering Mesh Verification', 'Computing SHA-256 minutiae cross-sums on edge hardware nodes...');
+  }
+
+  function viewFullAuditLog() {
+    showToast('Audit Trail Export', 'Filtering security audit logs for EMP-4891 (Last 365 Days)...');
+  }
+</script></main></div></body></html>

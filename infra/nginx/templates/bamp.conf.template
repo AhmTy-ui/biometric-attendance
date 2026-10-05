@@ -1,0 +1,70 @@
+# Rendered by the nginx image entrypoint (envsubst) → /etc/nginx/conf.d/bamp.conf
+limit_req_zone $binary_remote_addr zone=bamp_api:20m rate=30r/s;
+limit_req_zone $http_x_device_id zone=bamp_dev:20m rate=20r/s;
+
+map $http_upgrade $connection_upgrade {
+  default upgrade;
+  ''      close;
+}
+
+upstream bamp_backend {
+  server backend:4000;
+  keepalive 32;
+}
+
+server {
+  listen 80;
+  server_name ${BAMP_DOMAIN};
+  location /.well-known/acme-challenge/ { root /var/www/certbot; }
+  location / { return 301 https://$host$request_uri; }
+}
+
+server {
+  listen 443 ssl;
+  http2 on;
+  server_name ${BAMP_DOMAIN};
+
+  # NFR-1.1: TLS 1.2+ with a valid certificate
+  ssl_certificate     /etc/letsencrypt/live/${BAMP_DOMAIN}/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/${BAMP_DOMAIN}/privkey.pem;
+  ssl_protocols TLSv1.2 TLSv1.3;
+  ssl_prefer_server_ciphers off;
+  ssl_session_cache shared:SSL:10m;
+  ssl_session_timeout 1d;
+  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+  client_max_body_size 256m;   # firmware uploads
+  proxy_http_version 1.1;
+  proxy_set_header Host $host;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto https;
+  proxy_set_header Connection "";
+
+  # Metrics stay internal
+  location = /metrics { deny all; }
+
+  # Live dashboard updates (WebSocket gateway)
+  location /ws {
+    proxy_pass http://bamp_backend;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $connection_upgrade;
+    proxy_read_timeout 1h;
+  }
+
+  # Device HTTPS channel
+  location /device/ {
+    limit_req zone=bamp_dev burst=100 nodelay;
+    proxy_pass http://bamp_backend;
+    proxy_read_timeout 120s;
+  }
+
+  location /api/ {
+    limit_req zone=bamp_api burst=60 nodelay;
+    proxy_pass http://bamp_backend;
+    proxy_read_timeout 300s;   # large exports
+  }
+
+  location / {
+    proxy_pass http://bamp_backend;
+  }
+}
