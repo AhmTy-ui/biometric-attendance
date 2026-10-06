@@ -165,7 +165,7 @@ export default function Users() {
       </div>
 
       {/* Directory */}
-      <div className="rounded bg-surface-container-low shadow-sm overflow-hidden flex flex-col">
+      <div className="rounded-xl card overflow-hidden flex flex-col">
         <div className="p-space-sm bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-sm">
           <div className="flex flex-wrap items-center gap-space-sm flex-1 min-w-[280px]">
             <SearchInput value={q} onChange={setQ} placeholder="Search by name or email…" className="flex-1 max-w-md min-w-[200px]" />
@@ -227,13 +227,6 @@ export default function Users() {
             icon="person_search"
             title={filtered ? 'No users match these filters.' : 'No users found.'}
             description={filtered ? 'Try a different search or clear the filters.' : undefined}
-            action={
-              can('users.manage') && !filtered ? (
-                <LinkButton to="/users/new" variant="primary" icon="person_add">
-                  Add User
-                </LinkButton>
-              ) : undefined
-            }
           />
         ) : (
           <>
@@ -321,7 +314,7 @@ export default function Users() {
       </div>
 
       {/* Policy panel (real settings) */}
-      <div className="rounded bg-surface-container-low shadow-md p-space-md space-y-space-md">
+      <div className="rounded-xl card p-space-md space-y-space-md">
         <div className="flex items-center gap-2">
           <Icon name="gavel" className="text-secondary text-[22px]" />
           <div>

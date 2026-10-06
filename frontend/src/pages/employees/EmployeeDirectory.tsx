@@ -293,7 +293,7 @@ export default function EmployeeDirectory() {
       )}
 
       {/* Filter toolbar */}
-      <div className="p-space-sm rounded bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+      <div className="p-space-sm rounded-xl card flex flex-wrap items-center justify-between gap-space-sm">
         <div className="flex flex-wrap items-center gap-space-xs flex-1">
           <SearchInput value={search} onChange={setSearch} placeholder="Search name, staff number or web reference ID..." className="min-w-[240px] flex-1 max-w-sm" />
           <FilterSelect icon="storefront" label="Location" value={loc} onChange={(v) => setParam({ loc: v })}>
@@ -348,7 +348,7 @@ export default function EmployeeDirectory() {
       </div>
 
       {/* Table */}
-      <div className="flex flex-col rounded bg-surface-container-low overflow-hidden shadow-md">
+      <div className="flex flex-col rounded-xl card overflow-hidden">
         {list.isLoading ? (
           <Loading label="Loading employees..." />
         ) : list.error && !list.data ? (
@@ -359,19 +359,8 @@ export default function EmployeeDirectory() {
             title="No employees found."
             description={
               activeFilters
-                ? 'No employees match the current filters.'
-                : 'Employees appear here after they are synchronised from the web software.'
-            }
-            action={
-              activeFilters ? (
-                <Button icon="restart_alt" onClick={resetFilters}>
-                  Reset filters
-                </Button>
-              ) : can('employees.sync') ? (
-                <Button icon="sync" variant="primary" loading={syncMut.isPending} onClick={() => syncMut.mutate()}>
-                  Sync from Web Software
-                </Button>
-              ) : undefined
+                ? 'No employees match the current filters. Use the reset button beside the filters to clear them.'
+                : 'Employees appear here after they are synchronised from the web software (Sync from Web Software, above).'
             }
           />
         ) : (
@@ -441,7 +430,7 @@ export default function EmployeeDirectory() {
 
 function Kpi({ label, icon, value, foot, bar, valueCls }: { label: string; icon: string; value: ReactNode; foot: ReactNode; bar: string; valueCls?: string }) {
   return (
-    <div className="p-space-md rounded bg-surface-container-low flex flex-col justify-between shadow-sm relative overflow-hidden">
+    <div className="p-space-md rounded-xl card flex flex-col justify-between relative overflow-hidden">
       <div className="flex items-center justify-between text-on-surface-variant">
         <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline">{label}</span>
         <Icon name={icon} className="text-[18px] text-secondary" />

@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState, type ReactNode } from 'react';
 import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import AppShell from '@/components/AppShell';
+import AppShell, { Ambient } from '@/components/AppShell';
 import { Icon, Loading, PermissionDenied } from '@/components/ui';
 import { onGlobalApiError } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
@@ -51,10 +51,23 @@ const AuditDetail = lazy(() => import('@/pages/audit/AuditDetail'));
 const Settings = lazy(() => import('@/pages/settings/Settings'));
 const Profile = lazy(() => import('@/pages/profile/Profile'));
 
+/** Full-screen boot state while the session and first bundles load. */
+function BootScreen() {
+  return (
+    <div role="status" aria-live="polite" className="min-h-screen flex flex-col items-center justify-center gap-5 overlay-in">
+      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_0_0_1px_rgba(92,200,255,0.25),0_8px_30px_-6px_rgba(31,124,242,0.6)]">
+        <Icon name="fingerprint" className="text-[26px] text-white" />
+      </div>
+      <div className="w-40 h-1 rounded-full bg-white/[0.06] indeterminate" />
+      <span className="sr-only">Loading BAMP…</span>
+    </div>
+  );
+}
+
 function RequireAuth({ children }: { children: ReactNode }) {
   const { me, loading, error } = useAuth();
   const loc = useLocation();
-  if (loading) return <Loading label="Loading…" className="min-h-screen" />;
+  if (loading) return <BootScreen />;
   if (!me) {
     if (error?.code === 'session_expired') return <Navigate to="/session-expired" replace />;
     if (error?.code === 'maintenance') return <Navigate to="/maintenance" replace />;
@@ -109,8 +122,9 @@ export default function App() {
   const { me } = useAuth();
   return (
     <LiveProvider enabled={Boolean(me)}>
+      <Ambient />
       <GlobalErrorRouter />
-      <Suspense fallback={<Loading className="min-h-screen" />}>
+      <Suspense fallback={<BootScreen />}>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { keepPreviousData, useMutation, useQuery } from '@tanstack/react-query';
 import { useEffect, useState, type ReactNode } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import { Button, Empty, ErrorState, ExportMenu, Icon, Loading, PageHeader, Pagination, Select, Table, Td, Th, THead, Tr, useDebounced, useErrorToast, useToast } from '@/components/ui';
+import { Button, Empty, ErrorState, ExportMenu, Icon, Loading, PageHeader, Pagination, Select, Table, Td, Th, THead, Tr, useDebounced, useErrorToast, useToast, SideToggle } from '@/components/ui';
 import { api, download } from '@/lib/api';
 import { dateTime, humanize, num, relative } from '@/lib/format';
 import { ActionBadge, ACTOR_TYPES, actorIcon, HashText, shortHash } from './components';
@@ -87,8 +87,7 @@ export default function AuditLog() {
       <PageHeader title="Audit Log" icon="receipt_long" subtitle="Every change made by users, devices, the integration and the system — append-only and hash-chained." />
 
       {/* Integrity banner */}
-      <div className="relative overflow-hidden rounded bg-surface-container-low p-space-md shadow-md">
-        <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary-container/10 blur-3xl pointer-events-none" />
+      <div className="relative overflow-hidden rounded-xl card p-space-md">
         <div className="relative flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md z-10">
           <div className="flex items-start gap-space-md">
             <div className="h-10 w-10 shrink-0 rounded bg-surface-container flex items-center justify-center text-tertiary">
@@ -171,7 +170,7 @@ export default function AuditLog() {
       </div>
 
       {/* Filter toolbar */}
-      <div className="rounded bg-surface-container-low p-space-sm shadow-sm flex flex-col gap-space-xs">
+      <div className="rounded-xl card p-space-sm flex flex-col gap-space-xs">
         <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
           <div className="flex flex-wrap items-center gap-space-xs flex-1">
             <FilterChip icon="person" label="Actor">
@@ -279,7 +278,7 @@ export default function AuditLog() {
             </div>
             <span className="hidden sm:inline">Newest first · click an event to inspect</span>
           </div>
-          <div className="rounded bg-surface-container-low shadow-md overflow-hidden">
+          <div className="rounded-xl card overflow-hidden">
             {list.isLoading ? (
               <Loading label="Loading audit events…" />
             ) : list.error && !list.data ? (
@@ -357,7 +356,8 @@ export default function AuditLog() {
 
         {/* Inspector */}
         <div className="lg:col-span-4 flex flex-col gap-space-sm">
-          <div className="rounded bg-surface-container-low p-space-md shadow-md space-y-space-md lg:sticky lg:top-4">
+          <SideToggle id="audit-inspector" label="Inspector" />
+          <div className="rounded-xl card p-space-md space-y-space-md lg:sticky lg:top-20">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="h-7 w-7 rounded bg-surface-container flex items-center justify-center text-primary">
@@ -417,9 +417,7 @@ export default function AuditLog() {
                 ) : (
                   <div className="flex justify-between text-outline">
                     <span>First broken event</span>
-                    <Link to={`/audit/${verify.brokenAtSeq}`} className="text-error underline font-mono">
-                      #{verify.brokenAtSeq}
-                    </Link>
+                    <span className="text-error font-mono">#{verify.brokenAtSeq}</span>
                   </div>
                 )}
               </div>
@@ -438,7 +436,7 @@ export default function AuditLog() {
 
 function MetricCard({ label, icon, value, footer, tone }: { label: string; icon: string; value: string; footer: string; tone?: string }) {
   return (
-    <div className="rounded bg-surface-container-low p-space-md shadow-sm relative overflow-hidden hover:bg-surface-container transition-colors">
+    <div className="rounded-xl card p-space-md relative overflow-hidden lift">
       <div className="flex items-center justify-between mb-1">
         <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">{label}</span>
         <Icon name={icon} className="text-[18px] text-primary" />

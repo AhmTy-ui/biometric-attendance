@@ -130,7 +130,7 @@ export const EVENT_SELECT = `
          e.location_id, l.name AS location_name, l.code AS location_code, l.timezone AS location_timezone,
          e.device_id, dv.name AS device_name, dv.device_uid,
          d.status AS delivery_status, d.attempts AS delivery_attempts, d.next_attempt_at, d.last_error AS delivery_error,
-         d.last_http_status AS delivery_http_status, d.delivered_at
+         d.last_http_status AS delivery_http_status, d.delivered_at, d.last_attempt_at AS delivery_last_attempt_at
     FROM attendance_events e
     JOIN employees emp ON emp.id = e.employee_id
     JOIN locations l ON l.id = e.location_id

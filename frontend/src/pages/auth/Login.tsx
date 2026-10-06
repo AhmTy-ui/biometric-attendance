@@ -280,11 +280,6 @@ export default function Login() {
       title="Sign in"
       badge="Dashboard access"
       subtitle="Sign in with your work email and password. You'll be asked for your authenticator code if MFA is enabled."
-      footerLinks={
-        <Link to="/forgot-password" className="hover:text-on-surface">
-          Reset password
-        </Link>
-      }
     >
       {noticeBox}
       <form className="flex flex-col gap-space-md" onSubmit={(e) => void submitCredentials(e)}>

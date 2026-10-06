@@ -125,7 +125,7 @@ export default function AuditDetail() {
 
         {/* Chain inspector */}
         <div className="flex flex-col gap-space-md">
-          <div className="rounded bg-surface-container-low p-space-md shadow-md space-y-space-md">
+          <div className="rounded-xl card p-space-md space-y-space-md">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="h-7 w-7 rounded bg-surface-container flex items-center justify-center text-primary">

@@ -17,8 +17,7 @@ import {
   SearchInput,
   Tabs,
   useErrorToast,
-  useToast
-} from '@/components/ui';
+  useToast, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { useLiveEvents } from '@/lib/live';
@@ -237,6 +236,7 @@ export default function FirmwareDeploymentDetails() {
 
         {/* Firmware info */}
         <div className="xl:col-span-4 flex flex-col gap-space-md min-w-0">
+          <SideToggle id="firmware-dep-side" label="Firmware" />
           <Panel title="Firmware" icon="inventory_2">
             <KV label="Version" mono>
               {dep.version}

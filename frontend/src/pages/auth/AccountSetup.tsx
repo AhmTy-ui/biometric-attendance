@@ -93,7 +93,7 @@ export default function AccountSetup() {
   // ── Invalid / expired / missing invitation ──
   if (!accepted && (!token || tokenGone || invite.error?.status === 410))
     return (
-      <AuthLayout title="Invitation unavailable" badge="First-time setup" footerLinks={footer}>
+      <AuthLayout title="Invitation unavailable" badge="First-time setup">
         <div className="flex flex-col gap-space-md">
           <InlineAlert tone="error" icon="link_off" title={token ? 'This invitation is invalid or has expired.' : 'This page needs an invitation link.'}>
             Invitation links are valid for 7 days and can be used once. Ask an administrator to resend your invitation from Users &amp; Roles.
@@ -240,7 +240,7 @@ export default function AccountSetup() {
   if (step === 2) {
     if (challengeExpired)
       return (
-        <AuthLayout top={stepper} title="Configure MFA" badge="First-time setup" footerLinks={footer}>
+        <AuthLayout top={stepper} title="Configure MFA" badge="First-time setup">
           <div className="flex flex-col gap-space-md">
             <InlineAlert tone="warning" title="Your verification window expired">
               Your account is verified and your password is saved. Sign in with your email and new password to finish setting up your authenticator app.
@@ -323,7 +323,7 @@ export default function AccountSetup() {
   // ── Step 5: organisation review ──
   const needsSetup = Boolean(me && !me.organization.setupCompleted && me.permissions.includes('settings.manage'));
   return (
-    <AuthLayout top={stepper} title="Review your organization" badge="Almost done" subtitle="Your account is ready." footerLinks={footer}>
+    <AuthLayout top={stepper} title="Review your organization" badge="Almost done" subtitle="Your account is ready." footerLinks={meFailed || !me ? undefined : footer}>
       {meFailed || !me ? (
         <div className="flex flex-col gap-space-md">
           <InlineAlert tone="warning" title="We couldn't load your session">

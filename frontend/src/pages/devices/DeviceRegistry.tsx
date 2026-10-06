@@ -20,8 +20,7 @@ import {
   Th,
   THead,
   Tr,
-  useDebounced
-} from '@/components/ui';
+  useDebounced, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { dateTime, num, relative } from '@/lib/format';
@@ -224,13 +223,10 @@ export default function DeviceRegistry() {
             <Empty
               icon="router"
               title="No devices found."
-              description={status !== 'all' || dq || dfw || locationId ? 'No device matches these filters.' : 'Provision a fingerprint terminal to start capturing attendance.'}
-              action={
-                can('devices.provision') && status === 'all' && !dq ? (
-                  <LinkButton to="/devices/provision" icon="add_circle" variant="primary">
-                    Add / Provision device
-                  </LinkButton>
-                ) : undefined
+              description={
+                status !== 'all' || dq || dfw || locationId
+                  ? 'No device matches these filters.'
+                  : 'Provision a fingerprint terminal with Add / Provision device above to start capturing attendance.'
               }
             />
           ) : (
@@ -320,6 +316,7 @@ export default function DeviceRegistry() {
 
         {/* Right column: offline devices (user flow §14 / §30) and storage warnings (§15) */}
         <div className="xl:col-span-4 space-y-space-md">
+          <SideToggle id="registry-side" label="Offline & storage" />
           <div className="flex items-center justify-between px-1">
             <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Offline devices</span>
             {(offline.data?.total ?? 0) > 0 && (

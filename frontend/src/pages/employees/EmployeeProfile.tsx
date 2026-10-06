@@ -25,8 +25,7 @@ import {
   Th,
   THead,
   Tr,
-  type Tone
-} from '@/components/ui';
+  type Tone, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { dateTime, FINGERS, humanize, num, relative, time, todayIso } from '@/lib/format';
@@ -215,6 +214,7 @@ function ProfileTab({ d }: { d: ProfileData }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
       <div className="lg:col-span-4 flex flex-col gap-space-md">
+        <SideToggle id="employee-identity" label="Identity" />
         <Panel title="Identity" icon="badge" actions={<span className="font-label-sm text-label-sm text-outline uppercase font-semibold">Read-only</span>}>
           <KV label="Full name">{e.full_name}</KV>
           <KV label="Staff number" mono>
@@ -393,7 +393,7 @@ function AttendanceTab({ id }: { id: string }) {
 
   return (
     <div className="flex flex-col gap-space-md">
-      <div className="p-space-sm rounded bg-surface-container-low flex flex-wrap items-end gap-space-sm shadow-sm">
+      <div className="p-space-sm rounded-xl card flex flex-wrap items-end gap-space-sm">
         <Field label="From">
           <Input type="date" value={from} max={to} onChange={(ev) => ev.target.value && setRange(ev.target.value, to)} className="h-8" />
         </Field>
@@ -714,6 +714,7 @@ function SyncTab({ e, devices }: { e: any; devices: any[] }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
       <div className="lg:col-span-4 flex flex-col gap-space-md">
+        <SideToggle id="employee-sync-side" label="Sync" />
         <Panel title="Web software sync" icon="cloud_sync">
           <KV label="Last synced">
             <span title={dateTime(e.last_synced_at)}>{relative(e.last_synced_at)}</span>

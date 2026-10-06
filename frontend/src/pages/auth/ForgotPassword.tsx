@@ -37,7 +37,7 @@ export default function ForgotPassword() {
 
   if (sentTo !== null)
     return (
-      <AuthLayout title="Check your email" badge="Password reset" subtitle="If the address matches an active account, a reset link is on its way." footerLinks={footer}>
+      <AuthLayout title="Check your email" badge="Password reset" subtitle="If the address matches an active account, a reset link is on its way.">
         <div className="flex flex-col gap-space-md">
           <InlineAlert tone="info" title="Request received" icon="mark_email_read">
             <p>
@@ -87,12 +87,6 @@ export default function ForgotPassword() {
         <PrimaryAction icon="send" loading={busy} disabled={!email.trim()}>
           Send reset link
         </PrimaryAction>
-        <p className="font-body-sm text-body-sm text-outline">
-          Remembered it?{' '}
-          <Link to="/login" className="text-secondary hover:underline">
-            Sign in
-          </Link>
-        </p>
       </form>
     </AuthLayout>
   );

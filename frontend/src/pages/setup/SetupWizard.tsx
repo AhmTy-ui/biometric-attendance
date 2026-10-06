@@ -26,8 +26,7 @@ import {
   THead,
   Tr,
   useErrorToast,
-  useToast
-} from '@/components/ui';
+  useToast, SideToggle } from '@/components/ui';
 import { api, ApiError } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { dateTime, duration, num, relative } from '@/lib/format';
@@ -729,10 +728,7 @@ function DevicesStep({ checklist, done, onBack, onNext }: { checklist: Checklist
                 </Table>
                 {rows.length > 10 && (
                   <div className="px-space-md py-space-sm font-label-sm text-label-sm text-outline">
-                    Showing 10 of {num(devices.data?.total)}.{' '}
-                    <Link to="/devices" className="text-secondary hover:underline">
-                      Open Device Registry
-                    </Link>
+                    Showing 10 of {num(devices.data?.total)}.
                   </div>
                 )}
               </div>
@@ -1012,7 +1008,8 @@ export default function SetupWizard() {
         <ErrorState error={checklist.error} onRetry={() => void checklist.refetch()} />
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-          <aside className="lg:col-span-3 flex flex-col gap-gutter lg:sticky lg:top-28">
+          <aside className="lg:col-span-3 flex flex-col gap-gutter lg:sticky lg:top-20">
+            <SideToggle id="setup-progress" label="Progress" />
             <Panel title="Progress" icon="checklist" subtitle={`${totalDone} / ${total} complete`}>
               <Progress value={total ? (totalDone / total) * 100 : 0} tone={totalDone === total ? 'success' : 'primary'} className="mb-space-md" />
               <ol className="flex flex-col gap-1">
@@ -1024,11 +1021,7 @@ export default function SetupWizard() {
                         <Icon name={s.done ? 'check_circle' : 'radio_button_unchecked'} fill={s.done} className={clsx('text-[18px]', s.done ? 'text-tertiary' : 'text-warning')} />
                         {s.label}
                       </span>
-                      {!s.done && (
-                        <Link to="/profile" className="font-label-sm text-label-sm text-secondary hover:underline">
-                          Fix
-                        </Link>
-                      )}
+                      {!s.done && <span className="font-label-sm text-label-sm text-outline">In User Profile</span>}
                     </li>
                   ))}
                 {WIZARD.map((w, i) => {

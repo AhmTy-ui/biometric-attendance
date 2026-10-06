@@ -23,7 +23,8 @@ import {
   THead,
   Tr,
   useErrorToast,
-  useToast
+  useToast,
+  SideToggle
 } from '@/components/ui';
 import { api, download } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
@@ -191,7 +192,7 @@ export default function Integration() {
       />
 
       {!cfg.configured && (
-        <div className="bg-surface-container-low rounded-lg p-space-md shadow-md relative overflow-hidden">
+        <div className="card rounded-xl p-space-md relative overflow-hidden">
           <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-error" />
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pl-space-xs">
             <div className="flex items-start gap-space-sm">
@@ -213,7 +214,7 @@ export default function Integration() {
       )}
 
       {s.unmappedLocations > 0 && (
-        <div className="bg-surface-container-low rounded-lg p-space-md shadow-md relative overflow-hidden">
+        <div className="card rounded-xl p-space-md relative overflow-hidden">
           <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary-container" />
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pl-space-xs">
             <div className="flex items-start gap-space-sm min-w-0">
@@ -280,9 +281,7 @@ export default function Integration() {
           footerLeft={s.locations.health === 'never_run' ? 'No run yet' : failureNote(s.locations, 'locations')}
           footerRight={
             s.unmappedLocations > 0 ? (
-              <Link to="/integration/unmapped" className="text-secondary hover:underline">
-                {num(s.unmappedLocations)} unmapped
-              </Link>
+              <span className="text-secondary">{num(s.unmappedLocations)} unmapped</span>
             ) : (
               'All mapped'
             )
@@ -337,13 +336,16 @@ export default function Integration() {
           title="Configuration"
           icon="settings_ethernet"
           actions={
-            can('settings.view') && (
+            // When unconfigured, the "Configure integration" banner above is the call to action.
+            can('settings.view') &&
+            Boolean(cfg.baseUrl) && (
               <LinkButton to="/settings?tab=integration" size="sm" icon="edit">
                 Settings
               </LinkButton>
             )
           }
         >
+          <SideToggle id="integration-config" label="Configuration" />
           <KV label="Web software" mono>
             {cfg.baseUrl ? <span className="break-all">{cfg.baseUrl}</span> : <span className="text-error">Not configured</span>}
           </KV>
@@ -469,14 +471,6 @@ export default function Integration() {
           icon="file_export"
           subtitle="Files generated in the web software's import format"
           bodyClassName="px-0 pb-0"
-          actions={
-            canManage &&
-            exportMode && (
-              <Button size="sm" icon="play_arrow" loading={busyKey === 'attendance_export:manual'} disabled={sync.isPending} onClick={() => sync.mutate({ kind: 'attendance_export', mode: 'manual' })}>
-                Run export now
-              </Button>
-            )
-          }
         >
           <ExportsTable q={exportsQ} />
         </Panel>

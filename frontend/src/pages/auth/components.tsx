@@ -252,8 +252,6 @@ function SecurityPosture() {
 function InfoPanel() {
   return (
     <div className="order-2 lg:order-1 lg:col-span-5 bg-surface-container-lowest p-space-lg lg:p-space-xl flex flex-col justify-between relative overflow-hidden">
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-tertiary-container/10 rounded-full blur-3xl pointer-events-none" />
       <div className="relative z-10 flex flex-col gap-space-lg">
         <div className="flex flex-col gap-space-xs">
           <div className="flex items-center gap-space-sm">
@@ -326,7 +324,7 @@ export function AuthLayout({
     <main className="w-full min-h-screen bg-background flex items-center justify-center p-gutter">
       <div className="w-full max-w-7xl mx-auto my-auto p-margin-mobile lg:p-margin">
         <TelemetryBar />
-        <div className="grid grid-cols-1 lg:grid-cols-12 shadow-xl bg-surface-container-low rounded-xl overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 card rounded-xl overflow-hidden">
           <InfoPanel />
           <div className="order-1 lg:order-2 lg:col-span-7 bg-surface-container p-space-lg lg:p-space-xl flex flex-col justify-between">
             <div>

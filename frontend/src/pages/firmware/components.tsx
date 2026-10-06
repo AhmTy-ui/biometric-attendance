@@ -262,13 +262,13 @@ export function UploadFirmwareModal({ open, onClose }: { open: boolean; onClose:
 
 /** Shared recharts styling derived from the design tokens. */
 export const chartTheme = {
-  grid: '#434655',
-  axis: '#8d90a0',
-  tick: { fill: '#8d90a0', fontSize: 10, fontFamily: '"JetBrains Mono Variable", monospace' },
+  grid: '#262a31',
+  axis: '#6c717e',
+  tick: { fill: '#6c717e', fontSize: 10, fontFamily: '"Inter Variable", sans-serif' },
   tooltip: {
-    contentStyle: { background: '#262a33', border: '1px solid #434655', borderRadius: 4, fontSize: 12, color: '#dfe2ee' },
-    labelStyle: { color: '#c3c6d7', fontFamily: '"JetBrains Mono Variable", monospace', fontSize: 11 },
-    itemStyle: { color: '#dfe2ee' },
+    contentStyle: { background: '#1c1f25', border: '1px solid #262a31', borderRadius: 10, boxShadow: '0 12px 32px -12px rgba(0,0,0,0.8)', padding: '8px 10px', fontSize: 12, color: '#ededf0' },
+    labelStyle: { color: '#a3a7b3', fontFamily: '"JetBrains Mono Variable", monospace', fontSize: 11 },
+    itemStyle: { color: '#ededf0' },
     cursor: { fill: 'rgba(141,144,160,0.08)' }
   }
 };

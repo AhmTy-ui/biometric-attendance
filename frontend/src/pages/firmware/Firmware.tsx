@@ -18,8 +18,7 @@ import {
   Td,
   Th,
   THead,
-  Tr
-} from '@/components/ui';
+  Tr, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { bytes, date, dateTime, num, pct, relative } from '@/lib/format';
@@ -137,13 +136,6 @@ export default function Firmware() {
             icon="alt_route"
             subtitle="Most recent 200 deployments"
             bodyClassName="px-0 pb-0"
-            actions={
-              canManage && (
-                <LinkButton to="/firmware/deploy" size="sm" icon="add">
-                  New deployment
-                </LinkButton>
-              )
-            }
           >
             {deploymentsQ.isLoading ? (
               <Loading label="Loading deployments…" />
@@ -205,14 +197,7 @@ export default function Firmware() {
               <Empty
                 icon="inventory_2"
                 title="No firmware versions uploaded."
-                description="Upload a firmware file to make it available for deployment."
-                action={
-                  canManage && (
-                    <Button icon="cloud_upload" onClick={() => setUploadOpen(true)}>
-                      Upload version
-                    </Button>
-                  )
-                }
+                description="Upload a firmware file (Upload version, above) to make it available for deployment."
               />
             ) : (
               <Table>
@@ -300,6 +285,7 @@ export default function Firmware() {
 
         {/* Right column: fleet distribution */}
         <div className="xl:col-span-4 flex flex-col gap-space-md min-w-0">
+          <SideToggle id="firmware-side" label="Fleet" />
           <Panel title="Fleet firmware distribution" icon="memory" subtitle={`${num(devices.length)} registered devices`}>
             {devicesQ.isLoading ? (
               <Loading label="Loading devices…" />
@@ -318,7 +304,7 @@ export default function Firmware() {
                       <Tooltip {...chartTheme.tooltip} formatter={(v: any) => [`${num(v)} devices`, 'Installed']} />
                       <Bar dataKey="count" radius={[0, 4, 4, 0]} maxBarSize={16}>
                         {distribution.map((d) => (
-                          <Cell key={d.version} fill={d.version === latestStable?.version ? '#4edea3' : d.version === UNKNOWN ? '#8d90a0' : '#93ccff'} />
+                          <Cell key={d.version} fill={d.version === latestStable?.version ? '#3ddc97' : d.version === UNKNOWN ? '#6c717e' : '#a5b0ff'} />
                         ))}
                       </Bar>
                     </BarChart>
@@ -410,7 +396,7 @@ function Kpi({
   loading?: boolean;
 }) {
   return (
-    <div className="p-space-md bg-surface-container-low rounded flex flex-col justify-between shadow-sm relative overflow-hidden hover:bg-surface-container transition-colors">
+    <div className="p-space-md card rounded-xl flex flex-col justify-between relative overflow-hidden lift">
       <div className="flex items-center justify-between text-outline mb-space-xs">
         <span className="font-label-sm text-label-sm uppercase tracking-wider">{label}</span>
         <Icon name={icon} className={`${iconCls} text-[18px]`} />

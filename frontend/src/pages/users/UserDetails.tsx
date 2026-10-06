@@ -166,25 +166,7 @@ export default function UserDetails() {
               </div>
             </div>
           </div>
-          {manage && (
-            <div className="flex gap-space-xs">
-              {locked && (
-                <Button icon="lock_open" onClick={() => setConfirm('unlock')}>
-                  Unlock
-                </Button>
-              )}
-              {!locked && u.status === 'invited' && (
-                <Button icon="forward_to_inbox" loading={action.isPending && action.variables === 'resend-invite'} onClick={() => action.mutate('resend-invite')}>
-                  Resend invite
-                </Button>
-              )}
-              {!locked && u.status === 'disabled' && !isSelf && (
-                <Button icon="check_circle" onClick={() => setConfirm('enable')}>
-                  Enable
-                </Button>
-              )}
-            </div>
-          )}
+          {manage && <span className="font-label-sm text-label-sm text-outline shrink-0">Actions are under Security actions below.</span>}
         </div>
       )}
 

@@ -206,17 +206,17 @@ export function StorageGauge({ pct, warnPct, critPct, capacity, pending }: { pct
   const has = pct !== null && pct !== undefined && pct !== '';
   const v = has ? Math.max(0, Math.min(100, Number(pct))) : 0;
   const tone = has ? storageTone(v, warnPct, critPct) : 'neutral';
-  const stroke = { success: '#4edea3', info: '#93ccff', warning: '#f5b54a', error: '#ffb4ab', neutral: '#434655', primary: '#b4c5ff' }[tone];
+  const stroke = { success: '#3ddc97', info: '#a5b0ff', warning: '#f5b84a', error: '#ff7a7a', neutral: '#262a31', primary: '#5cc8ff' }[tone];
   const r = 52;
   const len = Math.PI * r;
   return (
     <div className="flex flex-col items-center">
       <svg viewBox="0 0 128 72" className="w-44 h-auto">
-        <path d={`M 12 64 A ${r} ${r} 0 0 1 116 64`} fill="none" stroke="#31353e" strokeWidth="10" strokeLinecap="round" />
+        <path d={`M 12 64 A ${r} ${r} 0 0 1 116 64`} fill="none" stroke="#24272e" strokeWidth="10" strokeLinecap="round" />
         {has && <path d={`M 12 64 A ${r} ${r} 0 0 1 116 64`} fill="none" stroke={stroke} strokeWidth="10" strokeLinecap="round" strokeDasharray={`${(v / 100) * len} ${len}`} />}
-        {warnPct !== undefined && <GaugeTick pct={warnPct} r={r} color="#f5b54a" />}
-        {critPct !== undefined && <GaugeTick pct={critPct} r={r} color="#ffb4ab" />}
-        <text x="64" y="58" textAnchor="middle" fontSize="18" fontWeight="600" fill="#dfe2ee" fontFamily='"JetBrains Mono Variable", monospace'>
+        {warnPct !== undefined && <GaugeTick pct={warnPct} r={r} color="#f5b84a" />}
+        {critPct !== undefined && <GaugeTick pct={critPct} r={r} color="#ff7a7a" />}
+        <text x="64" y="58" textAnchor="middle" fontSize="18" fontWeight="600" fill="#ededf0" fontFamily='"JetBrains Mono Variable", monospace'>
           {has ? `${v.toFixed(1)}%` : '—'}
         </text>
       </svg>
@@ -340,7 +340,7 @@ const POLICY_TEXT: Record<string, string> = {
 };
 
 /** Storage approaching capacity (user flow §15). */
-export function StorageWarningCard({ device, policies, className }: { device: any; policies?: any; className?: string }) {
+export function StorageWarningCard({ device, policies, className, hideViewDevice }: { device: any; policies?: any; className?: string; hideViewDevice?: boolean }) {
   const pct = Number(device.storage_used_pct);
   const critical = policies?.storageCriticalPct !== undefined ? pct >= policies.storageCriticalPct : device.health === 'critical';
   return (
@@ -365,10 +365,12 @@ export function StorageWarningCard({ device, policies, className }: { device: an
         </div>
       </div>
       <div className="flex items-center gap-space-xs shrink-0 self-end lg:self-center">
-        <LinkButton to={`/devices/${device.id}`} size="sm" icon="router" variant="secondary">
-          View device
-        </LinkButton>
-        <LinkButton to="/settings?section=device_policies" size="sm" icon="tune" variant="ghost">
+        {!hideViewDevice && (
+          <LinkButton to={`/devices/${device.id}`} size="sm" icon="router" variant="secondary">
+            View device
+          </LinkButton>
+        )}
+        <LinkButton to="/settings?tab=device_policies" size="sm" icon="tune" variant="ghost">
           Storage policy
         </LinkButton>
       </div>
@@ -600,17 +602,17 @@ export function DeviceLink({ id, name, uid }: { id: string; name: string; uid?: 
 
 /** Recharts styling derived from the design tokens. */
 export const chartColors = {
-  grid: '#434655',
-  tick: { fill: '#8d90a0', fontSize: 10, fontFamily: '"JetBrains Mono Variable", monospace' },
-  primary: '#b4c5ff',
-  secondary: '#93ccff',
-  tertiary: '#4edea3',
-  warning: '#f5b54a',
-  error: '#ffb4ab',
+  grid: '#262a31',
+  tick: { fill: '#6c717e', fontSize: 10, fontFamily: '"Inter Variable", sans-serif' },
+  primary: '#5cc8ff',
+  secondary: '#a5b0ff',
+  tertiary: '#3ddc97',
+  warning: '#f5b84a',
+  error: '#ff7a7a',
   tooltip: {
-    contentStyle: { background: '#262a33', border: '1px solid #434655', borderRadius: 4, fontSize: 12, color: '#dfe2ee' },
-    labelStyle: { color: '#c3c6d7', fontFamily: '"JetBrains Mono Variable", monospace', fontSize: 11 },
-    itemStyle: { color: '#dfe2ee' }
+    contentStyle: { background: '#1c1f25', border: '1px solid #262a31', borderRadius: 10, boxShadow: '0 12px 32px -12px rgba(0,0,0,0.8)', padding: '8px 10px', fontSize: 12, color: '#ededf0' },
+    labelStyle: { color: '#a3a7b3', fontFamily: '"JetBrains Mono Variable", monospace', fontSize: 11 },
+    itemStyle: { color: '#ededf0' }
   }
 };
 

@@ -17,8 +17,7 @@ import {
   PageHeader,
   Select,
   useErrorToast,
-  useToast
-} from '@/components/ui';
+  useToast, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { dateTime, num, relative } from '@/lib/format';
@@ -200,12 +199,12 @@ export default function DeviceProvisioning() {
         subtitle="Register a fingerprint terminal, issue its one-time activation code, verify it connects, then activate it."
         actions={
           <>
-            {device && (
+            {device && step !== 'online' && (
               <LinkButton to={`/devices/${device.id}`} icon="router">
                 View device
               </LinkButton>
             )}
-            {deviceId && (
+            {deviceId && step !== 'online' && (
               <Button icon="add" onClick={reset}>
                 Provision another
               </Button>
@@ -218,7 +217,7 @@ export default function DeviceProvisioning() {
       />
 
       {/* Stepper */}
-      <div className="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+      <div className="card rounded-xl p-space-md">
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-space-sm">
           {STEPS.map((s, i) => {
             const done = i < stepIdx || (s.key === 'online' && step === 'online');
@@ -539,8 +538,9 @@ export default function DeviceProvisioning() {
 
           {/* Right column: checklist + lifecycle */}
           <div className="lg:col-span-4 space-y-space-md">
+            <SideToggle id="provisioning-side" label="Checklist" />
             <Checklist device={device} form={form} locationName={selectedLoc?.name} creds={creds} />
-            <div className="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+            <div className="card rounded-xl p-space-md space-y-space-sm">
               <div className="flex items-center gap-space-sm">
                 <Icon name="conversion_path" className="text-primary text-[20px]" />
                 <h2 className="font-headline-sm text-headline-sm text-on-surface">Device state</h2>
@@ -574,7 +574,7 @@ export default function DeviceProvisioning() {
 
 function Card({ icon, title, subtitle, children }: { icon: string; title: string; subtitle?: string; children: ReactNode }) {
   return (
-    <div className="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-md">
+    <div className="card rounded-xl p-space-md space-y-space-md">
       <div className="flex items-center gap-space-sm">
         <div className="p-2 rounded-lg bg-primary-container/20 text-primary">
           <Icon name={icon} className="text-[20px]" />
@@ -653,7 +653,7 @@ function Checklist({ device, form, locationName, creds }: { device: any; form: {
   }, [device, form.deviceUid, locationName, creds]);
   const n = items.filter((i) => i.done).length;
   return (
-    <div className="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+    <div className="card rounded-xl p-space-md space-y-space-sm">
       <div className="flex items-center justify-between pb-space-xs">
         <div className="flex items-center gap-space-sm">
           <Icon name="fact_check" className="text-primary text-[20px]" />

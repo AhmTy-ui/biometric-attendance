@@ -148,14 +148,7 @@ export default function LocationDirectory() {
           <Empty
             icon="location_off"
             title={dq ? 'No locations match your search.' : 'No locations yet.'}
-            description={dq ? undefined : 'Create a location, or map the locations referenced by the web software on the Integration page.'}
-            action={
-              !dq && can('locations.manage') ? (
-                <Button icon="add_location_alt" onClick={() => setCreateOpen(true)}>
-                  Create location
-                </Button>
-              ) : undefined
-            }
+            description={dq ? undefined : 'Use Create location above, or map the locations referenced by the web software on the Integration page.'}
           />
         ) : view === 'cards' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-space-sm">

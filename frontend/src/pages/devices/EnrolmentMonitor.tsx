@@ -21,8 +21,7 @@ import {
   Td,
   Th,
   THead,
-  Tr
-} from '@/components/ui';
+  Tr, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { dateTime, duration, num, relative } from '@/lib/format';
@@ -157,7 +156,7 @@ export default function EnrolmentMonitor() {
       />
 
       {/* Journey B: how enrolment works */}
-      <div className="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+      <div className="card rounded-xl p-space-md space-y-space-sm">
         <div className="flex items-center justify-between gap-space-sm flex-wrap">
           <div className="flex items-center gap-2">
             <Icon name="route" className="text-primary text-[20px]" />
@@ -424,6 +423,7 @@ export default function EnrolmentMonitor() {
         </div>
 
         <div className="xl:col-span-4 space-y-space-md">
+          <SideToggle id="enrolment-side" label="Coverage" />
           {empEnabled && <NeedsEnrolment noneQ={noneQ} partialQ={partialQ} locName={effectiveLoc ? locName : undefined} />}
           {can('users.view') && <Supervisors q={users} locationId={effectiveLoc} locName={effectiveLoc ? locName : undefined} />}
         </div>

@@ -36,8 +36,7 @@ import {
   severityTone,
   useDebounced,
   useErrorToast,
-  useToast
-} from '@/components/ui';
+  useToast, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { FINGERS, date, dateTime, humanize, num, relative, time } from '@/lib/format';
@@ -248,7 +247,7 @@ function Overview({ data, reconcile, clearReconcile }: { data: DeviceDetailRespo
           </div>
         </div>
       )}
-      {storageWarn && isOperational(d) && <StorageWarningCard device={d} policies={pol} />}
+      {storageWarn && isOperational(d) && <StorageWarningCard device={d} policies={pol} hideViewDevice />}
 
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-space-sm">
         <Stat label="Status" value={<DeviceStatusBadge device={d} />} hint={d.connectivity === 'online' ? `Health: ${humanize(d.health)}` : 'Not reporting'} />
@@ -326,6 +325,7 @@ function Overview({ data, reconcile, clearReconcile }: { data: DeviceDetailRespo
         </div>
 
         <div className="xl:col-span-4 space-y-space-md">
+          <SideToggle id="device-overview-side" label="Device info" />
           <Panel title="Identity" icon="badge">
             <KV label="Device ID" mono>
               {d.device_uid}
@@ -1059,6 +1059,7 @@ function ActionsTab({ data }: { data: DeviceDetailResponse }) {
       </div>
 
       <div className="xl:col-span-4 space-y-space-md">
+        <SideToggle id="device-actions-side" label="Management" />
         <Panel title="Device management" icon="manage_accounts">
           {!can('devices.provision') ? (
             <p className="text-body-sm text-outline">Editing, credentials and decommissioning require the devices.provision permission.</p>
@@ -1077,18 +1078,6 @@ function ActionsTab({ data }: { data: DeviceDetailResponse }) {
                   </Button>
                 }
               />
-              {d.lifecycle_state !== 'active' && (
-                <ManageRow
-                  icon="play_arrow"
-                  title="Continue provisioning"
-                  text={`Current state: ${LIFECYCLE_INFO[d.lifecycle_state]?.label}. Resume the provisioning wizard.`}
-                  action={
-                    <LinkButton to={`/devices/provision?deviceId=${d.id}`} size="sm">
-                      Open
-                    </LinkButton>
-                  }
-                />
-              )}
               <ManageRow
                 icon="delete_forever"
                 danger

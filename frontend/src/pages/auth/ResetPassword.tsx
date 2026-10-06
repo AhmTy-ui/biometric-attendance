@@ -71,7 +71,7 @@ export default function ResetPassword() {
   // ── Invalid / expired link ──
   if (!token || expired || info.error?.status === 410)
     return (
-      <AuthLayout title="Reset link unavailable" badge="Password reset" footerLinks={footer}>
+      <AuthLayout title="Reset link unavailable" badge="Password reset">
         <div className="flex flex-col gap-space-md">
           <InlineAlert tone="error" title={token ? 'This reset link is invalid or has expired.' : 'This page needs a reset link.'} icon="link_off">
             Reset links are valid for 1 hour and can be used only once. Request a new link and open the most recent email you receive.
@@ -90,7 +90,7 @@ export default function ResetPassword() {
 
   if (done)
     return (
-      <AuthLayout title="Password updated" badge="Password reset" footerLinks={footer}>
+      <AuthLayout title="Password updated" badge="Password reset">
         <div className="flex flex-col gap-space-md">
           <InlineAlert tone="success" title="Your new password is set." icon="task_alt">
             All existing sessions for {info.data?.email ?? 'this account'} were signed out and any temporary lockout was cleared.

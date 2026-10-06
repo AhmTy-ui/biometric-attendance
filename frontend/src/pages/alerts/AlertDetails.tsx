@@ -15,8 +15,7 @@ import {
   Panel,
   severityTone,
   useErrorToast,
-  useToast
-} from '@/components/ui';
+  useToast, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { dateTime, duration, humanize, num, relative } from '@/lib/format';
@@ -221,6 +220,7 @@ export default function AlertDetails() {
         </div>
 
         <div className="lg:col-span-4 space-y-space-md">
+          <SideToggle id="alert-details" label="Actions" />
           <Panel title="What you can do" icon="bolt">
             <div className="flex flex-col gap-space-xs">
               {links.map((l) => (

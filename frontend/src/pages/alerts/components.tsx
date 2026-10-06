@@ -368,9 +368,6 @@ export function AlertCard({
                 {l.label}
               </LinkButton>
             ))}
-            <LinkButton to={`/alerts/${a.id}`} icon="open_in_new" size="sm" variant="ghost">
-              Details
-            </LinkButton>
             {canManage && a.status === 'open' && (
               <Button size="sm" icon="done" loading={acknowledging} onClick={onAcknowledge}>
                 Acknowledge

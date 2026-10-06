@@ -151,9 +151,24 @@ export async function attendanceRoutes(app: FastifyInstance) {
         GROUP BY d.last_http_status, d.last_error ORDER BY n DESC LIMIT 10`,
       params
     );
+    // "Today" = since midnight in the organisation's timezone.
+    const today = await one(
+      `SELECT count(*) FILTER (WHERE d.status='delivered' AND d.delivered_at >= t.start)::int AS delivered,
+              count(*) FILTER (WHERE d.status='dead_letter' AND d.updated_at >= t.start)::int AS failed
+         FROM attendance_deliveries d JOIN attendance_events e ON e.id=d.event_id
+         CROSS JOIN (SELECT date_trunc('day', now() AT TIME ZONE o.timezone) AT TIME ZONE o.timezone AS start FROM organizations o WHERE o.id=$1) t
+        WHERE d.organization_id=$1 ${scope}`,
+      params
+    );
     const byStatus: Record<string, number> = {};
     for (const c of counts) byStatus[c.status] = c.n;
-    return { byStatus, oldestPendingCapturedAt: oldestPending?.t ?? null, nextRetryAt: nextRetry?.t ?? null, topErrors };
+    return {
+      byStatus,
+      oldestPendingCapturedAt: oldestPending?.t ?? null,
+      nextRetryAt: nextRetry?.t ?? null,
+      topErrors,
+      today: { delivered: today?.delivered ?? 0, failed: today?.failed ?? 0 }
+    };
   });
 
   app.post('/api/attendance/delivery/replay', { preHandler: requirePerm('attendance.redeliver') }, async (req) => {

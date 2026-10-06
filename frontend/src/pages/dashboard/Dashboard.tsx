@@ -25,8 +25,7 @@ import {
   severityTone,
   useErrorToast,
   useToast,
-  type Tone
-} from '@/components/ui';
+  type Tone, SideToggle } from '@/components/ui';
 import { api, download } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { dateTime, duration, humanize, num, pct, relative, todayIso } from '@/lib/format';
@@ -41,8 +40,8 @@ const SLA_INGEST_MS = 5_000;
 const SLA_DELIVERY_MS = 10_000;
 const FEED_ROWS = 15;
 
-const C_IN = '#4edea3'; // tertiary
-const C_OUT = '#93ccff'; // secondary
+const C_IN = '#3ddc97'; // tertiary
+const C_OUT = '#a5b0ff'; // secondary
 
 const toneText: Record<Tone, string> = {
   success: 'text-tertiary',
@@ -270,30 +269,50 @@ export default function Dashboard() {
   const chartCaption = scoped && locDetail.data ? `Today by hour · ${locDetail.data.location?.timezone ?? 'location time'}` : 'Last 24 hours by hour (your local time)';
   const peak = chart.reduce((m, r) => (r.ins + r.outs > m.ins + m.outs ? r : m), chart[0] ?? { label: '', ins: 0, outs: 0 });
 
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
+  const firstName = me?.user.fullName?.split(/\s+/)[0];
+
   return (
     <>
       <PageHeader
-        title="Dashboard"
-        icon="grid_view"
+        title={firstName ? `${greeting}, ${firstName}` : 'Dashboard'}
+        icon="space_dashboard"
         subtitle={
           <>
             {me?.organization.name}
-            {scopeName ? ` · ${scopeName}` : ''} · updated {relative(d.serverTime)}
+            {scopeName ? ` · ${scopeName}` : ''} · attendance, devices and delivery at a glance · updated {relative(d.serverTime)}
           </>
         }
         actions={
-          <Button variant="ghost" icon="refresh" loading={q.isFetching} onClick={() => void q.refetch()}>
-            Refresh
-          </Button>
+          <>
+            <Button variant="ghost" icon="refresh" loading={q.isFetching} onClick={() => void q.refetch()} aria-label="Refresh dashboard">
+              Refresh
+            </Button>
+            {can('attendance.export') && <ExportMenu onExport={onExport} />}
+            {can('employees.sync') && (
+              <Button icon="sync" loading={sync.isPending} onClick={() => sync.mutate()}>
+                Sync roster
+              </Button>
+            )}
+            {can('devices.provision') && (
+              <LinkButton to="/devices/provision" variant="primary" icon="add">
+                Provision device
+              </LinkButton>
+            )}
+          </>
         }
       />
 
       <SyncResultBanner track={syncTrack} onDismiss={() => setSyncTrack(null)} />
 
       {me && !me.organization.setupCompleted && can('settings.manage') && (
-        <section className="bg-surface-container-low border-l-4 border-primary-container rounded-lg p-space-md shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
-          <div className="flex items-start gap-space-sm">
-            <Icon name="checklist" className="text-[24px] text-primary shrink-0 mt-0.5" />
+        <section className="card rounded-xl p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md relative overflow-hidden">
+          <span className="absolute left-0 top-3 bottom-3 w-[3px] rounded-r-full bg-primary" />
+          <div className="flex items-start gap-3">
+            <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 text-primary ring-1 ring-inset ring-primary/20 shrink-0">
+              <Icon name="checklist" className="text-[19px]" />
+            </span>
             <div>
               <div className="font-headline-sm text-headline-sm text-on-surface">Setup is not finished</div>
               <p className="font-body-sm text-body-sm text-on-surface-variant">
@@ -307,60 +326,73 @@ export default function Dashboard() {
         </section>
       )}
 
-      {/* Telemetry strip */}
-      <section className="bg-surface-container-low rounded-lg p-space-md shadow-md relative overflow-hidden">
-        <div className="absolute -right-16 -top-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md relative">
-          <div className="flex items-center gap-space-md shrink-0">
-            <div className="flex items-center justify-center w-10 h-10 rounded bg-primary-container/20 text-primary">
-              <Icon name="sensors" className="text-[24px]" />
-            </div>
-            <div>
+      {/* Attendance summary */}
+      <section className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-space-md">
+        {scoped && todayScoped.isLoading ? (
+          <div className="col-span-full">
+            <Loading label="Loading attendance data..." />
+          </div>
+        ) : (
+          <>
+            <Stat label="Present" icon="how_to_reg" tone="success" value={num(today?.present)} hint={today ? `of ${num(today.active_employees)} active` : undefined} to={can('employees.view') ? '/employees' : undefined} />
+            <Stat label="Absent" icon="person_off" tone={today?.absent ? 'error' : undefined} value={num(today?.absent)} hint="Scheduled workday, no record" />
+            <Stat label="Late" icon="schedule" tone={today?.late ? 'warning' : undefined} value={num(today?.late)} hint="After start + grace" />
+            <Stat label="Clocked in" icon="login" tone="info" value={num(today?.clocked_in)} hint="Last punch = in" />
+            <Stat label="Clocked out" icon="logout" value={num(today?.clocked_out)} hint="Last punch = out" />
+            <Stat label="Attendance events" icon="fingerprint" value={num(today?.total_events)} hint="Today" to={can('attendance.view') ? `/attendance/history?date=${todayIso()}` : undefined} />
+          </>
+        )}
+      </section>
+
+      {/* Service levels */}
+      <section className="card rounded-xl p-space-md">
+        <div className="flex flex-col xl:flex-row xl:items-center gap-space-md">
+          <div className="flex items-center gap-3 shrink-0 xl:w-[300px]">
+            <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 text-primary ring-1 ring-inset ring-primary/20">
+              <Icon name="speed" className="text-[19px]" />
+            </span>
+            <div className="min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="font-headline-sm text-headline-sm text-on-surface">Service levels</span>
-                <span className={clsx('flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm', liveOk ? 'bg-tertiary/15 text-tertiary' : 'bg-error-container text-on-error-container')}>
+                <Badge tone={liveOk ? 'success' : 'error'}>
                   <Dot tone={liveOk ? 'success' : 'error'} pulse={liveOk} />
-                  {liveOk ? 'LIVE' : d.realtime?.mqttConnected === false ? 'BROKER DOWN' : 'LIVE FEED OFFLINE'}
-                </span>
+                  {liveOk ? 'Live' : d.realtime?.mqttConnected === false ? 'Broker down' : 'Feed offline'}
+                </Badge>
               </div>
-              <p className="font-label-sm text-label-sm text-outline">
-                Availability this month · latency P95 over the last hour ({num(d.latency?.samples ?? 0)} samples)
-              </p>
+              <p className="font-body-sm text-body-sm text-outline">Availability this month · P95 latency, last hour ({num(d.latency?.samples ?? 0)} samples)</p>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-space-sm md:divide-x divide-outline-variant/30">
-            <Readout label="Availability (S-6)" value={avail === null ? '—' : pct(avail, 2)} target={`/ ≥${SLA_AVAILABILITY_PCT}%`} tone={avail === null ? 'neutral' : avail >= SLA_AVAILABILITY_PCT ? 'success' : 'error'} />
-            <Readout label="Ingest P95 (NFR-2.2)" value={p95i === null ? '—' : duration(p95i)} target="/ ≤5 s" tone={p95i === null ? 'neutral' : p95i <= SLA_INGEST_MS ? 'success' : 'warning'} />
-            <Readout label="Delivery P95 (S-1)" value={p95d === null ? '—' : duration(p95d)} target="/ ≤10 s" tone={p95d === null ? 'neutral' : p95d <= SLA_DELIVERY_MS ? 'success' : 'warning'} />
+          <div className="grid grid-cols-2 lg:grid-cols-4 flex-1 gap-2">
+            <Readout label="Availability" sla="S-6" value={avail === null ? '—' : pct(avail, 2)} target={`target ≥ ${SLA_AVAILABILITY_PCT}%`} tone={avail === null ? 'neutral' : avail >= SLA_AVAILABILITY_PCT ? 'success' : 'error'} />
+            <Readout label="Ingest P95" sla="NFR-2.2" value={p95i === null ? '—' : duration(p95i)} target="target ≤ 5 s" tone={p95i === null ? 'neutral' : p95i <= SLA_INGEST_MS ? 'success' : 'warning'} />
+            <Readout label="Delivery P95" sla="S-1" value={p95d === null ? '—' : duration(p95d)} target="target ≤ 10 s" tone={p95d === null ? 'neutral' : p95d <= SLA_DELIVERY_MS ? 'success' : 'warning'} />
             <Readout
-              label="Delivery backlog (S-2)"
+              label="Delivery backlog"
+              sla="S-2"
               value={num(backlog)}
-              target={dlq ? `${num(dlq)} in DLQ` : 'DLQ empty'}
+              target={dlq ? `${num(dlq)} in dead-letter` : 'dead-letter empty'}
               tone={dlq ? 'error' : backlog ? 'info' : 'success'}
               to={can('attendance.view') ? '/attendance/reconciliation' : undefined}
             />
-          </div>
-          <div className="hidden 2xl:flex flex-col text-right font-label-sm text-label-sm shrink-0">
-            <span className="text-outline">Last employee sync:</span>
-            <span className="text-on-surface-variant font-mono">
-              {d.employeeSync?.t ? relative(d.employeeSync.t) : 'never'} ({num(d.employeeSync?.n ?? 0)} staff)
-            </span>
           </div>
         </div>
       </section>
 
       {/* Unmapped locations */}
       {d.unmappedLocations > 0 && (
-        <section className="bg-surface-container-low border-l-4 border-secondary-container rounded-lg p-space-md shadow-sm">
+        <section className="card rounded-xl p-space-md relative overflow-hidden">
+          <span className="absolute left-0 top-3 bottom-3 w-[3px] rounded-r-full bg-warning" />
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
-            <div className="flex items-start gap-space-sm">
-              <Icon name="location_off" className="text-[24px] text-secondary shrink-0 mt-0.5" />
+            <div className="flex items-start gap-3">
+              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-warning/10 text-warning ring-1 ring-inset ring-warning/25 shrink-0">
+                <Icon name="location_off" className="text-[19px]" />
+              </span>
               <div>
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="font-headline-sm text-headline-sm text-on-surface">
                     {num(d.unmappedLocations)} unmapped location{d.unmappedLocations === 1 ? '' : 's'} from the web software
                   </span>
-                  <span className="px-1.5 rounded bg-surface-container-high text-secondary font-label-sm text-[10px]">ROSTER BLOCKED</span>
+                  <Badge tone="warning">Roster blocked</Badge>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
                   Employees assigned to these locations cannot be sent to any device until the location is mapped to a platform location.
@@ -368,7 +400,7 @@ export default function Dashboard() {
               </div>
             </div>
             {can('integration.view') && (
-              <LinkButton to="/integration/unmapped" variant="primary" icon="add_location_alt" className="self-end md:self-center">
+              <LinkButton to="/integration/unmapped" variant="secondary" icon="add_location_alt" className="self-end md:self-center">
                 Resolve & map locations
               </LinkButton>
             )}
@@ -383,17 +415,17 @@ export default function Dashboard() {
           icon="cloud_off"
           iconCls="text-secondary"
           title="Offline resilience"
-          badge={<span className="px-1.5 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold">{num(deviceStats?.offline ?? 0)} OFFLINE</span>}
+          badge={<Badge tone={deviceStats?.offline ? 'warning' : 'success'}>{num(deviceStats?.offline ?? 0)} offline</Badge>}
           description="Devices keep capturing while offline and upload buffered events when the connection returns."
           footer={
             can('devices.view') ? (
-              <LinkButton to="/devices" size="sm" className="w-full" icon="router">
-                View devices
+              <LinkButton to="/devices?status=offline" size="sm" className="w-full" icon="cloud_off">
+                View offline devices
               </LinkButton>
             ) : undefined
           }
         >
-          <div className="bg-surface-container rounded p-space-sm space-y-space-xs">
+          <div className="well rounded-lg p-3 space-y-1.5">
             {troubled.length === 0 ? (
               <div className="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
                 <Icon name="cloud_done" className="text-[14px]" /> No offline or buffering devices
@@ -429,11 +461,7 @@ export default function Dashboard() {
           icon="assignment_late"
           iconCls="text-error"
           title="DLQ & reconciliation"
-          badge={
-            <span className={clsx('px-1.5 py-0.5 rounded font-label-sm text-label-sm font-semibold', dlq ? 'bg-error-container text-on-error-container' : 'bg-tertiary-container/30 text-tertiary')}>
-              {num(dlq)} DEAD-LETTER
-            </span>
-          }
+          badge={<Badge tone={dlq ? 'error' : 'success'}>{num(dlq)} dead-letter</Badge>}
           description="Attendance rejected or timed out by the web software. Stored safely; retried automatically."
           footer={
             can('attendance.view') ? (
@@ -443,7 +471,7 @@ export default function Dashboard() {
             ) : undefined
           }
         >
-          <div className="bg-surface-container rounded p-space-sm space-y-space-xs font-label-sm text-label-sm">
+          <div className="well rounded-lg p-3 space-y-1.5 font-label-sm text-label-sm">
             <Row label="Top error:">
               <span className={clsx('font-mono truncate', summary.data?.topErrors?.[0] ? 'text-error' : 'text-tertiary')} title={summary.data?.topErrors?.[0]?.last_error ?? undefined}>
                 {summary.data?.topErrors?.[0]
@@ -468,7 +496,7 @@ export default function Dashboard() {
           icon="group"
           iconCls="text-tertiary"
           title="Workforce today"
-          badge={<span className="px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">{presentPct === null ? '—' : pct(presentPct, 1)} PRESENT</span>}
+          badge={<Badge tone="success">{presentPct === null ? '—' : pct(presentPct, 1)} present</Badge>}
           description={chartCaption}
           footer={
             <div className="flex justify-between items-center font-label-sm text-label-sm w-full">
@@ -481,7 +509,7 @@ export default function Dashboard() {
             </div>
           }
         >
-          <div className="bg-surface-container rounded p-space-xs">
+          <div className="well rounded-lg p-2">
             <div className="flex items-center justify-between font-label-sm text-[10px] text-outline px-1 mb-1">
               <span>{chart[0]?.label ?? ''}</span>
               {peak && peak.ins + peak.outs > 0 && (
@@ -494,11 +522,11 @@ export default function Dashboard() {
             <Sparkline values={chart.map((r) => r.ins + r.outs)} />
           </div>
           <div className="grid grid-cols-2 gap-space-xs pt-1">
-            <div className="bg-surface-container rounded p-1.5">
+            <div className="well rounded-lg px-2.5 py-2">
               <span className="font-label-sm text-[10px] text-outline block">PRESENT</span>
               <span className="font-headline-sm text-headline-sm text-tertiary font-mono">{num(today?.present)}</span>
             </div>
-            <div className="bg-surface-container rounded p-1.5">
+            <div className="well rounded-lg px-2.5 py-2">
               <span className="font-label-sm text-[10px] text-outline block">LATE</span>
               <span className="font-headline-sm text-headline-sm text-warning font-mono">{num(today?.late)}</span>
             </div>
@@ -510,7 +538,7 @@ export default function Dashboard() {
           icon="router"
           iconCls="text-primary"
           title="Fleet integrity"
-          badge={<span className="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">{num(deviceStats?.total ?? 0)} TOTAL</span>}
+          badge={<Badge tone="primary">{num(deviceStats?.total ?? 0)} total</Badge>}
           description="Heartbeat-based connectivity and health of fingerprint devices."
           footer={
             can('devices.view') ? (
@@ -522,51 +550,6 @@ export default function Dashboard() {
         >
           <FleetBar s={deviceStats} />
         </TriageCard>
-      </section>
-
-      {/* Quick actions */}
-      {(can('employees.sync') || can('attendance.export') || can('devices.provision')) && (
-        <section className="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low/60 rounded-lg p-space-sm">
-          <div className="flex items-center gap-2">
-            <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-xs font-semibold">Quick actions</span>
-            <span className="h-3 w-px bg-outline-variant/40" />
-            <span className={clsx('font-label-sm text-label-sm flex items-center gap-1', liveOk ? 'text-tertiary' : 'text-error')}>
-              <Dot tone={liveOk ? 'success' : 'error'} />
-              {liveOk ? 'Live updates connected' : 'Live updates unavailable'}
-            </span>
-          </div>
-          <div className="flex flex-wrap items-center gap-space-xs">
-            {can('employees.sync') && (
-              <Button size="sm" icon="sync" loading={sync.isPending} onClick={() => sync.mutate()}>
-                Sync roster from web software
-              </Button>
-            )}
-            {can('attendance.export') && <ExportMenu onExport={onExport} />}
-            {can('devices.provision') && (
-              <LinkButton to="/devices/provision" size="sm" variant="subtle" icon="add_circle">
-                Provision device
-              </LinkButton>
-            )}
-          </div>
-        </section>
-      )}
-
-      {/* Attendance summary */}
-      <section className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-space-md">
-        {scoped && todayScoped.isLoading ? (
-          <div className="col-span-full">
-            <Loading label="Loading attendance data..." />
-          </div>
-        ) : (
-          <>
-            <Stat label="Present" icon="how_to_reg" tone="success" value={num(today?.present)} hint={today ? `of ${num(today.active_employees)} active` : undefined} to={can('employees.view') ? '/employees' : undefined} />
-            <Stat label="Absent" icon="person_off" tone={today?.absent ? 'error' : undefined} value={num(today?.absent)} hint="Scheduled workday, no record" />
-            <Stat label="Late" icon="schedule" tone={today?.late ? 'warning' : undefined} value={num(today?.late)} hint="After start + grace" />
-            <Stat label="Clocked in" icon="login" tone="info" value={num(today?.clocked_in)} hint="Last punch = in" />
-            <Stat label="Clocked out" icon="logout" value={num(today?.clocked_out)} hint="Last punch = out" />
-            <Stat label="Attendance events" icon="fingerprint" value={num(today?.total_events)} hint="Today" to={can('attendance.view') ? `/attendance/history?date=${todayIso()}` : undefined} />
-          </>
-        )}
       </section>
 
       <section className="grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
@@ -589,6 +572,7 @@ export default function Dashboard() {
         </Panel>
 
         <div className="xl:col-span-4 flex flex-col gap-gutter">
+          <SideToggle id="dashboard-side" label="Alerts & sync" />
           {/* Alerts */}
           <Panel
             title="Alerts"
@@ -610,7 +594,7 @@ export default function Dashboard() {
               <ul className="divide-y divide-outline-variant/20">
                 {alerts.slice(0, 6).map((a) => (
                   <li key={a.id}>
-                    <Link to={`/alerts/${a.id}`} className="flex items-start gap-2 py-2 hover:bg-surface-container rounded px-1 -mx-1">
+                    <Link to={`/alerts/${a.id}`} className="flex items-start gap-2 py-2 hover:bg-white/[0.03] rounded-lg px-2 -mx-2 transition-colors">
                       <span className="pt-1.5">
                         <Dot tone={severityTone(a.severity)} pulse={a.severity === 'critical'} />
                       </span>
@@ -669,11 +653,6 @@ export default function Dashboard() {
                 );
               })}
               {!empSync && <p className="text-body-sm text-outline">No employee synchronisation has run yet.</p>}
-              {can('employees.sync') && (
-                <Button size="sm" icon="sync" className="mt-space-sm w-full" loading={sync.isPending} onClick={() => sync.mutate()}>
-                  Sync from Web Software
-                </Button>
-              )}
             </div>
           </Panel>
         </div>
@@ -686,13 +665,6 @@ export default function Dashboard() {
           title="Device health"
           icon="router"
           subtitle={scoped ? scopeName ?? undefined : 'All locations you can access'}
-          actions={
-            can('devices.view') ? (
-              <LinkButton to="/devices" size="sm">
-                Registry
-              </LinkButton>
-            ) : undefined
-          }
         >
           <div className="grid grid-cols-3 md:grid-cols-6 gap-space-sm">
             <Stat label="Online" tone="success" value={num(deviceStats?.online ?? 0)} />
@@ -722,7 +694,11 @@ export default function Dashboard() {
       {/* Location overview */}
       <Panel title="Location overview" icon="storefront" subtitle={`${num(locations.length)} location(s)`} bodyClassName="px-0 pb-0">
         {locations.length === 0 ? (
-          <Empty title="No locations yet." icon="storefront" action={can('settings.manage') ? <LinkButton to="/setup">Go to setup</LinkButton> : undefined} />
+          <Empty
+            title="No locations yet."
+            icon="storefront"
+            description={me?.organization.setupCompleted ? 'Add locations on the Locations page, or map them from the web software under Integration & Sync.' : 'Use Continue setup above to add your locations.'}
+          />
         ) : (
           <LocationTable rows={locations} />
         )}
@@ -732,18 +708,19 @@ export default function Dashboard() {
 }
 
 // ───────────────────────── Pieces ─────────────────────────
-function Readout({ label, value, target, tone, to }: { label: string; value: ReactNode; target: ReactNode; tone: Tone; to?: string }) {
+function Readout({ label, sla, value, target, tone, to }: { label: string; sla: string; value: ReactNode; target: ReactNode; tone: Tone; to?: string }) {
   const body = (
-    <div className="px-space-sm flex flex-col">
-      <span className="font-label-sm text-label-sm text-outline uppercase tracking-wider">{label}</span>
-      <div className="flex items-baseline gap-1 mt-0.5">
-        <span className={clsx('font-headline-sm text-headline-sm font-mono', toneText[tone])}>{value}</span>
-        <span className="font-label-sm text-label-sm text-outline">{target}</span>
-      </div>
+    <div className="h-full rounded-lg px-3 py-2.5 bg-white/[0.02] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] flex flex-col gap-0.5">
+      <span className="flex items-center justify-between gap-2 font-label-md text-label-md text-outline">
+        {label}
+        <span className="text-[10px] font-mono text-outline/70">{sla}</span>
+      </span>
+      <span className={clsx('text-[18px] leading-6 font-semibold tabular tracking-tight', toneText[tone])}>{value}</span>
+      <span className="font-body-sm text-[11.5px] text-outline">{target}</span>
     </div>
   );
   return to ? (
-    <Link to={to} className="hover:bg-surface-container rounded transition-colors">
+    <Link to={to} className="block rounded-lg lift">
       {body}
     </Link>
   ) : (
@@ -751,19 +728,31 @@ function Readout({ label, value, target, tone, to }: { label: string; value: Rea
   );
 }
 
-function TriageCard({ accent, icon, iconCls, title, badge, description, children, footer }: { accent: string; icon: string; iconCls: string; title: string; badge: ReactNode; description: ReactNode; children: ReactNode; footer?: ReactNode }) {
+const ACCENT_TONE: Record<string, Tone> = { 'bg-secondary-container': 'info', 'bg-error': 'error', 'bg-tertiary': 'success', 'bg-primary': 'primary' };
+const ICON_BOX: Record<Tone, string> = {
+  info: 'bg-secondary/10 text-secondary ring-secondary/20',
+  error: 'bg-error/10 text-error ring-error/25',
+  success: 'bg-tertiary/10 text-tertiary ring-tertiary/20',
+  primary: 'bg-primary/10 text-primary ring-primary/20',
+  warning: 'bg-warning/10 text-warning ring-warning/25',
+  neutral: 'bg-white/[0.04] text-outline ring-white/10'
+};
+
+function TriageCard({ accent, icon, title, badge, description, children, footer }: { accent: string; icon: string; iconCls?: string; title: string; badge: ReactNode; description: ReactNode; children: ReactNode; footer?: ReactNode }) {
+  const tone = ACCENT_TONE[accent] ?? 'neutral';
   return (
-    <div className="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-md relative overflow-hidden hover:bg-surface-container transition-colors">
-      <div className={clsx('absolute top-0 left-0 right-0 h-1', accent)} />
+    <div className="card lift rounded-xl p-space-md flex flex-col justify-between relative overflow-hidden">
       <div>
-        <div className="flex items-center justify-between mb-space-sm gap-2">
-          <div className="flex items-center gap-2 min-w-0">
-            <Icon name={icon} className={clsx('text-[20px]', iconCls)} />
-            <span className="font-headline-sm text-headline-sm text-on-surface truncate">{title}</span>
+        <div className="flex items-start gap-3 mb-3">
+          <span className={clsx('flex items-center justify-center w-9 h-9 rounded-lg ring-1 ring-inset shrink-0', ICON_BOX[tone])}>
+            <Icon name={icon} className="text-[19px]" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <div className="font-headline-sm text-headline-sm text-on-surface">{title}</div>
+            <div className="mt-1">{badge}</div>
           </div>
-          {badge}
         </div>
-        <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">{description}</p>
+        <p className="font-body-sm text-body-sm text-on-surface-variant mb-3">{description}</p>
         <div className="mb-space-md space-y-space-xs">{children}</div>
       </div>
       {footer && <div className="pt-space-xs flex">{footer}</div>}
@@ -819,7 +808,7 @@ function DeviceTriage({ d }: { d: any }) {
   const navigate = useNavigate();
   const offline = d.connectivity ? d.connectivity === 'offline' : Number(d.pending_events ?? 0) === 0;
   return (
-    <div className={clsx('rounded p-space-sm border-l-2 bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-sm', offline ? 'border-l-error' : 'border-l-secondary')}>
+    <div className={clsx('rounded-lg p-3 bg-white/[0.02] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] flex flex-col md:flex-row md:items-center justify-between gap-space-sm relative overflow-hidden')}>
       <div className="min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
           <Badge tone={offline ? 'error' : 'info'} icon={offline ? 'cloud_off' : 'cloud_sync'}>
@@ -950,18 +939,18 @@ function HourlyChart({ data }: { data: HourPoint[] }) {
     <div className="h-64 w-full">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data} margin={{ top: 8, right: 4, left: -16, bottom: 0 }} barGap={2} barCategoryGap="20%">
-          <CartesianGrid vertical={false} stroke="#434655" strokeOpacity={0.35} />
-          <XAxis dataKey="label" tick={{ fill: '#8d90a0', fontSize: 10 }} tickLine={false} axisLine={{ stroke: '#434655' }} interval={3} />
-          <YAxis allowDecimals={false} tick={{ fill: '#8d90a0', fontSize: 10 }} tickLine={false} axisLine={false} width={40} />
+          <CartesianGrid vertical={false} stroke="rgba(255,255,255,0.05)" />
+          <XAxis dataKey="label" tick={{ fill: '#6c717e', fontSize: 10 }} tickLine={false} axisLine={false} interval={3} />
+          <YAxis allowDecimals={false} tick={{ fill: '#6c717e', fontSize: 10 }} tickLine={false} axisLine={false} width={40} />
           <Tooltip
-            cursor={{ fill: 'rgba(141,144,160,0.08)' }}
-            contentStyle={{ background: '#262a33', border: '1px solid rgba(67,70,85,0.6)', borderRadius: 4, fontSize: 12, color: '#dfe2ee' }}
-            labelStyle={{ color: '#c3c6d7', fontFamily: 'JetBrains Mono Variable, monospace' }}
-            itemStyle={{ color: '#dfe2ee' }}
+            cursor={{ fill: 'rgba(255,255,255,0.04)' }}
+            contentStyle={{ background: '#1c1f25', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 10, boxShadow: '0 12px 32px -12px rgba(0,0,0,0.8)', padding: '8px 10px', fontSize: 12, color: '#ededf0' }}
+            labelStyle={{ color: '#a3a7b3', fontFamily: 'JetBrains Mono Variable, monospace' }}
+            itemStyle={{ color: '#ededf0' }}
           />
-          <Legend wrapperStyle={{ fontSize: 11, color: '#c3c6d7' }} iconType="circle" iconSize={8} />
-          <Bar dataKey="ins" name="Clock in" fill={C_IN} radius={[4, 4, 0, 0]} maxBarSize={14} />
-          <Bar dataKey="outs" name="Clock out" fill={C_OUT} radius={[4, 4, 0, 0]} maxBarSize={14} />
+          <Legend wrapperStyle={{ fontSize: 11, color: '#a3a7b3' }} iconType="circle" iconSize={8} />
+          <Bar dataKey="ins" name="Clock in" fill={C_IN} radius={[4, 4, 0, 0]} maxBarSize={14} animationDuration={700} animationEasing="ease-out" />
+          <Bar dataKey="outs" name="Clock out" fill={C_OUT} radius={[4, 4, 0, 0]} maxBarSize={14} animationDuration={700} animationEasing="ease-out" />
         </BarChart>
       </ResponsiveContainer>
     </div>

@@ -25,8 +25,7 @@ import {
   deviceStatusLabel,
   deviceTone,
   useErrorToast,
-  useToast
-} from '@/components/ui';
+  useToast, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useGlobalLocation } from '@/lib/scope';
 import { bytes, date, num, relative } from '@/lib/format';
@@ -423,6 +422,7 @@ export default function FirmwareDeploy() {
             </Panel>
           </div>
           <div className="xl:col-span-4 flex flex-col gap-space-md min-w-0">
+            <SideToggle id="firmware-deploy-side" label="Deployment" />
             <Panel title="Deployment" icon="alt_route">
               <div className="flex flex-col gap-space-md">
                 <Field label="Deployment name" required error={name && !nameOk ? 'Between 2 and 120 characters.' : null}>

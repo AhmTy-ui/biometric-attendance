@@ -47,11 +47,6 @@ export default function AccountLocked() {
           </LinkButton>
         </>
       }
-      footerLinks={
-        <Link to="/login" className="hover:text-on-surface">
-          Sign in
-        </Link>
-      }
     >
       <p>
         {state.email ? (

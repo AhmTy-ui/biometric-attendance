@@ -114,18 +114,18 @@ interface Report {
 
 // Chart tokens (from the Material 3 palette in tailwind.config.js)
 const C = {
-  onTime: '#4edea3',
-  late: '#f5b54a',
-  absent: '#ffb4ab',
-  rate: '#b4c5ff',
-  avg: '#93ccff',
+  onTime: '#3ddc97',
+  late: '#f5b84a',
+  absent: '#ff7a7a',
+  rate: '#5cc8ff',
+  avg: '#a5b0ff',
   grid: 'rgba(67,70,85,0.35)',
-  axis: '#8d90a0',
+  axis: '#6c717e',
   surface: '#181c24'
 };
 const tooltipStyle = {
-  contentStyle: { background: '#262a33', border: '1px solid rgba(67,70,85,0.6)', borderRadius: 4, fontSize: 12, color: '#dfe2ee' },
-  labelStyle: { color: '#c3c6d7', fontFamily: 'JetBrains Mono, monospace', fontSize: 11 },
+  contentStyle: { background: '#1c1f25', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 10, boxShadow: '0 12px 32px -12px rgba(0,0,0,0.8)', padding: '8px 10px', fontSize: 12, color: '#ededf0' },
+  labelStyle: { color: '#a3a7b3', fontFamily: 'JetBrains Mono, monospace', fontSize: 11 },
   cursor: { fill: 'rgba(180,197,255,0.06)' }
 };
 const axisProps = { stroke: C.axis, tick: { fill: C.axis, fontSize: 10 }, tickLine: false, axisLine: { stroke: C.grid } } as const;

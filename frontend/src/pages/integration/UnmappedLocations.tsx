@@ -23,8 +23,7 @@ import {
   Toggle,
   useErrorToast,
   useToast,
-  type Tone
-} from '@/components/ui';
+  type Tone, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { useLiveEvents } from '@/lib/live';
@@ -266,7 +265,7 @@ export default function UnmappedLocations() {
       />
 
       {/* Banner (template: operational triage) */}
-      <div className="bg-surface-container-low rounded-lg p-space-md shadow-md relative overflow-hidden">
+      <div className="card rounded-xl p-space-md relative overflow-hidden">
         <div className={clsx('absolute left-0 top-0 bottom-0 w-1.5', counts.unmapped ? 'bg-secondary-container' : 'bg-tertiary')} />
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pl-space-xs">
           <div className="flex items-start gap-space-sm min-w-0">
@@ -319,9 +318,7 @@ export default function UnmappedLocations() {
                     <p className="font-body-sm text-body-sm text-on-surface-variant">
                       <span className="font-mono text-secondary">{outcome.externalRef}</span>
                       {outcome.externalName ? ` (${outcome.externalName})` : ''} →{' '}
-                      <Link to={`/locations/${outcome.locationId}`} className="text-primary hover:underline">
-                        {outcome.locationName}
-                      </Link>
+                      <span className="text-on-surface font-semibold">{outcome.locationName}</span>
                       . {num(outcome.employeesAssigned)} employee(s) assigned and added to the location's device roster.
                     </p>
                   </div>
@@ -629,6 +626,7 @@ export default function UnmappedLocations() {
 
         {/* QUEUE */}
         <div className="lg:col-span-5 xl:col-span-4 bg-surface-container rounded-lg p-space-md shadow-md space-y-space-sm">
+          <SideToggle id="unmapped-queue" label="Queue" />
           <div className="flex items-center gap-2">
             <span className="p-1 rounded bg-secondary-container/20 text-secondary">
               <Icon name="format_list_bulleted" className="text-[18px]" />

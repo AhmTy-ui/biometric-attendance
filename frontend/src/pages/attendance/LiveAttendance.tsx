@@ -129,7 +129,7 @@ export default function LiveAttendance() {
       />
 
       {/* Stream status & filters (template: top console bar) */}
-      <section className="bg-surface-container-low rounded-xl p-space-md shadow-md">
+      <section className="card rounded-xl p-space-md">
         <div className="flex flex-wrap items-center justify-between gap-space-md">
           <div className="flex items-center gap-space-md min-w-0">
             <div className="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
@@ -236,9 +236,6 @@ export default function LiveAttendance() {
             <span className={clsx('inline-block w-2 h-2 rounded-full', streamState === 'live' ? 'bg-tertiary' : 'bg-outline')} />
             Click a row for delivery details · click an employee to open the profile
           </span>
-          <Link to="/attendance/history" className="text-primary hover:underline">
-            Search full history →
-          </Link>
         </div>
       </Panel>
     </>

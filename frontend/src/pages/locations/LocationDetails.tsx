@@ -30,8 +30,7 @@ import {
   deviceStatusLabel,
   deviceTone,
   severityTone,
-  useDebounced
-} from '@/components/ui';
+  useDebounced, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { useLiveEvents, type LiveFrame } from '@/lib/live';
@@ -206,7 +205,7 @@ function Overview({ l, devices, alerts, today, mappings, hourly, onTab }: { l: a
                   <XAxis dataKey="hour" tick={chartTheme.tick} axisLine={false} tickLine={false} interval={2} />
                   <YAxis allowDecimals={false} tick={chartTheme.tick} axisLine={false} tickLine={false} />
                   <Tooltip {...chartTheme.tooltip} />
-                  <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#c3c6d7' }} />
+                  <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#a3a7b3' }} />
                   <Bar dataKey="In" fill={chartTheme.colors.in} radius={[4, 4, 0, 0]} maxBarSize={12} />
                   <Bar dataKey="Out" fill={chartTheme.colors.out} radius={[4, 4, 0, 0]} maxBarSize={12} />
                 </BarChart>
@@ -270,6 +269,7 @@ function Overview({ l, devices, alerts, today, mappings, hourly, onTab }: { l: a
       </div>
 
       <div className="xl:col-span-4 flex flex-col gap-space-md min-w-0">
+        <SideToggle id="location-side" label="Alerts" />
         <Panel
           title="Recent alerts"
           icon="notifications"
@@ -755,7 +755,7 @@ function AnalyticsTab({ l }: { l: any }) {
                   <CartesianGrid vertical={false} stroke={chartTheme.grid} strokeOpacity={0.4} />
                   <XAxis dataKey="period" tick={chartTheme.tick} axisLine={false} tickLine={false} tickFormatter={(v: string) => v.slice(5)} minTickGap={16} />
                   <YAxis domain={[0, 100]} tick={chartTheme.tick} axisLine={false} tickLine={false} tickFormatter={(v: number) => `${v}%`} />
-                  <Tooltip {...chartTheme.tooltip} cursor={{ stroke: '#8d90a0', strokeDasharray: '3 3' }} formatter={(v: any, _n: any, item: any) => [`${pct(v)} (${num(item?.payload?.present)}/${num(item?.payload?.expected)})`, 'Attendance']} />
+                  <Tooltip {...chartTheme.tooltip} cursor={{ stroke: '#6c717e', strokeDasharray: '3 3' }} formatter={(v: any, _n: any, item: any) => [`${pct(v)} (${num(item?.payload?.present)}/${num(item?.payload?.expected)})`, 'Attendance']} />
                   <Area type="monotone" dataKey="rate" stroke={chartTheme.colors.rate} strokeWidth={2} fill="url(#locRate)" dot={false} activeDot={{ r: 4 }} connectNulls />
                 </AreaChart>
               </ResponsiveContainer>
@@ -769,7 +769,7 @@ function AnalyticsTab({ l }: { l: any }) {
                   <XAxis dataKey="period" tick={chartTheme.tick} axisLine={false} tickLine={false} tickFormatter={(v: string) => v.slice(5)} minTickGap={16} />
                   <YAxis allowDecimals={false} tick={chartTheme.tick} axisLine={false} tickLine={false} />
                   <Tooltip {...chartTheme.tooltip} />
-                  <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#c3c6d7' }} />
+                  <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11, color: '#a3a7b3' }} />
                   <Bar dataKey="Late" fill={chartTheme.colors.late} radius={[4, 4, 0, 0]} maxBarSize={10} />
                   <Bar dataKey="Absent" fill={chartTheme.colors.absent} radius={[4, 4, 0, 0]} maxBarSize={10} />
                 </BarChart>

@@ -54,11 +54,17 @@ export const toneTextCls = (t: Tone) => toneText[t];
 export function DirectionBadge({ direction }: { direction: string | null | undefined }) {
   if (direction === 'in')
     return (
-      <span className="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">Clock in</span>
+      <span className="inline-flex items-center gap-1 h-[22px] pl-1.5 pr-2 rounded-full ring-1 ring-inset ring-tertiary/20 bg-tertiary/10 text-tertiary text-label-badge font-label-badge uppercase whitespace-nowrap">
+        <Icon name="login" className="text-[13px]" />
+        Clock in
+      </span>
     );
   if (direction === 'out')
     return (
-      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">Clock out</span>
+      <span className="inline-flex items-center gap-1 h-[22px] pl-1.5 pr-2 rounded-full ring-1 ring-inset ring-white/10 bg-white/[0.04] text-on-surface-variant text-label-badge font-label-badge uppercase whitespace-nowrap">
+        <Icon name="logout" className="text-[13px]" />
+        Clock out
+      </span>
     );
   return <span className="text-outline">—</span>;
 }
@@ -145,7 +151,7 @@ export function EventTime({ ev, withDate = true }: { ev: any; withDate?: boolean
   );
 }
 
-export function EmployeeCell({ ev, link = true }: { ev: any; link?: boolean }) {
+export function EmployeeCell({ ev, link = true, showStaff }: { ev: any; link?: boolean; showStaff?: boolean }) {
   const { can } = useAuth();
   const name = ev.employee_name ?? 'Unknown employee';
   return (
@@ -159,7 +165,9 @@ export function EmployeeCell({ ev, link = true }: { ev: any; link?: boolean }) {
         ) : (
           <span className="text-on-surface font-semibold text-body-sm leading-tight truncate">{name}</span>
         )}
-        {ev.department && <span className="font-label-sm text-[10px] text-outline truncate">{ev.department}</span>}
+        {(ev.department || (showStaff && ev.staff_number)) && (
+          <span className="font-label-sm text-[10.5px] text-outline truncate">{[showStaff ? ev.staff_number : null, ev.department].filter(Boolean).join(' · ')}</span>
+        )}
       </div>
     </div>
   );
@@ -195,7 +203,7 @@ export function EventTable({ rows, flashIds, selectable, selected, onToggle, onT
             </Th>
           )}
           <Th>Employee</Th>
-          <Th>Staff No</Th>
+          {!compact && <Th>Staff No</Th>}
           <Th>Location · Device</Th>
           <Th className="text-center">Direction</Th>
           <Th>Timestamp (location time)</Th>
@@ -244,9 +252,9 @@ export function EventRow({ ev, flash, selectable, selected, onToggle, actions, c
         </Td>
       )}
       <Td className="whitespace-nowrap">
-        <EmployeeCell ev={ev} />
+        <EmployeeCell ev={ev} showStaff={compact} />
       </Td>
-      <Td className="font-mono text-[11px] text-on-surface-variant whitespace-nowrap">{ev.staff_number ?? '—'}</Td>
+      {!compact && <Td className="font-mono text-[11px] text-on-surface-variant whitespace-nowrap">{ev.staff_number ?? '—'}</Td>}
       <Td className="whitespace-nowrap">
         <div className="text-on-surface text-body-sm">{ev.location_name ?? '—'}</div>
         <div className="font-mono text-[10px] text-outline">
@@ -258,7 +266,7 @@ export function EventRow({ ev, flash, selectable, selected, onToggle, actions, c
         <DirectionBadge direction={ev.direction} />
       </Td>
       <Td>
-        <EventTime ev={ev} />
+        <EventTime ev={ev} withDate={!compact} />
       </Td>
       <Td className="whitespace-nowrap">
         <MatchScore score={ev.match_score} />

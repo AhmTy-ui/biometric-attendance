@@ -211,7 +211,7 @@ export function SyncResultBanner({ track, onDismiss }: { track: SyncTrack | null
     primary: 'bg-primary'
   };
   return (
-    <div className="bg-surface-container-low rounded-lg p-space-md shadow-md relative overflow-hidden" role="status">
+    <div className="card rounded-xl p-space-md relative overflow-hidden" role="status">
       <div className={clsx('absolute left-0 top-0 bottom-0 w-1.5', accent[tone])} />
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pl-space-xs">
         <div className="flex items-start gap-space-sm min-w-0">

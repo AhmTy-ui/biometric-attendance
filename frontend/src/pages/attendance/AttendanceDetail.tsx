@@ -111,7 +111,7 @@ export default function AttendanceDetail() {
       />
 
       {status === 'dead_letter' && (
-        <section className="bg-surface-container-low border-l-4 border-error rounded-lg p-space-md shadow-sm flex items-start gap-space-sm">
+        <section className="card border-l-4 border-error rounded-xl p-space-md flex items-start gap-space-sm">
           <Icon name="report_problem" className="text-[24px] text-error shrink-0" />
           <div className="min-w-0">
             <div className="font-headline-sm text-headline-sm text-on-surface">This event did not reach the web software.</div>

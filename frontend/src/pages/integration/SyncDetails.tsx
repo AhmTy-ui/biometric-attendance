@@ -21,8 +21,7 @@ import {
   THead,
   Tr,
   useErrorToast,
-  useToast
-} from '@/components/ui';
+  useToast, SideToggle } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { dateTime, duration, num, relative } from '@/lib/format';
@@ -136,7 +135,7 @@ export default function SyncDetails() {
       )}
 
       {failed && (
-        <div className="bg-surface-container-low rounded-lg p-space-md shadow-md relative overflow-hidden">
+        <div className="card rounded-xl p-space-md relative overflow-hidden">
           <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-error" />
           <div className="pl-space-xs space-y-space-sm">
             <div className="flex items-start gap-space-sm">
@@ -168,14 +167,6 @@ export default function SyncDetails() {
               </div>
             </div>
             <div className="flex flex-wrap gap-space-xs">
-              {canRetry && (
-                <Button variant="primary" icon="replay" loading={retry.isPending} onClick={() => retry.mutate(run.kind)}>
-                  Retry Sync
-                </Button>
-              )}
-              <LinkButton to="/integration" icon="lan">
-                Test connection
-              </LinkButton>
               {can('settings.view') && (
                 <LinkButton to="/settings?tab=integration" icon="settings">
                   Integration settings
@@ -201,6 +192,7 @@ export default function SyncDetails() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
         <Panel className="lg:col-span-5 xl:col-span-4" title="Run details" icon="info">
+          <SideToggle id="sync-run-side" label="Run details" />
           <KV label="Run ID" mono>
             <span className="flex items-center gap-2 justify-end">
               <span className="break-all">{run.id}</span>
